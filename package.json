@@ -4,7 +4,15 @@
   "description": "Learning resources for the webpack academy workshop series for 2018",
   "main": "index.js",
   "scripts": {
-    "serve": "http-server ./"
+    "serve": "http-server ./",
+    "webpack": "webpack",
+    "webpack-dev-server": "webpack-dev-server",
+    "prod": "yarn run webpack --env.mode production",
+    "prod:analyze": "yarn run prod --env.presets analyze",
+    "prod:compress": "yarn run prod --env.presets compress",
+    "dev": "yarn run webpack-dev-server --env.mode development --hot",
+    "debug": "node --inspect --inspect-brk ./node_modules/webpack/bin/webpack.js",
+    "dev:debug": "yarn run debug --mode development"
   },
   "repository": {
     "type": "git",
@@ -18,6 +26,20 @@
   },
   "homepage": "https://github.com/TheLarkInn/webpack-workshop-2018#readme",
   "devDependencies": {
-    "http-server": "^0.11.1"
+    "compression-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "file-loader": "^5.0.2",
+    "html-webpack-plugin": "^4.0.0-beta.11",
+    "http-server": "^0.11.1",
+    "mini-css-extract-plugin": "^0.8.0",
+    "style-loader": "^1.0.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.8.0-dev.20191128",
+    "url-loader": "^3.0.0",
+    "webpack": "^4.41.2",
+    "webpack-bundle-analyzer": "^3.6.0",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2"
   }
 }
