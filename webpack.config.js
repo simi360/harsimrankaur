@@ -6,40 +6,49 @@ const presetConfig = require("./build-utils/loadPresets");
 
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
-//on va fournir des arguments d'environnement et de presets avec leurs valeurs par défaut
-module.exports = ({mode, presets} = {mode: "production", presets: []}) => {
-    return webpackMerge(
-        {
-            mode,
-            // to change name of the bundle (by default main.js)
-            output: {
-                filename: "bundle.js"
-            },
-
-            module: {
-                rules: [
-                    {
-                        test: /\.png/,
-                        use: [
-                            {
-                                //changes images in base64 format until a certain limit and renames it with an hash
-                                loader: "url-loader",
-                                options: {
-                                    limit: 500
-                                }
-                            }
-                        ]
-                    }
-                ]
-            },
-
-            plugins: [
-                new HtmlWebpackPlugin(),
-                //va rajouter le bundle créé dans un script tag dans l'index
-                new webpack.ProgressPlugin()
+//environment and presets arguments with their default values are given
+module.exports = ({mode, presets} = {mode: "production",presets: []}) => {
+   return webpackMerge({
+         mode,
+         module: {
+            rules: [{
+                  test: /\.(js)$/,
+                  exclude: /node_modules/,
+                  use: ['babel-loader']
+               },
+               {
+                  test: /\.png/,
+                  use: [{
+                     //changes images in base64 format until a certain limit and renames it with an hash
+                     loader: "url-loader",
+                     options: {
+                        limit: 500
+                     }
+                  }]
+               }
             ]
-        },
-        modeConfig(mode),
-        presetConfig({mode, presets})
-    );
+         },
+
+         plugins: [
+            new HtmlWebpackPlugin({
+               template: './index.html'
+            }),
+            //adds the created bundles between script tags in the output file
+            new webpack.ProgressPlugin()
+         ],
+
+         optimization: {
+            //creats also a bundle from vendors
+            splitChunks: {
+               // include all types of chunks
+               chunks: 'all'
+            }
+         },
+      },
+      modeConfig(mode),
+      // presetConfig({
+      //    mode,
+      //    presets
+      // })
+   );
 };

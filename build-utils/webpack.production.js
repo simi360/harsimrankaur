@@ -1,16 +1,32 @@
+const path = require("path");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 module.exports = () => ({
     devtool: "source-map",
     output: {
-        //permet de nommer le nom du fichier en hash
-        // filename: "[chunkhash].js"
-        filename: "bundle.js"
+      filename: '[name].[hash].js',
+      chunkFilename: '[name].bundle.js',
+      publicPath: 'dist/',
     },
     module: {
         rules: [
             {
-                test: /\.css$/,
-                use:[MiniCssExtractPlugin.loader, "css-loader"]
+               test: /\.css$/,
+               use: [
+                  MiniCssExtractPlugin.loader,
+                  {
+                     loader: 'css-loader',
+                     options: {
+                        modules: true,
+                        localsConvention: 'camelCase',
+                        sourceMap: true
+                     }
+                  },
+                  {
+                     // PostCSS will run before css-loader and will
+                     // minify and autoprefix our CSS rules.
+                     loader: 'postcss-loader',
+                  }
+               ]
             }
         ]
     },
