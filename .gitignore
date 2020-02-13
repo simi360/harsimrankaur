@@ -30,4 +30,4 @@ node_modules/
 dist/
 
 # phpstorm directory 
-.idea
+**/.idea/

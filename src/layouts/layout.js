@@ -1,23 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Header, Container, Divider, Icon } from 'semantic-ui-react';
 
 import { pullRight, h1 } from '../css/layout.css';
 
 const Layout = ({ children }) => {
   return (
-    <Container>
+    <div>
       <Link to="/">
-        <Header as="h1" className={h1}>
+        <h1 className={h1}>
           webpack-for-react
-        </Header>
+        </h1>
       </Link>
       {children}
-      <Divider />
+      <hr />
       <p className={pullRight}>
-        Made with <Icon name="heart" color="red" /> by Esau Silva
+        Made with Love by Esau Silva
       </p>
-    </Container>
+    </div>
   );
 };
 
