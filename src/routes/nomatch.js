@@ -1,12 +1,10 @@
 import React from 'react';
 
-import Layout from '../layouts/layout';
-
 const NoMatch = () => {
   return (
-    <Layout>
+    <div>
       <strong>Page not found!</strong>
-    </Layout>
+    </div>
   );
 };
 

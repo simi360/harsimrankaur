@@ -1,13 +1,11 @@
 import React from 'react';
 
-import Layout from '../layouts/layout';
-
 const DynamicPage = () => {
   return (
-    <Layout>
+    <div>
       <h2>Dynamic Page</h2>
       <p>This page was loaded asynchronously!!!</p>
-    </Layout>
+    </div>
   );
 };
 

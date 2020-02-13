@@ -8,18 +8,20 @@ const Btn = styled.button`
   color: ${props => props.color || "palevioletred"};
   background: transparent;
   border: 1px solid ${props => props.color || "palevioletred"};
+  transition: all 0.25s ease-in-out;
   
   &:hover {
       background: ${props => props.color || "palevioletred"};
+      color: #fff;
   }
 `;
 
 function Button(props) {
-    return <Btn color={props.color}>Push</Btn>;
+    return <Btn>Push</Btn>;
 }
 
 Button.propTypes = {
     color: PropTypes.string
 }
 
-export default Button;
+export {Button, Btn};
