@@ -17,8 +17,6 @@ the latest [npm](https://www.npmjs.com/) v5 or greater installed as well.
 - [css-nano](https://cssnano.co/): CSS minifyer
 - [file-loader](https://github.com/webpack-contrib/file-loader): resolves import and require() on a file for Webpack
 - [html-webpack-plugin](https://github.com/jantimon/html-webpack-plugin): appends the styles and scripts tags of Webpack bundles in the html files
-- [mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin): extract CSS files per CSS files declared in JS files
-- [postcss-loader](https://github.com/postcss/postcss-loader): needed to process PostCSS in Webpack
 - [postcss-preset-env](https://preset-env.cssdb.org/): permit to use extra features in CSS
 - [prop-types](https://github.com/facebook/prop-types): Type checking for React props
 - [React](https://fr.reactjs.org/): JS framework
@@ -26,6 +24,10 @@ the latest [npm](https://www.npmjs.com/) v5 or greater installed as well.
 - [react-imported-component](https://github.com/theKashey/react-imported-component): allows to use code splitting with Reat
 - [react-router-dom](https://github.com/ReactTraining/react-router): needed to use routes in React
 - [style-loader](https://github.com/webpack-contrib/style-loader): needed by Webpack to inject CSS into the DOM
+- [Styled Components](https://styled-components.com): library for CSS-in-JS
+- [styleLint](https://stylelint.io/): linter
+- [stylelint-custom-processor-loader](https://github.com/emilgoldsmith/stylelint-custom-processor-loader): webpack loader for Stylelint
+- [stylelint-processor-styled-components](https://github.com/styled-components/stylelint-processor-styled-components): linter for styled-components
 - [url-loader](https://github.com/webpack-contrib/url-loader): loader for Webpack wich transform files in base64 URIs
 - [Webpack](https://webpack.js.org/): bundler
  

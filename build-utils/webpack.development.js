@@ -20,11 +20,6 @@ module.exports = () => ({
                      sourceMap: true
                   }
                },
-               {
-                  // PostCSS will run before css-loader and will
-                  // minify and autoprefix our CSS rules.
-                  loader: 'postcss-loader',
-               }
             ]
          }]
    },

@@ -14,7 +14,10 @@ module.exports = ({mode, presets} = {mode: "production",presets: []}) => {
             rules: [{
                   test: /\.(js)$/,
                   exclude: /node_modules/,
-                  use: ['babel-loader']
+                  use: [
+                      'babel-loader',
+                      'stylelint-custom-processor-loader',//for css in js
+                  ]
                },
                {
                   test: /\.png/,

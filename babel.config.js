@@ -8,7 +8,12 @@ module.exports = function (api) {
 
   const plugins = [
      "@babel/plugin-syntax-dynamic-import",
-     "@babel/plugin-proposal-class-properties"
+     "@babel/plugin-proposal-class-properties",
+     [ "babel-plugin-styled-components", {
+        "ssr": false,// deactivate server side rendering
+         "pure": true,//dead code elimination
+         "transpileTemplateLiterals": true //lesser transpilation size than babel
+     }]
   ];
 
   return {
