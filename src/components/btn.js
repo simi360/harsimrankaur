@@ -16,7 +16,7 @@ const Btn = styled.button`
   }
 `;
 
-function Button(props) {
+function Button() {
     return <Btn>Push</Btn>;
 }
 

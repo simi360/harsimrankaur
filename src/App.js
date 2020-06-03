@@ -5,7 +5,7 @@ import importedComponent from "react-imported-component";
 import Home from "./routes/Home";
 import Loading from "./components/loader";
 import { GlobalStyle } from "./utils/globalStyles";
-import Nav from './components/nav/nav';
+import Nav from "./components/nav/nav";
 
 const AsyncDynamicPAge = importedComponent(
   () => import(/* webpackChunkName:'DynamicPage' */ "./routes/dynamicPage"),
@@ -25,9 +25,9 @@ const App = () => {
     <Router>
       <GlobalStyle />
       <div>
-        <Nav/>
+        <Nav />
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route exact path="/" component={Home} />{" "}
           <Route exact path="/dynamic" component={AsyncDynamicPAge} />
           <Route component={AsyncNoMatch} />
         </Switch>
