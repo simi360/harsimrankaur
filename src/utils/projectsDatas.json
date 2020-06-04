@@ -1,0 +1,99 @@
+{
+  "cfl": {
+    "id": "cfl",
+    "name": "CFL",
+    "year": "2018-2019",
+    "client": "Société Nationale des Chemins de Fer Luxembourgeois",
+    "url": "https://www.cfl.lu",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "JS",
+      "Webpack",
+      "PHP",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "challenges": [
+      "128 different pages",
+      "3 different web sites with shared styles and functions",
+      "support of legacy browsers",
+      "accessibility",
+      "crossbrowser printing styles",
+      "99% of the time, the only developper on the front-end part of the project"
+    ],
+    "photos": {
+      "thumb": {
+        "default": "/assets/img/cfl-thumb.png",
+        "retina": "/assets/img/cfl-thumb2x.png"
+      },
+      "project": [
+        "/assets/img/cfl-home.png",
+        "/assets/img/cfl-home-mobile.png",
+        "/assets/img/cfl-home-tablet.png"
+      ]
+    }
+  },
+  "aea": {
+    "id": "aea",
+    "name": "A&A",
+    "year": "2019",
+    "client": "a&a gérence",
+    "url": "https://www.aea.lu",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "JS",
+      "Webpack",
+      "PHP",
+      "Drupal",
+      "Twig",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "challenges": ["Learning Drupal and Twig ecosystem"],
+    "photos": {
+      "thumb": {
+        "default": "/assets/img/aea-thumb.png",
+        "retina": "/assets/img/aea-thumb2x.png"
+      },
+      "project": [
+        "/assets/img/aea-home.png",
+        "/assets/img/aea-home-mobile.png",
+        "/assets/img/aea-home-tablet.png"
+      ]
+    }
+  },
+  "aeo": {
+    "id": "aeo",
+    "name": "A&O",
+    "year": "2019",
+    "client": "Allen & Overy Luxemburg",
+    "url": "",
+    "technologies": [
+      "HTML",
+      "SASS",
+      "JS",
+      "React Native",
+      "Drupal",
+      "Twig",
+      "Bootstrap",
+      "jQuery"
+    ],
+    "challenges": [
+      "Intranet website and internal app",
+      "Learning the difference between React & React Native"
+    ],
+    "photos": {
+      "thumb": {
+        "default": "/assets/img/aeo-thumb.png",
+        "retina": "/assets/img/aeo-thumb2x.png"
+      },
+      "project": [
+        "/assets/img/aeo-home.png",
+        "/assets/img/aeo-home-mobile.png",
+        "/assets/img/aeo-home-tablet.png"
+      ]
+    }
+  }
+}
