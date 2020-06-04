@@ -6,6 +6,10 @@ const NavTag = styled.nav`
   max-width: 1920px;
   margin: auto;
   padding: 0.875rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +21,7 @@ const NavTag = styled.nav`
 
   @media (min-width: ${(p) => p.theme.bp.tablets}) {
     padding: 3rem;
-    font-size: 1.3rem;
+    font-size: 1.125rem;
   }
 `;
 
@@ -29,16 +33,16 @@ const Logo = styled(Link)`
   font-weight: bold;
 
   span {
+    display: block;
     font-size: 1.175rem;
     letter-spacing: 3px;
-    display: block;
   }
 
   @media (min-width: ${(p) => p.theme.bp.tablets}) {
-    font-size: 1.45rem;
+    font-size: 1.125rem;
 
     span {
-      font-size: 1.75rem;
+      font-size: 1.35rem;
     }
   }
 `;
