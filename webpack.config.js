@@ -14,13 +14,13 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       module: {
         rules: [
           {
-            test: /\.(js)$/,
+            test: /\.js$/,
             exclude: /node_modules/,
             use: [
               "babel-loader",
               "eslint-loader",
               "stylelint-custom-processor-loader", //for css in js
-            ]
+            ],
           },
           {
             test: /\.png/,
