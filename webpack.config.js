@@ -18,7 +18,12 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
             exclude: /node_modules/,
             use: [
               "babel-loader",
-              "eslint-loader",
+              {
+                loader: "eslint-loader",
+                options: {
+                  cache: true,
+                },
+              },
               "stylelint-custom-processor-loader", //for css in js
             ],
           },
