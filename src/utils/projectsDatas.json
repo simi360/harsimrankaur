@@ -1,5 +1,5 @@
-{
-  "cfl": {
+[
+  {
     "id": "cfl",
     "name": "CFL",
     "year": "2018-2019",
@@ -24,17 +24,17 @@
     ],
     "photos": {
       "thumb": {
-        "default": "/assets/img/cfl-thumb.png",
-        "retina": "/assets/img/cfl-thumb2x.png"
+        "default": "img/cfl-thumb.png",
+        "retina": "img/cfl-thumb2x.png"
       },
       "project": [
-        "/assets/img/cfl-home.png",
-        "/assets/img/cfl-home-mobile.png",
-        "/assets/img/cfl-home-tablet.png"
+        "img/cfl-home.png",
+        "img/cfl-home-mobile.png",
+        "img/cfl-home-tablet.png"
       ]
     }
   },
-  "aea": {
+  {
     "id": "aea",
     "name": "A&A",
     "year": "2019",
@@ -54,17 +54,17 @@
     "challenges": ["Learning Drupal and Twig ecosystem"],
     "photos": {
       "thumb": {
-        "default": "/assets/img/aea-thumb.png",
-        "retina": "/assets/img/aea-thumb2x.png"
+        "default": "img/aea-thumb.png",
+        "retina": "img/aea-thumb2x.png"
       },
       "project": [
-        "/assets/img/aea-home.png",
-        "/assets/img/aea-home-mobile.png",
-        "/assets/img/aea-home-tablet.png"
+        "img/aea-home.png",
+        "img/aea-home-mobile.png",
+        "img/aea-home-tablet.png"
       ]
     }
   },
-  "aeo": {
+  {
     "id": "aeo",
     "name": "A&O",
     "year": "2019",
@@ -86,14 +86,14 @@
     ],
     "photos": {
       "thumb": {
-        "default": "/assets/img/aeo-thumb.png",
-        "retina": "/assets/img/aeo-thumb2x.png"
+        "default": "img/aeo-thumb.png",
+        "retina": "img/aeo-thumb2x.png"
       },
       "project": [
-        "/assets/img/aeo-home.png",
-        "/assets/img/aeo-home-mobile.png",
-        "/assets/img/aeo-home-tablet.png"
+        "img/aeo-home.png",
+        "img/aeo-home-mobile.png",
+        "img/aeo-home-tablet.png"
       ]
     }
   }
-}
+]

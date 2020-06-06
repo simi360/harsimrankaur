@@ -1,8 +1,12 @@
-import React from "react";
-import styled from "styled-components";
+import React, { Fragment } from "react";
+import WorkSlider from "../components/slider/works-slider/WorkSlider";
 
 const Home = () => {
-  return <div></div>;
+  return (
+    <Fragment>
+      <WorkSlider />
+    </Fragment>
+  );
 };
 
 export default Home;

@@ -10,9 +10,9 @@ export const Theme = {
     poppins: "'Poppins', 'Roboto', Helvetica, Arial, sans-serif",
   },
   bp: {
-    phones: "568px",
-    tablets: "768px",
-    desktops: "1024px",
-    largeDesktops: "1200px",
+    phones: 568,
+    tablets: 768,
+    desktops: 1024,
+    largeDesktops: 1200,
   },
 };

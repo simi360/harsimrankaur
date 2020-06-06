@@ -20,9 +20,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
               "babel-loader",
               {
                 loader: "eslint-loader",
-                options: {
-                  cache: true,
-                },
               },
               "stylelint-custom-processor-loader", //for css in js
             ],

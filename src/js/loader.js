@@ -1,13 +1,6 @@
-import React from 'react';
+import React from "react";
+import ReactDelayRender from "react-delay-render";
 
-const Loader = () => {
-    return (
-        <main className="loader">
-            <h1 className="read-only">Sarah Hick</h1>
-            <span className="loaderFirstName">Sarah</span>
-            <span className="loaderLastName">Hick</span>
+const Loading = () => <div>Loading</div>;
 
-            <p>Front-ENd Developper</p>
-        </main>
-    );
-}
+export default ReactDelayRender({ delay: 1000 })(Loading);

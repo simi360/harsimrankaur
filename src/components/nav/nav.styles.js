@@ -19,7 +19,7 @@ const NavTag = styled.nav`
     color: ${(p) => p.theme.color.dark};
   }
 
-  @media (min-width: ${(p) => p.theme.bp.tablets}) {
+  @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     padding: 3rem;
     font-size: 1.125rem;
   }
@@ -38,7 +38,7 @@ const Logo = styled(Link)`
     letter-spacing: 3px;
   }
 
-  @media (min-width: ${(p) => p.theme.bp.tablets}) {
+  @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     font-size: 1.125rem;
 
     span {
