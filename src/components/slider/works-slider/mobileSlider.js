@@ -2,18 +2,33 @@ import React from "react";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
+import { ThemeProvider, withTheme } from "styled-components";
 
-import { SliderStyle, WorkSliderPagination } from "./WorkSlider.styles";
+import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
 
 class WorkSliderMobile extends React.Component {
   state = {
     activeIndex: 0,
+    theme: {
+      color: {
+        primary: this.props.slides[0].colors.primary,
+        primaryLight: this.props.slides[0].colors.primaryLight,
+      },
+    },
   };
 
-  updateActiveIndex = (index) => {
+  //Will update the activeIndex to pass to the pagination component
+  // and update the primary/primaryLight Colors of the theme to the project given colors
+  handleSlideChanges = (index) => {
     if (this.state.activeIndex !== index) {
+      let newTheme = { ...this.state.theme };
+      newTheme.color.primary = this.props.slides[index].colors.primary;
+      newTheme.color.primaryLight = this.props.slides[
+        index
+      ].colors.primaryLight;
       this.setState({
         activeIndex: index,
+        theme: newTheme,
       });
     }
   };
@@ -32,26 +47,28 @@ class WorkSliderMobile extends React.Component {
     };
 
     return (
-      <SliderStyle>
-        <div className="slider-container">
-          <WorkSliderPagination
-            activeIndex={activeIndex}
-            sliderLenght={slides.length}
-          />
-          <Carousel {...sliderSettings} onChange={this.updateActiveIndex}>
-            {slides &&
-              slides.map((slide, index) => (
-                <Project
-                  slide={slide}
-                  slideIndex={index}
-                  key={"slide" + index}
-                />
-              ))}
-          </Carousel>
-        </div>
-      </SliderStyle>
+      <ThemeProvider theme={this.state.theme}>
+        <SliderStyle>
+          <div className="slider-container">
+            <WorkSliderPagination
+              activeIndex={activeIndex}
+              sliderLenght={slides.length}
+            />
+            <Carousel {...sliderSettings} onChange={this.handleSlideChanges}>
+              {slides &&
+                slides.map((slide, index) => (
+                  <Project
+                    slide={slide}
+                    slideIndex={index}
+                    key={"slide" + index}
+                  />
+                ))}
+            </Carousel>
+          </div>
+        </SliderStyle>
+      </ThemeProvider>
     );
   }
 }
 
-export default WorkSliderMobile;
+export default withTheme(WorkSliderMobile);

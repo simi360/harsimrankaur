@@ -8,7 +8,7 @@ import {
 
 const Project = (props) => {
   return (
-    <ProjectSection>
+    <ProjectSection title={props.slide.name}>
       <ProjectTitle title={props.slide.name} />
       <ProjectImg
         imgSrc={`../public/${props.slide.photos.thumb.default}`}

@@ -6,8 +6,9 @@ import { ThemeProvider } from "styled-components";
 import Home from "./routes/Home";
 // import Loading from "./components/loader";
 import { GlobalStyle } from "./utils/globalStyles";
-import Nav from "./components/nav/nav";
+import Nav from "./components/nav/Nav";
 import { Theme } from "./utils/ThemeContext";
+import About from "./routes/About";
 
 // const AsyncDynamicPAge = importedComponent(
 //   () => import(/* webpackChunkName:'DynamicPage' */ "./routes/dynamicPage"),
@@ -30,9 +31,10 @@ const App = () => {
         <div>
           <Nav />
           <Switch>
-            <Route exact path="/" component={Home} />{" "}
+            <Route exact path="/" component={Home} />
             {/* <Route exact path="/dynamic" component={AsyncDynamicPAge} />
             <Route component={AsyncNoMatch} /> */}
+            <Route exact path="/about" component={About} />
           </Switch>
         </div>
       </ThemeProvider>

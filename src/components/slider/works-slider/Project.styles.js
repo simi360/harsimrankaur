@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgWithOverflowingBg from "../../img/imgWithOverflowinBg";
+import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
 import Title from "../../text/Title";
 
 const ProjectSection = styled.section`
@@ -7,21 +7,13 @@ const ProjectSection = styled.section`
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(4, minmax(0, 4.5rem));
+  /* Depending the text length, the last row will be bigger to allow the text to wrap */
+  grid-template-rows: ${(p) =>
+    p.title.length <= 10
+      ? "repeat(4, minmax(0, 4.5rem))"
+      : "repeat(3, minmax(0, 4.5rem)) minmax(0, 6rem)"};
   grid-gap: 0 1.875rem;
   font-family: ${(p) => p.theme.font.poppins};
-
-  &::before {
-    content: "";
-    width: 50%;
-    height: 90%;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    transform: translate(100%, 35%);
-    background: ${(p) => p.theme.color.primaryLight};
-    z-index: -1;
-  }
 `;
 
 const ProjectImg = styled(ImgWithOverflowingBg)`
@@ -39,6 +31,7 @@ const ProjectIndex = styled.p`
   letter-spacing: 3px;
   text-align: left;
   color: ${(p) => p.theme.color.primary};
+  transition: all 0.25s ease-in-out;
 
   &::before {
     content: "";
@@ -48,6 +41,7 @@ const ProjectIndex = styled.p`
     right: 100%;
     bottom: 0.25rem;
     background: ${(p) => p.theme.color.primary};
+    transition: all 0.25s ease-in-out;
     z-index: -1;
   }
 `;
@@ -55,6 +49,7 @@ const ProjectIndex = styled.p`
 const ProjectTitle = styled(Title)`
   grid-column: 2 / span 3;
   grid-row: 4;
+  font-size: ${(p) => (p.title.length >= 4 ? "2.4rem" : "4rem")};
   z-index: 2;
 `;
 

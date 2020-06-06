@@ -14,6 +14,7 @@ const NavTag = styled.nav`
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
+  z-index: 9999;
 
   a {
     color: ${(p) => p.theme.color.dark};

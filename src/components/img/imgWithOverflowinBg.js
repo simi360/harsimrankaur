@@ -1,5 +1,5 @@
 import React from "react";
-import { ImgContainer, Img } from "./imgWithOverflowinBg.style";
+import { ImgContainer, Img } from "./ImgWithOverflowinBg.style";
 
 const ImgWithOverflowingBg = (props) => {
   return (

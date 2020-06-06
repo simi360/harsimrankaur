@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Pagination from "./pagination";
+import Pagination from "./Pagination";
 
 const SliderStyle = styled.section`
   width: 100vw;
@@ -7,7 +7,21 @@ const SliderStyle = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
+  &::before {
+    content: "";
+    width: 50%;
+    height: 48%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background: ${(p) => p.theme.color.primaryLight};
+    transform: translate(100%, 77%);
+    transition: all 0.25s ease-in-out;
+    z-index: -1;
+  }
+  /* to override the slider imported styles */
   .slider-container,
   .carousel {
     display: grid;
@@ -16,7 +30,6 @@ const SliderStyle = styled.section`
   }
 
   .carousel {
-    padding-bottom: 1rem;
     grid-template-rows: 6fr 1fr;
 
     &-root {
@@ -42,7 +55,7 @@ const SliderStyle = styled.section`
       position: relative;
       top: auto;
       right: auto;
-      bottom: -1rem;
+      bottom: 0;
       left: auto;
       grid-row: 2;
       align-self: end;
@@ -50,6 +63,7 @@ const SliderStyle = styled.section`
 
       &::before {
         width: 1rem;
+        transition: all 0.25s ease-in-out;
       }
 
       &.control-disabled {
@@ -88,6 +102,7 @@ const WorkSliderPagination = styled(Pagination)`
   grid-column: 3;
   grid-row: 1;
   z-index: 2;
+  transition: all 0.25s ease-in-out;
 `;
 
 export { SliderStyle, WorkSliderPagination };

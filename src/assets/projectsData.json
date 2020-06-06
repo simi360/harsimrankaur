@@ -32,6 +32,10 @@
         "img/cfl-home-mobile.png",
         "img/cfl-home-tablet.png"
       ]
+    },
+    "colors": {
+      "primary": "#CC0033",
+      "primaryLight": "#FCADA9"
     }
   },
   {
@@ -62,6 +66,10 @@
         "img/aea-home-mobile.png",
         "img/aea-home-tablet.png"
       ]
+    },
+    "colors": {
+      "primary": "#006083",
+      "primaryLight": "#86C2D2"
     }
   },
   {
@@ -94,6 +102,83 @@
         "img/aeo-home-mobile.png",
         "img/aeo-home-tablet.png"
       ]
+    },
+    "colors": {
+      "primary": "#B23427",
+      "primaryLight": "#EA9289"
+    }
+  },
+
+  {
+    "id": "raiffeisen",
+    "name": "Raiffeisen",
+    "year": "2019",
+    "client": "Raiffeisen Luxembourg",
+    "photos": {
+      "thumb": {
+        "default": "img/cfl-thumb.png",
+        "retina": "img/cfl-thumb2x.png"
+      },
+      "slider": [
+        {
+          "type": "video",
+          "url": "img/cfl-home.mp4"
+        },
+        {
+          "type": "image",
+          "url": "img/cfl_home.png"
+        }
+      ]
+    },
+    "technologies": ["HTML", "LESS", "JS", "Drupal", "Bootstrap 3", "JQuery"],
+    "challenges": [
+      "Working at the client location with extremely limited tools",
+      "No access to Github, Figma and Browserstack",
+      "Using old version of Bootstrap",
+      "Learning LESS on the fly"
+    ],
+    "colors": {
+      "primary": "#006083",
+      "primaryLight": "#86C2D2"
+    }
+  },
+  {
+    "id": "mytrainer",
+    "name": "My Trainer And Me",
+    "year": "2019",
+    "client": "My Trainer And Me",
+    "photos": {
+      "thumb": {
+        "default": "img/cfl-thumb.png",
+        "retina": "img/cfl-thumb2x.png"
+      },
+      "slider": [
+        {
+          "type": "video",
+          "url": "img/cfl-home.mp4"
+        },
+        {
+          "type": "image",
+          "url": "img/cfl_home.png"
+        }
+      ]
+    },
+    "technologies": [
+      "HTML",
+      "SASS",
+      "JS",
+      "Webpack",
+      "Drupal",
+      "Twig",
+      "Bootstrap",
+      "JQuery"
+    ],
+    "challenges": [
+      "Installing the project on Drupal myself with the hooks instead of the Back-End Developpers doing it"
+    ],
+    "colors": {
+      "primary": "#006083",
+      "primaryLight": "#86C2D2"
     }
   }
 ]

@@ -14,6 +14,7 @@ const ImgContainer = styled.div`
     top: 1.25rem;
     left: 0;
     background: ${(props) => props.theme.color.primary};
+    transition: all 0.25s ease-in-out;
     z-index: -1;
   }
 `;

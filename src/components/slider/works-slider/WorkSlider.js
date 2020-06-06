@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import Loader from "../../loader";
 import GetViewport from "../../../utils/getViewport";
-import WorkSliderMobile from "./mobileSlider";
+import WorkSliderMobile from "./MobileSlider";
 import { ThemeContext } from "styled-components";
 
 const WorkSlider = () => {
@@ -16,7 +16,7 @@ const WorkSlider = () => {
     }, 0);
 
     const res = await import(
-      /* webpackChunkName:'projects' */ "../../../utils/projectsDatas.json"
+      /* webpackChunkName:'projects' */ "../../../assets/projectsData.json"
     );
 
     const resArr = res.default;
