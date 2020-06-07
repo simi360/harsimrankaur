@@ -42,7 +42,7 @@ class WorkSliderMobile extends React.Component {
       showIndicators: false,
       showArrows: true,
       swipeable: true,
-      emulateTouch: true,
+      emulateTouch: false,
       showStatus: false,
     };
 

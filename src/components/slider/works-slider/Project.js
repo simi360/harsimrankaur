@@ -1,4 +1,5 @@
 import React from "react";
+import StretchedLink from "../../links/stretched-link";
 import {
   ProjectSection,
   ProjectImg,
@@ -19,6 +20,11 @@ const Project = (props) => {
           ? props.slideIndex + 1
           : `0${props.slideIndex + 1}`}
       </ProjectIndex>
+      <StretchedLink
+        id={props.slide.id}
+        ariaLabel={`See ${props.slide.name} details`}
+        srOnly={true}
+      />
     </ProjectSection>
   );
 };
