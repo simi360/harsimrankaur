@@ -62,25 +62,29 @@ const SliderStyle = styled.section`
       opacity: 1;
 
       &::before {
-        width: 1rem;
-        transition: all 0.25s ease-in-out;
+        display: none;
+      }
+
+      svg {
+        width: 0.75rem;
       }
 
       &.control-disabled {
         opacity: 0.4;
         display: inline-block;
       }
+
+      :hover {
+        background: none;
+      }
     }
 
     &.control-prev {
       grid-column: 1;
       justify-self: end;
-      right: -1rem;
 
-      &::before {
-        border-right: 1.25rem solid ${(p) => p.theme.color.primary};
-        border-top: 0.85rem solid transparent;
-        border-bottom: 0.85rem solid transparent;
+      svg {
+        transform: scaleX(-1);
       }
     }
 
@@ -88,12 +92,6 @@ const SliderStyle = styled.section`
       grid-column: 2;
       justify-self: start;
       left: -0.3rem;
-
-      &::before {
-        border-left: 1.25rem solid ${(p) => p.theme.color.primary};
-        border-top: 0.85rem solid transparent;
-        border-bottom: 0.85rem solid transparent;
-      }
     }
   }
 `;

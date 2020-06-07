@@ -3,7 +3,7 @@ import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
 import { ThemeProvider, withTheme } from "styled-components";
-
+import MobileSliderButton from "./MobileSliderButton";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
 
 class WorkSliderMobile extends React.Component {
@@ -54,7 +54,28 @@ class WorkSliderMobile extends React.Component {
               activeIndex={activeIndex}
               sliderLenght={slides.length}
             />
-            <Carousel {...sliderSettings} onChange={this.handleSlideChanges}>
+            <Carousel
+              {...sliderSettings}
+              onChange={this.handleSlideChanges}
+              renderArrowPrev={(onClickHandler, hasFollowingSLide, label) => (
+                <MobileSliderButton
+                  onClickHandler={onClickHandler}
+                  hasFollowingSLide={hasFollowingSLide}
+                  label={label}
+                  isPrev={true}
+                  colors={this.state.theme}
+                />
+              )}
+              renderArrowNext={(onClickHandler, hasFollowingSLide, label) => (
+                <MobileSliderButton
+                  onClickHandler={onClickHandler}
+                  hasFollowingSLide={hasFollowingSLide}
+                  label={label}
+                  isPrev={false}
+                  colors={this.state.theme}
+                />
+              )}
+            >
               {slides &&
                 slides.map((slide, index) => (
                   <Project
