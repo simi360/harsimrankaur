@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
-import Title from "../../text/Title";
 
 const ProjectSection = styled.section`
   width: 100%;
@@ -10,20 +9,20 @@ const ProjectSection = styled.section`
   /* Depending the text length, the last row will be bigger to allow the text to wrap */
   grid-template-rows: ${(p) =>
     p.title.length <= 10
-      ? "repeat(4, minmax(0, 4.5rem))"
-      : "repeat(3, minmax(0, 4.5rem)) minmax(0, 6rem)"};
+      ? "repeat(8, minmax(1fr, 2.25rem))"
+      : "repeat(6, minmax(1fr, 2.25rem)) repeat(2, minmax(1fr, 3rem))"};
   grid-gap: 0 1.875rem;
   font-family: ${(p) => p.theme.font.poppins};
 `;
 
 const ProjectImg = styled(ImgWithOverflowingBg)`
   grid-column: 1 / span 3;
+  grid-row: 1 / span 7;
 `;
 
 const ProjectIndex = styled.p`
   grid-column: 4;
-  grid-row: 2;
-  align-self: end;
+  grid-row: 5;
   padding-left: 0.875rem;
   position: relative;
   font-size: 1.5rem;
@@ -46,11 +45,23 @@ const ProjectIndex = styled.p`
   }
 `;
 
-const ProjectTitle = styled(Title)`
+const ProjectTitle = styled.div`
   grid-column: 2 / span 3;
-  grid-row: 4;
-  font-size: ${(p) => (p.title.length >= 4 ? "2.4rem" : "4rem")};
+  grid-row: 7 / span 2;
+  display: flex;
+  align-items: center;
   z-index: 2;
+
+  h2 {
+    width: 100%;
+    font-size: ${(p) => (p.title.length >= 4 ? "2.4rem" : "4rem")};
+  }
+
+  @media (min-width: ${(p) => `${p.theme.bp.phones}px`}) {
+    h2 {
+      font-size: ${(p) => (p.title.length >= 4 ? "4.5rem" : "6rem")};
+    }
+  }
 `;
 
 export { ProjectSection, ProjectImg, ProjectIndex, ProjectTitle };

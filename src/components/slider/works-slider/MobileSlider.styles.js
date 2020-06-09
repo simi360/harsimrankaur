@@ -9,18 +9,23 @@ const SliderStyle = styled.section`
   justify-content: center;
   position: relative;
 
-  &::before {
-    content: "";
-    width: 50%;
-    height: 48%;
-    position: absolute;
-    top: 0%;
-    left: 0;
-    background: ${(p) => p.theme.color.primaryLight};
-    transform: translate(100%, 77%);
-    transition: all 0.25s ease-in-out;
-    z-index: -1;
+  .slider-container {
+    position: relative;
+
+    &::before {
+      content: "";
+      width: 50%;
+      height: 70%;
+      position: absolute;
+      top: 0%;
+      left: 0;
+      background: ${(p) => p.theme.color.primaryLight};
+      transform: translate(100%, 43%);
+      transition: all 0.25s ease-in-out;
+      z-index: -1;
+    }
   }
+
   /* to override the slider imported styles */
   .slider-container,
   .carousel {

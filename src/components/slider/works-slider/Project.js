@@ -1,5 +1,6 @@
 import React from "react";
 import StretchedLink from "../../links/stretched-link";
+import Title from "../../text/Title";
 import {
   ProjectSection,
   ProjectImg,
@@ -10,7 +11,9 @@ import {
 const Project = (props) => {
   return (
     <ProjectSection title={props.slide.name}>
-      <ProjectTitle title={props.slide.name} />
+      <ProjectTitle title={props.slide.name}>
+        <Title title={props.slide.name} />
+      </ProjectTitle>
       <ProjectImg
         imgSrc={`../public/${props.slide.photos.thumb.default}`}
         imgAlt=""

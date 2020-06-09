@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ImgContainer = styled.div`
   width: 100%;
-  padding-top: 108%;
+  padding-top: 100%;
   position: relative;
   overflow: hidden;
 
