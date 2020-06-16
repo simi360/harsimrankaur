@@ -10,7 +10,10 @@ import {
 
 const Project = (props) => {
   return (
-    <ProjectSection title={props.slide.name}>
+    <ProjectSection
+      title={props.slide.name}
+      className={props.className + " project"}
+    >
       <ProjectTitle title={props.slide.name}>
         <Title title={props.slide.name} />
       </ProjectTitle>

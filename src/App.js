@@ -28,7 +28,7 @@ const App = () => {
     <Router>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
-        <div>
+        <React.Fragment>
           <Nav />
           <Switch>
             <Route exact path="/" component={Home} />
@@ -36,7 +36,7 @@ const App = () => {
             <Route component={AsyncNoMatch} /> */}
             <Route exact path="/about" component={About} />
           </Switch>
-        </div>
+        </React.Fragment>
       </ThemeProvider>
     </Router>
   );

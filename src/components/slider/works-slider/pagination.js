@@ -25,6 +25,13 @@ const PaginationTag = styled.p`
       background: #fff;
     }
   }
+
+  @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
+    width: 9.875rem;
+    height: 9.875rem;
+    padding: 1.5rem;
+    font-size: 2.25rem;
+  }
 `;
 
 const Pagination = (props) => {

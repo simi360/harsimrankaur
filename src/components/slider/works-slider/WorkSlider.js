@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import Loader from "../../loader";
 import GetViewport from "../../../utils/getViewport";
 import WorkSliderMobile from "./MobileSlider";
+import DesktopSlider from "./DesktopSlider";
 import { ThemeContext } from "styled-components";
 
 const WorkSlider = () => {
@@ -35,7 +36,7 @@ const WorkSlider = () => {
   return width < themeContext.bp.tablets ? (
     <WorkSliderMobile slides={projects} />
   ) : (
-    <div>Desktop</div>
+    <DesktopSlider slides={projects} width={width} />
   );
 };
 
