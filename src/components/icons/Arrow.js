@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 //The component needs to be written inline
 //without the use of SVGR loader to keep the dynamic changes of colors
@@ -19,4 +20,9 @@ const Arrow = (props) => {
     </svg>
   );
 };
+
+Arrow.prototype = {
+  colors: PropTypes.object.isRequired,
+};
+
 export default Arrow;

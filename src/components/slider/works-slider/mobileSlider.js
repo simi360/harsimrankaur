@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
@@ -91,5 +92,9 @@ class WorkSliderMobile extends React.Component {
     );
   }
 }
+
+WorkSliderMobile.propTypes = {
+  slides: PropTypes.array.isRequired,
+};
 
 export default withTheme(WorkSliderMobile);

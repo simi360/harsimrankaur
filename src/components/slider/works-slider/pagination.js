@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const PaginationTag = styled.p`
@@ -48,6 +49,11 @@ const Pagination = (props) => {
       {props.sliderLenght >= 10 ? props.sliderLenght : `0${props.sliderLenght}`}
     </PaginationTag>
   );
+};
+
+Pagination.propTypes = {
+  activeIndex: PropTypes.number.isRequired,
+  sliderLenght: PropTypes.number.isRequired,
 };
 
 export default Pagination;

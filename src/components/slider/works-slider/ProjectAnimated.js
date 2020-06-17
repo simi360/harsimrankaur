@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import PropTypes from "prop-types";
 import StretchedLink from "../../links/stretched-link";
 import Title from "../../text/Title";
 import {
@@ -138,6 +139,13 @@ const Project = (props) => {
       />
     </ProjectSection>
   );
+};
+
+Project.propTypes = {
+  slide: PropTypes.object.isRequired,
+  slideIndex: PropTypes.number.isRequired,
+  isActive: PropTypes.bool.isRequired,
+  width: PropTypes.number.isRequired,
 };
 
 export default Project;

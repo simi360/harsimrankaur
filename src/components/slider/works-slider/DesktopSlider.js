@@ -1,6 +1,6 @@
 import React from "react";
 import { ThemeProvider } from "styled-components";
-// import Project from "./Project";
+import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import {
@@ -37,7 +37,6 @@ class DesktopSlider extends React.Component {
         currentSlide: projectSlides[0],
       },
       () => {
-        // gsap.defaults({ overwrite: "auto", duration: 0.3 });
         gsap.set(".slider-container", {
           height: projectSlides.length * 100 + "vh",
         });
@@ -62,7 +61,7 @@ class DesktopSlider extends React.Component {
         // when a new section activates (from either direction), set the section accordingly.
         onUpdate: (self) => self.isActive && this.updateSlider(slide, i),
         id: `slide${i}`,
-        //refresh need to start scrollTrigger on Firefox
+        //refresh needed to start scrollTrigger on Firefox
       }).refresh();
     });
   }
@@ -125,5 +124,10 @@ class DesktopSlider extends React.Component {
     );
   }
 }
+
+DesktopSlider.propTypes = {
+  slides: PropTypes.array.isRequired,
+  width: PropTypes.number.isRequired,
+};
 
 export default DesktopSlider;
