@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from "react";
 import Loader from "../../loader";
-import GetViewport from "../../../utils/getViewport";
-import WorkSliderMobile from "./MobileSlider";
-import DesktopSlider from "./DesktopSlider";
+import WorkSliderMobile from "./mobile-slider/MobileSlider";
+import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";
+import { useViewPortWidth } from "../../../utils/getViewport";
 
 const WorkSlider = () => {
   const [isLoading, setLoadingStatus] = useState(true);
   const [projects, setProjects] = useState([]);
-  const { width } = GetViewport();
+
   const themeContext = useContext(ThemeContext);
+  const width = useViewPortWidth();
 
   async function getProjects() {
     setTimeout(() => {
@@ -33,10 +34,11 @@ const WorkSlider = () => {
     return <Loader />;
   }
 
+  //the components are shown depending the screen size
   return width < themeContext.bp.tablets ? (
     <WorkSliderMobile slides={projects} />
   ) : (
-    <DesktopSlider slides={projects} width={width} />
+    <DesktopSlider slides={projects} />
   );
 };
 

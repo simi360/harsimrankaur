@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Project from "./Project";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
+import MobileSliderButton from "../mobile-slider-button/MobileSliderButton";
+import Project from "../project/project-mobile/ProjectMobile";
 import { ThemeProvider, withTheme } from "styled-components";
-import MobileSliderButton from "./MobileSliderButton";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
 
 class WorkSliderMobile extends React.Component {

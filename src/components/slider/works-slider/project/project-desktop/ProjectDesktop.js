@@ -1,20 +1,22 @@
 import React, { useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import StretchedLink from "../../links/stretched-link";
-import Title from "../../text/Title";
+import StretchedLink from "../../../../links/Stretched-link";
+import Title from "../../../../text/Title";
 import {
   ProjectSection,
   ProjectImg,
   ProjectIndex,
   ProjectTitle,
-} from "./Project.styles";
+} from "./ProjectDesktop.styles";
 
 import { gsap } from "gsap";
 //plugin only downlable on gsap website when having a registered account
-import CustomEase from "../../../assets/libraries/CustomEase";
+import CustomEase from "../../../../../assets/libraries/CustomEase";
 gsap.registerPlugin(CustomEase);
 
 const Project = (props) => {
+  // refs are needed to be able to use correctly gsap with react
+  // for a matter of perf and not having thousands of timelines
   const masterTl = useRef();
   const leaveTl = useRef();
   const enterTl = useRef();
@@ -24,6 +26,8 @@ const Project = (props) => {
   const imgRef = useRef();
   const indexRef = useRef();
 
+  //making the timelines on project first render using a master timeline
+  //making it easier to controll the entering and leaving animations
   useEffect(() => {
     masterTl.current = gsap.timeline({ paused: true });
 
@@ -34,9 +38,14 @@ const Project = (props) => {
     masterTl.current.add(leaveSceneAnimation(), "leaveScene");
     masterTl.current.add(enterSceneAnimation(), "enterScene");
 
-    return () => masterTl.current.kill();
+    return () => {
+      masterTl.current.kill();
+      leaveTl.current.kill();
+      enterTl.current.kill();
+    };
   }, []);
 
+  //project animations executed depending if it's entering or leaving
   useEffect(() => {
     props.isActive
       ? masterTl.current.seek("enterScene").play()
@@ -49,7 +58,7 @@ const Project = (props) => {
     enterTl.current
       .fromTo(
         imgRef.current,
-        { x: -1000 },
+        { x: -3000 },
         { duration: 0.5, ease: "easeOut", x: 0 },
         1
       )
@@ -104,7 +113,7 @@ const Project = (props) => {
       .fromTo(
         imgRef.current,
         { x: 0 },
-        { duration: 0.4, ease: "easeIn", x: -1000 },
+        { duration: 0.4, ease: "easeIn", x: -3000 },
         0.5
       );
 
@@ -145,7 +154,6 @@ Project.propTypes = {
   slide: PropTypes.object.isRequired,
   slideIndex: PropTypes.number.isRequired,
   isActive: PropTypes.bool.isRequired,
-  width: PropTypes.number.isRequired,
 };
 
 export default Project;

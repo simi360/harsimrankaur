@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Pagination from "./Pagination";
+import Pagination from "../pagination/Pagination";
 
 const SliderStyle = styled.section`
   width: 100vw;

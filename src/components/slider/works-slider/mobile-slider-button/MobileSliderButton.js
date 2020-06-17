@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Arrow from "../../icons/Arrow";
+import Arrow from "../../../icons/Arrow";
 
 const MobileSliderButton = ({
   onClickHandler,
@@ -26,7 +26,7 @@ MobileSliderButton.propTypes = {
   hasFollowingSLide: PropTypes.bool.isRequired,
   label: PropTypes.string.isRequired,
   isPrev: PropTypes.bool.isRequired,
-  colors: PropTypes.bool.isRequired,
+  colors: PropTypes.object.isRequired,
 };
 
 export default MobileSliderButton;

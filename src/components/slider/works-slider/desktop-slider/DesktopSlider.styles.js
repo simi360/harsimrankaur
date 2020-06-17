@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Project from "./ProjectAnimated";
-import Pagination from "./Pagination";
+import Project from "../project/project-desktop/ProjectDesktop";
+import Pagination from "../pagination/Pagination";
 
 const SliderContainer = styled.div`
   width: 100vw;

@@ -37,6 +37,7 @@ class DesktopSlider extends React.Component {
         currentSlide: projectSlides[0],
       },
       () => {
+        //sets the slider depending the number of slides
         gsap.set(".slider-container", {
           height: projectSlides.length * 100 + "vh",
         });
@@ -73,7 +74,7 @@ class DesktopSlider extends React.Component {
       this.updateTheme(currentSlide, index, newSection);
     }
   }
-
+  //change theme color depending the slide colors
   updateTheme(slide, index, newSection) {
     let newTheme = {
       color: {
@@ -88,6 +89,8 @@ class DesktopSlider extends React.Component {
         activeIndex: index,
       },
       () => {
+        //a timeout is needed to match the color change timing
+        //with the triggering of the entering animation
         setTimeout(() => {
           this.setState({
             theme: newTheme,
@@ -99,7 +102,7 @@ class DesktopSlider extends React.Component {
 
   render() {
     const { theme, activeIndex } = this.state;
-    const { slides, width } = this.props;
+    const { slides } = this.props;
     return (
       <ThemeProvider theme={theme}>
         <SliderContainer ref={this.sliderRef}>
@@ -115,7 +118,6 @@ class DesktopSlider extends React.Component {
                   slideIndex={index}
                   key={"slide" + index}
                   isActive={activeIndex == index ? true : false}
-                  width={width}
                 />
               ))}
           </div>
@@ -127,7 +129,6 @@ class DesktopSlider extends React.Component {
 
 DesktopSlider.propTypes = {
   slides: PropTypes.array.isRequired,
-  width: PropTypes.number.isRequired,
 };
 
 export default DesktopSlider;

@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import LinkTag from "./stretched-link.styles";
+import LinkTag from "./Stretched-link.styles";
 
 const StretchedLink = (props) => (
   <LinkTag to={`/${props.id}`} aria-label={props.ariaLabel} />

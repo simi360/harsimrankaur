@@ -1,6 +1,8 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, createContext, useContext } from "react";
 
-const GetViewport = () => {
+const ViewPortWidth = createContext(null);
+
+const ViewportWidthProvider = ({ children }) => {
   const [width, setWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -10,7 +12,10 @@ const GetViewport = () => {
   }, []);
 
   // Return the width so we can use it in our components
-  return { width };
+  return (
+    <ViewPortWidth.Provider value={width}>{children}</ViewPortWidth.Provider>
+  );
 };
 
-export default GetViewport;
+export default ViewportWidthProvider;
+export const useViewPortWidth = () => useContext(ViewPortWidth);
