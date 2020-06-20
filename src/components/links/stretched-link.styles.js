@@ -11,7 +11,7 @@ const LinkTag = styled(Link)`
     right: 0;
     bottom: 0;
     left: 0;
-    pointer-events: auto;
+    pointer-events: "auto";
     z-index: 1;
   }
 `;

@@ -84,7 +84,7 @@ const ProjectTitle = styled.div`
   display: flex;
   align-items: center;
   overflow: hidden;
-  z-index: 2;
+  z-index: 1;
 
   h2 {
     width: auto;

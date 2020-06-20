@@ -25,6 +25,7 @@ const Project = (props) => {
   const titleRef = useRef();
   const imgRef = useRef();
   const indexRef = useRef();
+  const linkRef = useRef();
 
   //making the timelines on project first render using a master timeline
   //making it easier to controll the entering and leaving animations
@@ -56,6 +57,7 @@ const Project = (props) => {
     enterTl.current = gsap.timeline();
 
     enterTl.current
+      .to(projectRef.current, { zIndex: 100 })
       .fromTo(
         imgRef.current,
         { x: -3000 },
@@ -115,14 +117,14 @@ const Project = (props) => {
         { x: 0 },
         { duration: 0.4, ease: "easeIn", x: -3000 },
         0.5
-      );
+      )
+      .to(projectRef.current, { zIndex: -100 });
 
     return leaveTl.current;
   }
 
   return (
     <ProjectSection
-      title={props.slide.name}
       className={props.className + " project"}
       ref={projectRef}
       id={props.slide.id}
@@ -146,6 +148,8 @@ const Project = (props) => {
         id={props.slide.id}
         ariaLabel={`See ${props.slide.name} details`}
         srOnly={true}
+        ref={linkRef}
+        isActive={props.isActive}
       />
     </ProjectSection>
   );
