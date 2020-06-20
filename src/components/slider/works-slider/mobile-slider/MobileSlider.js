@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
-import MobileSliderButton from "../mobile-slider-button/MobileSliderButton";
+import SliderButton from "../slider-button/SliderButton";
 import Project from "../project/project-mobile/ProjectMobile";
 import { ThemeProvider, withTheme } from "styled-components";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
@@ -58,19 +58,19 @@ class WorkSliderMobile extends React.Component {
             <Carousel
               {...sliderSettings}
               onChange={this.handleSlideChanges}
-              renderArrowPrev={(onClickHandler, hasFollowingSLide, label) => (
-                <MobileSliderButton
+              renderArrowPrev={(onClickHandler, hasFollowingSlide, label) => (
+                <SliderButton
                   onClickHandler={onClickHandler}
-                  hasFollowingSLide={hasFollowingSLide}
+                  hasFollowingSlide={hasFollowingSlide}
                   label={label}
                   isPrev={true}
                   colors={this.state.theme}
                 />
               )}
-              renderArrowNext={(onClickHandler, hasFollowingSLide, label) => (
-                <MobileSliderButton
+              renderArrowNext={(onClickHandler, hasFollowingSlide, label) => (
+                <SliderButton
                   onClickHandler={onClickHandler}
-                  hasFollowingSLide={hasFollowingSLide}
+                  hasFollowingSlide={hasFollowingSlide}
                   label={label}
                   isPrev={false}
                   colors={this.state.theme}

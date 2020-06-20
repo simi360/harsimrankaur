@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const NavTag = styled.nav`
   width: 100%;
-  max-width: 1920px;
+  max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
   padding: 0.875rem;
   position: fixed;

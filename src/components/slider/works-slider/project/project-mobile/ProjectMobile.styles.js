@@ -3,7 +3,7 @@ import ImgWithOverflowingBg from "../../../../img/ImgWithOverflowinBg";
 
 const ProjectSection = styled.section`
   width: 100%;
-  max-width: 1920px;
+  max-width: ${(p) => `${p.theme.container}px`};
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));

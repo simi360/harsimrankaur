@@ -125,6 +125,7 @@ const Project = (props) => {
       title={props.slide.name}
       className={props.className + " project"}
       ref={projectRef}
+      id={props.slide.id}
     >
       <ProjectTitle title={props.slide.name} ref={titleRef}>
         <Title title={props.slide.name} />

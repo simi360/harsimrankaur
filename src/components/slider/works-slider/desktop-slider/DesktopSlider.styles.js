@@ -5,37 +5,79 @@ import Pagination from "../pagination/Pagination";
 const SliderContainer = styled.div`
   width: 100vw;
   position: relative;
-  overflow: scroll;
+  overflow: hidden;
 
   &::before {
     content: "";
-    width: calc(100vw / 12 * 5 + 0.5rem);
-    height: calc(76% + 1.875rem);
+    width: 100%;
+    max-width: 49rem;
+    height: 69.5vh;
     position: fixed;
-    top: calc(7.5% + 1.875rem);
-    left: calc((100% / 12 * 4) + 0.6rem);
+    top: 20.4vh;
+    left: 33.6vw;
     display: block;
     background: ${(p) => p.theme.color.primaryLight};
-    transition: all 0.25s ease-in-out;
+    transition: background-color 0.25s ease-in-out;
     z-index: -1;
+  }
+
+  @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
+    &::before {
+      width: calc(100% / 12 * 5);
+      height: 79.3vh;
+      top: 10.3vh;
+    }
+  }
+
+  @media (min-width: ${(p) => `${p.theme.container}px`}) {
+    &::before {
+      left: ${(p) => `calc(50vw - ${p.theme.container}px/6)`};
+    }
   }
 `;
 
 const SliderProject = styled(Project)`
   width: 100%;
   height: 100%;
+  max-height: 1080px;
   position: fixed;
-  top: 0;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
 `;
 
 const WorkSliderPagination = styled(Pagination)`
   position: fixed;
-  top: calc(20% + 0.5rem);
-  left: calc(69% + 1.875rem);
+  top: 13.5vh;
+  right: 5.5vw;
   z-index: 10;
-  transition: all 0.25s ease-in-out;
+  transition: background-color 0.25s ease-in-out;
+
+  @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
+    top: 17.5vh;
+    right: 18.5vw;
+  }
+
+  @media (min-width: ${(p) => `${p.theme.container}px`}) {
+    right: ${(p) =>
+      `calc(50vw - ${p.theme.container}px/4 - ${p.theme.container}px/28)`};
+  }
 `;
 
-export { SliderContainer, SliderProject, WorkSliderPagination };
+const SliderButtons = styled.div`
+  position: fixed;
+  bottom: 10vh;
+  left: 14vw;
+
+  @media (min-width: ${(p) => `${p.theme.bp.largeDesktops}px`}) {
+    display: none;
+  }
+
+  @media (orientation: portrait) and (min-width: ${(p) =>
+      `${p.theme.bp.desktops}px`}) {
+    bottom: 20vh;
+    left: 8vw;
+  }
+`;
+
+export { SliderContainer, SliderProject, WorkSliderPagination, SliderButtons };

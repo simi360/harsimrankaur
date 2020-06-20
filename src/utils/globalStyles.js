@@ -55,4 +55,10 @@ export const GlobalStyle = createGlobalStyle`
     ol, ul {
 	list-style: none;
 }
+
+button {
+    border: none;
+    background: none;
+    color: ${(p) => p.theme.color.primary};
+}
 `;

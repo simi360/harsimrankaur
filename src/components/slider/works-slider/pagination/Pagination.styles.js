@@ -26,9 +26,15 @@ const PaginationTag = styled.p`
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
+    width: 8.75rem;
+    height: 8.75rem;
+    padding: 1.5rem;
+    font-size: 1.875rem;
+  }
+
+  @media (min-width: ${(p) => `${p.theme.bp.largeDesktops}px`}) {
     width: 9.875rem;
     height: 9.875rem;
-    padding: 1.5rem;
     font-size: 2.25rem;
   }
 `;

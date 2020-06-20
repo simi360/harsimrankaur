@@ -3,10 +3,12 @@ import { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SliderButton from "../slider-button/SliderButton";
 import {
   SliderContainer,
   SliderProject,
   WorkSliderPagination,
+  SliderButtons,
 } from "./DesktopSlider.styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -100,12 +102,36 @@ class DesktopSlider extends React.Component {
     );
   }
 
+  //will scroll to corresponding slider and active scrollTrigger functions
+  onClickHandler(isPrev) {
+    if (this.hasFollowingSlide(isPrev)) {
+      window.scrollTo({
+        top: isPrev
+          ? (this.state.activeIndex - 1) * window.innerHeight
+          : (this.state.activeIndex + 1) * window.innerHeight,
+      });
+    }
+  }
+
+  hasFollowingSlide(isPrev) {
+    if (isPrev && this.state.activeIndex - 1 >= 0) {
+      return true;
+    } else if (
+      !isPrev &&
+      this.state.activeIndex + 1 < this.props.slides.length
+    ) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   render() {
     const { theme, activeIndex } = this.state;
     const { slides } = this.props;
     return (
       <ThemeProvider theme={theme}>
-        <SliderContainer ref={this.sliderRef}>
+        <SliderContainer>
           <WorkSliderPagination
             activeIndex={activeIndex}
             sliderLenght={slides.length}
@@ -121,6 +147,22 @@ class DesktopSlider extends React.Component {
                 />
               ))}
           </div>
+          <SliderButtons>
+            <SliderButton
+              onClickHandler={() => this.onClickHandler(true)}
+              hasFollowingSlide={() => this.hasFollowingSlide(true)}
+              label="Prevous work"
+              isPrev={true}
+              colors={this.state.theme}
+            />
+            <SliderButton
+              onClickHandler={() => this.onClickHandler(false)}
+              hasFollowingSlide={() => this.hasFollowingSlide(false)}
+              label="Next work"
+              isPrev={false}
+              colors={this.state.theme}
+            />
+          </SliderButtons>
         </SliderContainer>
       </ThemeProvider>
     );

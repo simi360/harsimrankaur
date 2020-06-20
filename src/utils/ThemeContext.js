@@ -11,8 +11,9 @@ export const Theme = {
   },
   bp: {
     phones: 568,
-    tablets: 768,
-    desktops: 1024,
+    tablets: 767,
+    desktops: 1023,
     largeDesktops: 1200,
   },
+  container: 1920,
 };

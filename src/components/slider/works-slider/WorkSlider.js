@@ -23,7 +23,7 @@ const WorkSlider = () => {
 
     const resArr = res.default;
 
-    setProjects(resArr || []);
+    await setProjects(resArr || []);
   }
 
   useEffect(() => {

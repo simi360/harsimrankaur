@@ -70,15 +70,6 @@ const SliderStyle = styled.section`
         display: none;
       }
 
-      svg {
-        width: 0.75rem;
-      }
-
-      &.control-disabled {
-        opacity: 0.4;
-        display: inline-block;
-      }
-
       :hover {
         background: none;
       }
@@ -87,10 +78,6 @@ const SliderStyle = styled.section`
     &.control-prev {
       grid-column: 1;
       justify-self: end;
-
-      svg {
-        transform: scaleX(-1);
-      }
     }
 
     &.control-next {
