@@ -18,6 +18,9 @@ class DesktopSlider extends React.Component {
   constructor(props) {
     super(props);
 
+    this.timeOut = 0;
+    this.isUnMounted = false;
+
     this.state = {
       slides: null,
       currentSlide: null,
@@ -49,6 +52,11 @@ class DesktopSlider extends React.Component {
   }
 
   componentWillUnmount() {
+    //used to fix the memory leak when clicking on link before the end of the animation
+    clearTimeout(this.timeOut);
+    this.timeOut = 0;
+    this.isUnMounted = true;
+
     //remove all the scrolltrigger events
     this.state.slides.forEach((slide, index) => {
       ScrollTrigger.getById(`slide${index}`).kill();
@@ -85,21 +93,23 @@ class DesktopSlider extends React.Component {
       },
     };
 
-    this.setState(
-      {
-        currentSlide: newSection,
-        activeIndex: index,
-      },
-      () => {
-        //a timeout is needed to match the color change timing
-        //with the triggering of the entering animation
-        setTimeout(() => {
-          this.setState({
-            theme: newTheme,
-          });
-        }, 1000);
-      }
-    );
+    if (!this.isUnMounted) {
+      this.setState(
+        {
+          currentSlide: newSection,
+          activeIndex: index,
+        },
+        () => {
+          //a timeout is needed to match the color change timing
+          //with the triggering of the entering animation
+          this.timeOut = setTimeout(() => {
+            this.setState({
+              theme: newTheme,
+            });
+          }, 1000);
+        }
+      );
+    }
   }
 
   //will scroll to corresponding slider and active scrollTrigger functions
