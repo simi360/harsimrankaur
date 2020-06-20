@@ -68,6 +68,7 @@ const SliderButtons = styled.div`
   position: fixed;
   bottom: 10vh;
   left: 14vw;
+  z-index: 100;
 
   @media (min-width: ${(p) => `${p.theme.bp.largeDesktops}px`}) {
     display: none;

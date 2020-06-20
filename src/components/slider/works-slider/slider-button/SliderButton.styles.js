@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
 const SliderButtonStyles = styled.button`
-  /* doubme && needed to override react-responsive-carousel styles */
+  :focus {
+    outline: none;
+  }
+
+  /* double & needed to override react-responsive-carousel styles */
   &&.control-prev,
   &&.control-next {
     svg {
