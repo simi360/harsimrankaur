@@ -32,10 +32,10 @@ const App = () => {
           <ViewportWidthProvider>
             <Nav />
             <Switch>
-              <Route exact path="/" component={Home} />
+              <Route exact path="/portfolio2020/" component={Home} />
               {/* <Route exact path="/dynamic" component={AsyncDynamicPAge} />
             <Route component={AsyncNoMatch} /> */}
-              <Route exact path="/about" component={About} />
+              <Route exact path="/portfolio2020/about" component={About} />
             </Switch>
           </ViewportWidthProvider>
         </React.Fragment>

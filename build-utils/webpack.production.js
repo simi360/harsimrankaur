@@ -5,7 +5,7 @@ module.exports = () => ({
   output: {
     filename: "[name].[hash].js",
     chunkFilename: "[name].bundle.js",
-    publicPath: "dist/",
+    publicPath: "",
   },
   module: {
     rules: [
