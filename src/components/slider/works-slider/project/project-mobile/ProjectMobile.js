@@ -18,10 +18,7 @@ const Project = (props) => {
       <ProjectTitle title={props.slide.name}>
         <Title title={props.slide.name} />
       </ProjectTitle>
-      <ProjectImg
-        imgSrc={`../public/${props.slide.photos.thumb.default}`}
-        imgAlt=""
-      />
+      <ProjectImg imgSrc={`${props.slide.photos.thumb.default}`} imgAlt="" />
       <ProjectIndex>
         {props.slideIndex + 1 >= 10
           ? props.slideIndex + 1

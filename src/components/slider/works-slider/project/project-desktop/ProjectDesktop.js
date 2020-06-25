@@ -133,7 +133,11 @@ const Project = (props) => {
         <Title title={props.slide.name} />
       </ProjectTitle>
       <ProjectImg
-        imgSrc={`../public/${props.slide.photos.thumb.default}`}
+        imgSrc={
+          process.env.NODE_ENV === "development"
+            ? `src/assets/${props.slide.photos.thumb.default}`
+            : ` ${props.slide.photos.thumb.default}`
+        }
         imgAlt=""
         ref={imgRef}
       />

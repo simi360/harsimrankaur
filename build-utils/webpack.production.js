@@ -3,9 +3,8 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 module.exports = () => ({
   devtool: "source-map",
   output: {
-    filename: "[name].[hash].js",
+    filename: "[name].js",
     chunkFilename: "[name].bundle.js",
-    publicPath: "",
   },
   module: {
     rules: [
@@ -19,6 +18,18 @@ module.exports = () => ({
               modules: false,
               localsConvention: "camelCase",
               sourceMap: true,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.png/,
+        use: [
+          {
+            //changes images in base64 format until a certain limit and renames it with an hash
+            loader: "file-loader",
+            options: {
+              name: "img/[name].[ext]",
             },
           },
         ],

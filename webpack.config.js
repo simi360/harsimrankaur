@@ -25,18 +25,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
             ],
           },
           {
-            test: /\.png/,
-            use: [
-              {
-                //changes images in base64 format until a certain limit and renames it with an hash
-                loader: "url-loader",
-                options: {
-                  limit: 500,
-                },
-              },
-            ],
-          },
-          {
             test: /\.svg$/,
             use: ["@svgr/webpack"],
           },

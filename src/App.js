@@ -10,6 +10,8 @@ import Nav from "./components/nav/Nav";
 import { Theme } from "./utils/ThemeContext";
 import About from "./routes/About";
 
+require.context("./assets/img", true);
+
 // const AsyncDynamicPAge = importedComponent(
 //   () => import(/* webpackChunkName:'DynamicPage' */ "./routes/dynamicPage"),
 //   {

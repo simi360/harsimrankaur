@@ -24,13 +24,13 @@
     ],
     "photos": {
       "thumb": {
-        "default": "img/cfl-thumb.png",
-        "retina": "img/cfl-thumb2x.png"
+        "default": "./img/cfl-thumb.png",
+        "retina": "./img/cfl-thumb2x.png"
       },
       "project": [
-        "img/cfl-home.png",
-        "img/cfl-home-mobile.png",
-        "img/cfl-home-tablet.png"
+        "./img/cfl-home.png",
+        "./img/cfl-home-mobile.png",
+        "./img/cfl-home-tablet.png"
       ]
     },
     "colors": {
@@ -58,13 +58,13 @@
     "challenges": ["Learning Drupal and Twig ecosystem"],
     "photos": {
       "thumb": {
-        "default": "img/aea-thumb.png",
-        "retina": "img/aea-thumb2x.png"
+        "default": "./img/aea-thumb.png",
+        "retina": "./img/aea-thumb2x.png"
       },
       "project": [
-        "img/aea-home.png",
-        "img/aea-home-mobile.png",
-        "img/aea-home-tablet.png"
+        "./img/aea-home.png",
+        "./img/aea-home-mobile.png",
+        "./img/aea-home-tablet.png"
       ]
     },
     "colors": {
@@ -94,13 +94,13 @@
     ],
     "photos": {
       "thumb": {
-        "default": "img/aeo-thumb.png",
-        "retina": "img/aeo-thumb2x.png"
+        "default": "./img/aeo-thumb.png",
+        "retina": "./img/aeo-thumb2x.png"
       },
       "project": [
-        "img/aeo-home.png",
-        "img/aeo-home-mobile.png",
-        "img/aeo-home-tablet.png"
+        "./img/aeo-home.png",
+        "./img/aeo-home-mobile.png",
+        "./img/aeo-home-tablet.png"
       ]
     },
     "colors": {
@@ -116,17 +116,17 @@
     "client": "Raiffeisen Luxembourg",
     "photos": {
       "thumb": {
-        "default": "img/cfl-thumb.png",
-        "retina": "img/cfl-thumb2x.png"
+        "default": "./img/cfl-thumb.png",
+        "retina": "./img/cfl-thumb2x.png"
       },
       "slider": [
         {
           "type": "video",
-          "url": "img/cfl-home.mp4"
+          "url": "./img/cfl-home.mp4"
         },
         {
           "type": "image",
-          "url": "img/cfl_home.png"
+          "url": "./img/cfl_home.png"
         }
       ]
     },
@@ -149,17 +149,17 @@
     "client": "My Trainer And Me",
     "photos": {
       "thumb": {
-        "default": "img/cfl-thumb.png",
-        "retina": "img/cfl-thumb2x.png"
+        "default": "./img/cfl-thumb.png",
+        "retina": "./img/cfl-thumb2x.png"
       },
       "slider": [
         {
           "type": "video",
-          "url": "img/cfl-home.mp4"
+          "url": "./img/cfl-home.mp4"
         },
         {
           "type": "image",
-          "url": "img/cfl_home.png"
+          "url": "./img/cfl_home.png"
         }
       ]
     },
