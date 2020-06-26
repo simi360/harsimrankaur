@@ -4,6 +4,7 @@ import WorkSliderMobile from "./mobile-slider/MobileSlider";
 import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";
 import { useViewPortWidth } from "../../../utils/getViewport";
+import ProjectDatas from "../../../assets/projectsData.json";
 
 const WorkSlider = () => {
   const [isLoading, setLoadingStatus] = useState(true);
@@ -17,13 +18,7 @@ const WorkSlider = () => {
       setLoadingStatus(false);
     }, 0);
 
-    const res = await import(
-      /* webpackChunkName:'projects' */ "../../../assets/projectsData.json"
-    );
-
-    const resArr = res.default;
-
-    await setProjects(resArr || []);
+    await setProjects(ProjectDatas || []);
   }
 
   useEffect(() => {

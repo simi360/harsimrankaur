@@ -6,7 +6,7 @@ const TitleTag = styled.h2`
   font-family: ${(p) => p.theme.font.poppins};
   color: #fff;
   line-height: 1;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   background: ${(p) => p.theme.color.primary};
   transition: all 0.25s ease-in-out;
