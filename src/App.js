@@ -1,5 +1,5 @@
 import React from "react";
-import { Switch, BrowserRouter as Router, Route } from "react-router-dom";
+import { Switch, HashRouter as Router, Route } from "react-router-dom";
 import { ThemeProvider } from "styled-components";
 import ViewportWidthProvider from "./utils/getViewport";
 import Home from "./routes/Home";
