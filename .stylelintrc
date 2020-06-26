@@ -8,6 +8,9 @@
   ],
   "plugins": ["stylelint-prettier"],
   "rules": {
+    "selector-type-no-unknown": [true, {
+      "ignoreTypes": ["/^-styled-mixin/"]
+    }],
     "prettier/prettier": true
   }
 }

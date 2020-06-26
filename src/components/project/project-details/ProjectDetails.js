@@ -3,10 +3,17 @@ import { ThemeProvider } from "styled-components";
 import {
   Main,
   ProjectTitle,
-  ProjectCategoryTitle,
+  CatTitle,
+  CatDescription,
+  ListItem,
+  Link,
+  Arrow,
+  Img,
+  RightSection,
 } from "./ProjectDetails.styles";
 
 const ProjectDetails = ({ project }) => {
+  console.log(project);
   const theme = {
     color: {
       primary: project.colors.primary,
@@ -19,32 +26,43 @@ const ProjectDetails = ({ project }) => {
         <section>
           <ProjectTitle title={project.name} />
 
-          <ProjectCategoryTitle>Year</ProjectCategoryTitle>
-          <p>{project.year}</p>
+          <CatTitle>Year :</CatTitle>
+          <CatDescription>{project.year}</CatDescription>
 
-          <ProjectCategoryTitle>Client</ProjectCategoryTitle>
-          <p>{project.client}</p>
+          <CatTitle>Client :</CatTitle>
+          <CatDescription>{project.client}</CatDescription>
 
-          <ProjectCategoryTitle>Technologies</ProjectCategoryTitle>
-          <p>
+          <CatTitle>Technologies :</CatTitle>
+          <CatDescription>
             {project.technologies.map((tech, index) => {
               return index == project.technologies.length - 1
                 ? tech
                 : `${tech}, `;
             })}
-          </p>
+          </CatDescription>
 
-          <ProjectCategoryTitle>Challenges</ProjectCategoryTitle>
+          <CatTitle>Challenges :</CatTitle>
           <ul>
             {" "}
             {project.challenges.map((challenge, index) => (
-              <li key={`challenge-${index}`}>{challenge}</li>
+              <ListItem key={`challenge-${index}`}>{challenge}</ListItem>
             ))}
           </ul>
-          <a href={project.url} target="_blank" rel="noreferrer">
-            {`Visit ${project.name}'s website`}
-          </a>
+          <Link href={project.url} target="_blank" rel="noreferrer">
+            {`Visit ${project.name}'s website`}{" "}
+            <Arrow color={project.colors.primary} />
+          </Link>
         </section>
+        <RightSection>
+          <Img
+            imgSrc={
+              process.env.NODE_ENV === "development"
+                ? `src/assets/${project.photos.project[0]}`
+                : ` ${project.photos.project[0]}`
+            }
+            imgAlt=""
+          />
+        </RightSection>
       </Main>
     </ThemeProvider>
   );
