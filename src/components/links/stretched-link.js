@@ -5,7 +5,7 @@ import LinkTag from "./Stretched-link.styles";
 const StretchedLink = React.forwardRef((props, ref) => {
   return (
     <LinkTag
-      to={`/portfolio2020/${props.id}`}
+      to={`/project/${props.id}`}
       aria-label={props.ariaLabel}
       ref={ref}
     />

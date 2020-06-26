@@ -5,10 +5,10 @@ import { NavTag, Logo } from "./Nav.styles";
 function Nav() {
   return (
     <NavTag>
-      <Logo to="/portfolio2020" aria-label="home">
+      <Logo to="" aria-label="home">
         Sarah <span>Hick</span>
       </Logo>
-      <Link to="/portfolio2020/about">About</Link>
+      <Link to="/about">About</Link>
     </NavTag>
   );
 }
