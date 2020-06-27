@@ -20,17 +20,60 @@
       "support of legacy browsers",
       "accessibility",
       "crossbrowser printing styles",
-      "99% of the time, the only developper on the front-end part of the project"
+      "99% of the time, the only developper on the front-end part of the project",
+      "working with outsourced back-end developers"
     ],
     "photos": {
       "thumb": {
-        "default": "./img/cfl-thumb.png",
-        "retina": "./img/cfl-thumb2x.png"
+        "default": "./img/cfl/cfl-thumb.png",
+        "retina": "./img/cfl/cfl-thumb2x.png"
       },
       "project": [
-        "./img/cfl-home.png",
-        "./img/cfl-home-mobile.png",
-        "./img/cfl-home-tablet.png"
+        {
+          "src": "./img/cfl/cfl-home.jpg",
+          "alt": "CFL Travelers homepage",
+          "url": "https://www.cfl.lu"
+        },
+        {
+          "src": "./img/cfl/cfl-timetables.png",
+          "alt": "CFL Travelers timetable results",
+          "url": "https://www.cfl.lu/fr-fr/search/searchresult?SearchDepartureExtId=9217081&SearchDeparture=Luxembourg%2C+Gare+Centrale&SearchArrivalExtId=8200102&SearchArrival=Pfaffenthal-Kirchberg&departureBullets=departure&SearchDate=2020-06-27&SearchTime=17%3A00&SearchViaExtId=&SearchVia=&SearchProducts=0%2C1&SearchProducts=3%2C4&SearchProducts=2%2C5&SearchProducts=8&SearchProducts=9&SearchMaxConnections=4&SearchManageOriginWalk=true&SearchManageDestWalk=true&advanced-search-preferences=direct"
+        },
+        {
+          "src": "./img/cfl/cfl-network.png",
+          "alt": "CFL Travelers's network overview",
+          "url": "https://www.cfl.lu/fr-fr/network"
+        },
+        {
+          "src": "./img/cfl/cfl-transport.png",
+          "alt": "CFL Fret combined transport page",
+          "url": "https://www.cfl-mm.lu/fr-fr/solutions/ferroviaire/transport-combine"
+        },
+        {
+          "src": "./img/cfl/cfl-groupe.jpg",
+          "alt": "CFL Group's homepage",
+          "url": "https://groupe.cfl.lu/fr-fr"
+        },
+        {
+          "src": "./img/cfl/cfl-historique.jpg",
+          "alt": "CFL' history",
+          "url": "https://groupe.cfl.lu/fr-fr/history"
+        },
+        {
+          "src": "./img/cfl/cfl-projects.png",
+          "alt": "CFL Group's projects",
+          "url": "https://groupe.cfl.lu/fr-fr/project"
+        },
+        {
+          "src": "./img/cfl/cfl-numbers.png",
+          "alt": "CFL Group's key numbers",
+          "url": "https://groupe.cfl.lu/fr-fr/keynumbers"
+        },
+        {
+          "src": "./img/cfl/cfl-contact.png",
+          "alt": "CFL Group's contact page",
+          "url": "https://groupe.cfl.lu/fr-fr/contact"
+        }
       ]
     },
     "colors": {
@@ -58,13 +101,30 @@
     "challenges": ["Learning Drupal and Twig ecosystem"],
     "photos": {
       "thumb": {
-        "default": "./img/aea-thumb.png",
-        "retina": "./img/aea-thumb2x.png"
+        "default": "./img/aea/aea-thumb.png",
+        "retina": "./img/aea/aea-thumb2x.png"
       },
       "project": [
-        "./img/aea-home.png",
-        "./img/aea-home-mobile.png",
-        "./img/aea-home-tablet.png"
+        {
+          "src": "./img/aea/aea-home.png",
+          "alt": "A&A's homepage",
+          "url": "https://www.aea.lu"
+        },
+        {
+          "src": "./img/aea/aea-immo.png",
+          "alt": "A&a's real estate page",
+          "url": "https://www.aea.lu/fr/immobilier"
+        },
+        {
+          "src": "./img/aea/aea-goods.png",
+          "alt": "A&a's available goods",
+          "url": "https://www.aea.lu/fr/immobilier/recherche"
+        },
+        {
+          "src": "./img/aea/aea-property.png",
+          "alt": "A&a's property's details",
+          "url": "https://www.aea.lu/fr/immobilier/recherche/location/maison-bettembourg"
+        }
       ]
     },
     "colors": {
@@ -78,6 +138,7 @@
     "year": "2019",
     "client": "Allen & Overy Luxemburg",
     "url": "",
+    "message": "Unavailable to the public",
     "technologies": [
       "HTML",
       "SASS",
@@ -94,13 +155,26 @@
     ],
     "photos": {
       "thumb": {
-        "default": "./img/aeo-thumb.png",
-        "retina": "./img/aeo-thumb2x.png"
+        "default": "./img/aeo/aeo-thumb.png",
+        "retina": "./img/aeo/aeo-thumb2x.png"
       },
       "project": [
-        "./img/aeo-home.png",
-        "./img/aeo-home-mobile.png",
-        "./img/aeo-home-tablet.png"
+        {
+          "src": "./img/aeo/aeo-event.png",
+          "alt": "A&O Event desktop page"
+        },
+        {
+          "src": "./img/aeo/aeo-contact.png",
+          "alt": "A&O Contact details desktop page with a floor plan"
+        },
+        {
+          "src": "./img/aeo/aeo-contact-mobile.png",
+          "alt": "A&O Contact details mobile page with a floor plan"
+        },
+        {
+          "src": "./img/aeo/aeo-contact-list.png",
+          "alt": "A&O contact list on mobile"
+        }
       ]
     },
     "colors": {
@@ -108,25 +182,35 @@
       "primaryLight": "#EA9289"
     }
   },
-
   {
     "id": "raiffeisen",
     "name": "Raiffeisen",
     "year": "2019",
     "client": "Raiffeisen Luxembourg",
+    "url": "",
+    "message": "The website has not been released yet",
     "photos": {
       "thumb": {
-        "default": "./img/cfl-thumb.png",
-        "retina": "./img/cfl-thumb2x.png"
+        "default": "./img/raiffeisen/raiffeisen-thumb.png",
+        "retina": "./img/raiffeisen/raiffeisen-thumb2x.png"
       },
-      "slider": [
+      "project": [
         {
-          "type": "video",
-          "url": "./img/cfl-home.mp4"
+          "src": "./img/raiffeisen/raiffeisen-personal-loan.png",
+          "alt": "Raiffeisen personal loan simulator"
+        },
+
+        {
+          "src": "./img/raiffeisen/raiffeisen-simulator-step1.png",
+          "alt": "Raiffeisen housing loan simulator step 1"
         },
         {
-          "type": "image",
-          "url": "./img/cfl_home.png"
+          "src": "./img/raiffeisen/raiffeisen-simulator-step2.png",
+          "alt": "Raiffeisen housing loan simulator step 2"
+        },
+        {
+          "src": "./img/raiffeisen/raiffeisen-simulator-step3.png",
+          "alt": "Raiffeisen housing loan simulator step 3"
         }
       ]
     },
@@ -138,47 +222,8 @@
       "Learning LESS on the fly"
     ],
     "colors": {
-      "primary": "#006083",
-      "primaryLight": "#86C2D2"
-    }
-  },
-  {
-    "id": "mytrainer",
-    "name": "My Trainer And Me",
-    "year": "2019",
-    "client": "My Trainer And Me",
-    "photos": {
-      "thumb": {
-        "default": "./img/cfl-thumb.png",
-        "retina": "./img/cfl-thumb2x.png"
-      },
-      "slider": [
-        {
-          "type": "video",
-          "url": "./img/cfl-home.mp4"
-        },
-        {
-          "type": "image",
-          "url": "./img/cfl_home.png"
-        }
-      ]
-    },
-    "technologies": [
-      "HTML",
-      "SASS",
-      "JS",
-      "Webpack",
-      "Drupal",
-      "Twig",
-      "Bootstrap",
-      "JQuery"
-    ],
-    "challenges": [
-      "Installing the project on Drupal myself with the hooks instead of the Back-End Developpers doing it"
-    ],
-    "colors": {
-      "primary": "#006083",
-      "primaryLight": "#86C2D2"
+      "primary": "#b4c72e",
+      "primaryLight": "#DAE58F"
     }
   }
 ]
