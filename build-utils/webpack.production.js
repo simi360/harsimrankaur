@@ -23,7 +23,7 @@ module.exports = () => ({
         ],
       },
       {
-        test: /\.png/,
+        test: /\.(png|jpe?g)$/,
         use: [
           {
             //changes images in base64 format until a certain limit and renames it with an hash
