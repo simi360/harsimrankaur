@@ -1,11 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.css";
-import SliderButton from "../slider-button/SliderButton";
 import Project from "../project/project-mobile/ProjectMobile";
 import { ThemeProvider, withTheme } from "styled-components";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
+import BaseSlider from "../../base-slider/BaseSlider";
 
 class WorkSliderMobile extends React.Component {
   state = {
@@ -38,13 +37,8 @@ class WorkSliderMobile extends React.Component {
     const { activeIndex } = this.state;
     const { slides } = this.props;
 
-    const sliderSettings = {
-      showThumbs: false,
-      showIndicators: false,
-      showArrows: true,
-      swipeable: true,
-      emulateTouch: true,
-      showStatus: false,
+    const additionalSettings = {
+      onChange: this.handleSlideChanges.bind(this),
     };
 
     return (
@@ -55,27 +49,10 @@ class WorkSliderMobile extends React.Component {
               activeIndex={activeIndex}
               sliderLenght={slides.length}
             />
-            <Carousel
-              {...sliderSettings}
-              onChange={this.handleSlideChanges}
-              renderArrowPrev={(onClickHandler, hasFollowingSlide, label) => (
-                <SliderButton
-                  onClickHandler={onClickHandler}
-                  hasFollowingSlide={hasFollowingSlide}
-                  label={label}
-                  isPrev={true}
-                  colors={this.state.theme}
-                />
-              )}
-              renderArrowNext={(onClickHandler, hasFollowingSlide, label) => (
-                <SliderButton
-                  onClickHandler={onClickHandler}
-                  hasFollowingSlide={hasFollowingSlide}
-                  label={label}
-                  isPrev={false}
-                  colors={this.state.theme}
-                />
-              )}
+
+            <BaseSlider
+              additionalSettings={additionalSettings}
+              theme={this.state.theme}
             >
               {slides &&
                 slides.map((slide, index) => (
@@ -85,7 +62,7 @@ class WorkSliderMobile extends React.Component {
                     key={"slide" + index}
                   />
                 ))}
-            </Carousel>
+            </BaseSlider>
           </div>
         </SliderStyle>
       </ThemeProvider>

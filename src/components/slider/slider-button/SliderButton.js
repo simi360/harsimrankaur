@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Arrow from "../../../icons/Arrow";
+import Arrow from "../../icons/Arrow";
 import SliderButtonStyles from "./SliderButton.styles";
 
 const SliderButton = ({

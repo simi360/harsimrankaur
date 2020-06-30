@@ -3,7 +3,7 @@ import { ThemeProvider } from "styled-components";
 import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import SliderButton from "../slider-button/SliderButton";
+import SliderButton from "../../slider-button/SliderButton";
 import {
   SliderContainer,
   SliderProject,
