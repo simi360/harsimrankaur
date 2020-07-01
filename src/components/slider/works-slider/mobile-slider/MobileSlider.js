@@ -52,7 +52,7 @@ class WorkSliderMobile extends React.Component {
 
             <BaseSlider
               additionalSettings={additionalSettings}
-              theme={this.state.theme}
+              colors={this.state.theme}
             >
               {slides &&
                 slides.map((slide, index) => (

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import PropTypes from "prop-types";
 import ProjectDetails from "../components/project/project-details/ProjectDetails";
 import ProjectDatas from "../assets/projectsData.json";
 
@@ -27,6 +28,14 @@ const ProjectDetailsRoute = ({
   }
 
   return <ProjectDetails project={projectInfos} />;
+};
+
+ProjectDetailsRoute.prototype = {
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    }),
+  }),
 };
 
 export default ProjectDetailsRoute;

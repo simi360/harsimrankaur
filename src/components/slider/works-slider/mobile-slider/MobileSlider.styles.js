@@ -49,30 +49,11 @@ const SliderStyle = styled.section`
     overflow: visible;
   }
 
-  .slide {
-    background: none;
-  }
-
   .control-arrow {
     &.control-prev,
     &.control-next {
-      padding: 0;
-      position: relative;
-      top: auto;
-      right: auto;
-      bottom: 0;
-      left: auto;
       grid-row: 2;
       align-self: end;
-      opacity: 1;
-
-      &::before {
-        display: none;
-      }
-
-      :hover {
-        background: none;
-      }
     }
 
     &.control-prev {

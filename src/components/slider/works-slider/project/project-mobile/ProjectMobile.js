@@ -32,7 +32,7 @@ const Project = (props) => {
           : `0${props.slideIndex + 1}`}
       </ProjectIndex>
       <StretchedLink
-        id={props.slide.id}
+        url={`/project/${props.slide.id}`}
         ariaLabel={`See ${props.slide.name} details`}
         srOnly={true}
       />

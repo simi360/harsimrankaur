@@ -7,13 +7,14 @@ import { CarouselStyle } from "./BaseSlider.styles";
 const BaseSlider = ({
   additionalSettings,
   //defautl values needed for the first render vefore passing the theme colors
-  theme = {
+  colors = {
     color: {
       primary: "#fff",
       primaryLight: "#fff",
     },
   },
   children,
+  className,
 }) => {
   //Default settings needs to be in same component as the Carousel
   // When passing all settings as props, isn't taken in account from the Carousel
@@ -30,6 +31,7 @@ const BaseSlider = ({
   return (
     <React.Fragment>
       <CarouselStyle
+        className={className}
         {...sliderSettings}
         renderArrowPrev={(onClickHandler, hasFollowingSlide, label) => (
           <SliderButton
@@ -37,7 +39,7 @@ const BaseSlider = ({
             hasFollowingSlide={hasFollowingSlide}
             label={label}
             isPrev={true}
-            colors={theme}
+            colors={colors}
           />
         )}
         renderArrowNext={(onClickHandler, hasFollowingSlide, label) => (
@@ -46,7 +48,7 @@ const BaseSlider = ({
             hasFollowingSlide={hasFollowingSlide}
             label={label}
             isPrev={false}
-            colors={theme}
+            colors={colors}
           />
         )}
       >
@@ -57,8 +59,8 @@ const BaseSlider = ({
 };
 
 BaseSlider.propTypes = {
-  additionalSettings: PropTypes.object,
-  theme: PropTypes.object,
+  additionalSettings: PropTypes.object.isRequired,
+  colors: PropTypes.object.isRequired,
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,

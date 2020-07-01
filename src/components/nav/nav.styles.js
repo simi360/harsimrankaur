@@ -14,6 +14,7 @@ const NavTag = styled.nav`
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
+  background: rgba(255, 255, 255, 0.8);
   z-index: 9999;
 
   a {
@@ -21,7 +22,7 @@ const NavTag = styled.nav`
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
-    padding: 3rem;
+    padding: 2rem 1rem;
     font-size: 1.125rem;
   }
 `;

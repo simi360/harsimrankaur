@@ -1,7 +1,7 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Link } from "react-router-dom";
 
-const LinkTag = styled(Link)`
+const StretchedLinksStyles = css`
   visibility: ${(p) => (p.srOnly ? "hidden" : "")};
 
   &::after {
@@ -16,4 +16,12 @@ const LinkTag = styled(Link)`
   }
 `;
 
-export default LinkTag;
+const LinkTag = styled(Link)`
+  ${StretchedLinksStyles}
+`;
+
+const ExternalLinkTag = styled.a`
+  ${StretchedLinksStyles}
+`;
+
+export { LinkTag, ExternalLinkTag };
