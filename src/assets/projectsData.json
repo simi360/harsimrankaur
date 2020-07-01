@@ -25,60 +25,60 @@
     ],
     "photos": {
       "thumb": {
-        "default": "./img/cfl/cfl-thumb.png",
-        "retina": "./img/cfl/cfl-thumb2x.png"
+        "default": "cfl-thumb.png",
+        "retina": "cfl-thumb2x.png"
       },
       "project": [
         {
-          "src": "./img/cfl/cfl-home.jpg",
+          "src": "cfl-home.jpg",
           "alt": "CFL Travelers homepage",
           "url": "https://www.cfl.lu",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-timetables.png",
+          "src": "cfl-timetables.png",
           "alt": "CFL Travelers timetable results",
           "url": "https://www.cfl.lu/fr-fr/search/searchresult?SearchDepartureExtId=9217081&SearchDeparture=Luxembourg%2C+Gare+Centrale&SearchArrivalExtId=8200102&SearchArrival=Pfaffenthal-Kirchberg&departureBullets=departure&SearchDate=2020-06-27&SearchTime=17%3A00&SearchViaExtId=&SearchVia=&SearchProducts=0%2C1&SearchProducts=3%2C4&SearchProducts=2%2C5&SearchProducts=8&SearchProducts=9&SearchMaxConnections=4&SearchManageOriginWalk=true&SearchManageDestWalk=true&advanced-search-preferences=direct",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-network.png",
+          "src": "cfl-network.png",
           "alt": "CFL Travelers's network overview",
           "url": "https://www.cfl.lu/fr-fr/network",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-transport.png",
+          "src": "cfl-transport.png",
           "alt": "CFL Fret combined transport page",
           "url": "https://www.cfl-mm.lu/fr-fr/solutions/ferroviaire/transport-combine",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-groupe.jpg",
+          "src": "cfl-groupe.jpg",
           "alt": "CFL Group's homepage",
           "url": "https://groupe.cfl.lu/fr-fr",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-historique.jpg",
+          "src": "cfl-historique.jpg",
           "alt": "CFL' history",
           "url": "https://groupe.cfl.lu/fr-fr/history",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-projects.png",
+          "src": "cfl-projects.png",
           "alt": "CFL Group's projects",
           "url": "https://groupe.cfl.lu/fr-fr/project",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-numbers.png",
+          "src": "cfl-numbers.png",
           "alt": "CFL Group's key numbers",
           "url": "https://groupe.cfl.lu/fr-fr/keynumbers",
           "isMobile": false
         },
         {
-          "src": "./img/cfl/cfl-contact.png",
+          "src": "cfl-contact.png",
           "alt": "CFL Group's contact page",
           "url": "https://groupe.cfl.lu/fr-fr/contact",
           "isMobile": false
@@ -110,30 +110,30 @@
     "challenges": ["Learning Drupal and Twig ecosystem"],
     "photos": {
       "thumb": {
-        "default": "./img/aea/aea-thumb.png",
-        "retina": "./img/aea/aea-thumb2x.png"
+        "default": "aea-thumb.png",
+        "retina": "aea-thumb2x.png"
       },
       "project": [
         {
-          "src": "./img/aea/aea-home.png",
+          "src": "aea-home.png",
           "alt": "A&A's homepage",
           "url": "https://www.aea.lu",
           "isMobile": false
         },
         {
-          "src": "./img/aea/aea-immo.png",
+          "src": "aea-immo.png",
           "alt": "A&a's real estate page",
           "url": "https://www.aea.lu/fr/immobilier",
           "isMobile": false
         },
         {
-          "src": "./img/aea/aea-goods.png",
+          "src": "aea-goods.png",
           "alt": "A&a's available goods",
           "url": "https://www.aea.lu/fr/immobilier/recherche",
           "isMobile": false
         },
         {
-          "src": "./img/aea/aea-property.png",
+          "src": "aea-property.png",
           "alt": "A&a's property's details",
           "url": "https://www.aea.lu/fr/immobilier/recherche/location/maison-bettembourg",
           "isMobile": false
@@ -168,27 +168,27 @@
     ],
     "photos": {
       "thumb": {
-        "default": "./img/aeo/aeo-thumb.png",
-        "retina": "./img/aeo/aeo-thumb2x.png"
+        "default": "aeo-thumb.png",
+        "retina": "aeo-thumb2x.png"
       },
       "project": [
         {
-          "src": "./img/aeo/aeo-event.png",
+          "src": "aeo-event.png",
           "alt": "A&O Event desktop page",
           "isMobile": false
         },
         {
-          "src": "./img/aeo/aeo-contact-mobile.png",
+          "src": "aeo-contact-mobile.png",
           "alt": "A&O Contact details mobile page with a floor plan",
           "isMobile": true
         },
         {
-          "src": "./img/aeo/aeo-contact.png",
+          "src": "aeo-contact.png",
           "alt": "A&O Contact details desktop page with a floor plan",
           "isMobile": false
         },
         {
-          "src": "./img/aeo/aeo-contact-list.png",
+          "src": "aeo-contact-list.png",
           "alt": "A&O contact list on mobile",
           "isMobile": true
         }
@@ -208,28 +208,28 @@
     "message": "The website has not been released yet",
     "photos": {
       "thumb": {
-        "default": "./img/raiffeisen/raiffeisen-thumb.png",
+        "default": "raiffeisen-thumb.png",
         "retina": "./img/raiffeisen/raiffeisen-thumb2x.png"
       },
       "project": [
         {
-          "src": "./img/raiffeisen/raiffeisen-personal-loan.png",
+          "src": "raiffeisen-personal-loan.png",
           "alt": "Raiffeisen personal loan simulator",
           "isMobile": false
         },
 
         {
-          "src": "./img/raiffeisen/raiffeisen-simulator-step1.png",
+          "src": "raiffeisen-simulator-step1.png",
           "alt": "Raiffeisen housing loan simulator step 1",
           "isMobile": false
         },
         {
-          "src": "./img/raiffeisen/raiffeisen-simulator-step2.png",
+          "src": "raiffeisen-simulator-step2.png",
           "alt": "Raiffeisen housing loan simulator step 2",
           "isMobile": false
         },
         {
-          "src": "./img/raiffeisen/raiffeisen-simulator-step3.png",
+          "src": "raiffeisen-simulator-step3.png",
           "alt": "Raiffeisen housing loan simulator step 3",
           "isMobile": false
         }

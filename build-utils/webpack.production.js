@@ -29,7 +29,7 @@ module.exports = () => ({
             //changes images in base64 format until a certain limit and renames it with an hash
             loader: "file-loader",
             options: {
-              name: "img/[name].[ext]",
+              name: "./img/[name].[ext]",
             },
           },
         ],

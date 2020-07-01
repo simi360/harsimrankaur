@@ -6,7 +6,7 @@ import ExternalStretchedLink from "../../links/External-stretched-link";
 import MovingImgWithBg from "../../img/MovingImgWithBg";
 import { ProjectSliderStyles, Slide } from "./ProjectSlider.Styles";
 
-const ProjectSlider = ({ photos, theme }) => {
+const ProjectSlider = ({ photos, theme, projectId }) => {
   const width = useViewPortWidth();
 
   const themeContext = useContext(ThemeContext);
@@ -39,8 +39,8 @@ const ProjectSlider = ({ photos, theme }) => {
             <MovingImgWithBg
               imgSrc={
                 process.env.NODE_ENV === "development"
-                  ? `src/assets/${photo.src}`
-                  : `${photo.src}`
+                  ? `src/assets/img/${projectId}/${photo.src}`
+                  : `./img/${photo.src}`
               }
               imgAlt={photo.alt}
               isActive={index == activeIndex ? true : false}

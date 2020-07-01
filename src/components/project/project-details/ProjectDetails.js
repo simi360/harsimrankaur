@@ -72,15 +72,19 @@ const ProjectDetails = ({ project }) => {
             <Img
               imgSrc={
                 process.env.NODE_ENV === "development"
-                  ? `src/assets/${project.photos.project[0].src}`
-                  : ` ${project.photos.project[0].src}`
+                  ? `src/assets/img/${project.id}/${project.photos.project[0].src}`
+                  : `./img/${project.photos.project[0].src}`
               }
               imgAlt=""
             />
           )}
 
           {width >= themeContext.bp.tablets && (
-            <ProjectSlider photos={project.photos.project} theme={theme} />
+            <ProjectSlider
+              photos={project.photos.project}
+              theme={theme}
+              projectId={project.id}
+            />
           )}
         </RightSection>
       </Main>

@@ -21,8 +21,8 @@ const Project = (props) => {
       <ProjectImg
         imgSrc={
           process.env.NODE_ENV === "development"
-            ? `src/assets/${props.slide.photos.thumb.default}`
-            : ` ${props.slide.photos.thumb.default}`
+            ? `src/assets/img/${props.slide.id}/${props.slide.photos.thumb.default}`
+            : `./img/${props.slide.photos.thumb.default}`
         }
         imgAlt=""
       />
