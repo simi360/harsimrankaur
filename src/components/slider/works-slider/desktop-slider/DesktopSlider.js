@@ -4,11 +4,13 @@ import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SliderButton from "../../slider-button/SliderButton";
+
 import {
   SliderContainer,
   SliderProject,
   WorkSliderPagination,
   SliderButtons,
+  ScrollIcon,
 } from "./DesktopSlider.styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -173,6 +175,7 @@ class DesktopSlider extends React.Component {
               colors={this.state.theme}
             />
           </SliderButtons>
+          <ScrollIcon />
         </SliderContainer>
       </ThemeProvider>
     );

@@ -89,9 +89,26 @@ const translateVerticalMobile = keyframes`
     }
 `;
 
+const translateDot = keyframes`
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(0.9rem);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+`;
+
 export {
   translateVerticalDesktops,
   translateVerticalUltraLargeDesktops,
   translateVerticalTablets,
   translateVerticalMobile,
+  translateDot,
 };
