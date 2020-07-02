@@ -7,7 +7,7 @@ const Main = styled.main`
   width: 100%;
   max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
-  padding: 0 1rem;
+  padding: 0 1rem 4rem;
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     padding: 0 0 5rem;

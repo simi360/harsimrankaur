@@ -67,7 +67,7 @@ const WorkSliderPagination = styled(Pagination)`
 const SliderButtons = styled.div`
   position: fixed;
   bottom: 10vh;
-  left: 14vw;
+  left: 11.5vw;
   z-index: 100;
 
   @media (min-width: ${(p) => `${p.theme.bp.largeDesktops}px`}) {
@@ -77,7 +77,7 @@ const SliderButtons = styled.div`
   @media (orientation: portrait) and (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) {
     bottom: 20vh;
-    left: 8vw;
+    left: 7.3vw;
   }
 `;
 

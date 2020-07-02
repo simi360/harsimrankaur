@@ -49,7 +49,8 @@ const SliderStyle = styled.section`
     overflow: visible;
   }
 
-  .control-arrow {
+  /* && needed to override base slider styles*/
+  && .control-arrow {
     &.control-prev,
     &.control-next {
       grid-row: 2;
@@ -59,12 +60,13 @@ const SliderStyle = styled.section`
     &.control-prev {
       grid-column: 1;
       justify-self: end;
+      right: -1rem;
     }
 
     &.control-next {
       grid-column: 2;
       justify-self: start;
-      left: -0.3rem;
+      left: -1rem;
     }
   }
 `;

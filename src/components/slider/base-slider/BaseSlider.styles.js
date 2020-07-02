@@ -9,7 +9,7 @@ const CarouselStyle = styled(Carousel)`
   .control-arrow {
     &.control-prev,
     &.control-next {
-      padding: 0;
+      padding: 1rem 1rem 0;
       position: relative;
       top: auto;
       right: auto;

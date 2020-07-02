@@ -24,11 +24,11 @@ const ProjectSliderStyles = styled(BaseSlider)`
     .control-arrow {
       height: 1.5rem;
       position: absolute;
-      bottom: 0.5rem;
-      left: calc(50vw - 6.5rem);
+      bottom: 1.25rem;
+      left: calc(50vw - 7.5rem);
 
       &.control-next {
-        left: calc(50vw - 3.5rem);
+        left: calc(50vw - 4.5rem);
       }
     }
   }
