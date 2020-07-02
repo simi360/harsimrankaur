@@ -30,7 +30,8 @@ const WorkSlider = () => {
   }
 
   //the components are shown depending the screen size
-  return width < themeContext.bp.tablets ? (
+  return width < themeContext.bp.tablets ||
+    (width < themeContext.bp.desktops && width >= window.innerHeight) ? (
     <WorkSliderMobile slides={projects} />
   ) : (
     <DesktopSlider slides={projects} />

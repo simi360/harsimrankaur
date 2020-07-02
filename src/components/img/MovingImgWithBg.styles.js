@@ -13,7 +13,7 @@ const BgContainer = styled.div`
 
   &::before {
     content: "";
-    width: 100%;
+    width: calc(100% - 1.25rem);
     height: 100%;
     position: absolute;
     top: 1.25rem;
@@ -23,6 +23,15 @@ const BgContainer = styled.div`
     z-index: -1;
   }
 `;
+const PlaceHolder = styled.div`
+  width: calc(100% - 1.25rem);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  filter: blur(5px);
+  overflow: hidden;
+  transition: opacity 0.15s ease-in;
+`;
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -30,42 +39,56 @@ const ImgContainer = styled.div`
   padding-top: ${(p) => (p.isMobile ? "150%" : "56%")};
   position: relative;
   overflow: hidden;
+
+  .lazy-load-image-background {
+    width: calc(100% - 1.25rem);
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: auto;
+    display: block;
+    transform-origin: top center;
+
+    &.lazy-load-image-loaded {
+      animation: ${(p) =>
+          p.isMobile ? translateVerticalMobile : translateVerticalTablets}
+        ${(p) => (p.isMobile ? "12s" : "10s")} linear infinite;
+
+      animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
+      animation-delay: 1s;
+
+      & + ${PlaceHolder} {
+        opacity: 0;
+      }
+    }
+
+    @media (min-width: ${(p) =>
+        `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+      &.lazy-load-image-loaded {
+        animation: ${(p) =>
+            p.isMobile ? translateVerticalMobile : translateVerticalDesktops}
+          10s linear infinite;
+
+        animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
+        animation-delay: 1s;
+      }
+    }
+
+    @media (min-width: ${(p) =>
+        `${p.theme.container}px`}) and (orientation: landscape) {
+      &.lazy-load-image-loaded {
+        animation: ${(p) =>
+            p.isMobile
+              ? translateVerticalMobile
+              : translateVerticalUltraLargeDesktops}
+          10s linear infinite;
+
+        animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
+        animation-delay: 1s;
+      }
+    }
+  }
 `;
 
-const Img = styled.img`
-  width: calc(100% - 1.25rem);
-  height: auto;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: auto;
-  display: block;
-  transform-origin: top center;
-  animation: ${(p) =>
-      p.isMobile ? translateVerticalMobile : translateVerticalTablets}
-    ${(p) => (p.isMobile ? "12s" : "10s")} linear infinite;
-
-  animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
-
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
-    animation: ${(p) =>
-        p.isMobile ? translateVerticalMobile : translateVerticalDesktops}
-      10s linear infinite;
-
-    animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
-  }
-
-  @media (min-width: ${(p) =>
-      `${p.theme.container}px`}) and (orientation: landscape) {
-    animation: ${(p) =>
-        p.isMobile
-          ? translateVerticalMobile
-          : translateVerticalUltraLargeDesktops}
-      10s linear infinite;
-
-    animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
-  }
-`;
-
-export { ImgContainer, Img, BgContainer };
+export { ImgContainer, BgContainer, PlaceHolder };

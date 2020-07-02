@@ -138,8 +138,14 @@ const Project = (props) => {
             ? `src/assets/img/${props.slide.id}/${props.slide.photos.thumb.default}`
             : `./img/${props.slide.photos.thumb.default}`
         }
+        imgLazy={
+          process.env.NODE_ENV === "development"
+            ? `src/assets/img/${props.slide.id}/${props.slide.photos.thumb.lazy}`
+            : `./img/${props.slide.photos.thumb.lazy}`
+        }
         imgAlt=""
         ref={imgRef}
+        effect="blur"
       />
       <ProjectIndex ref={indexRef}>
         <span>

@@ -94,6 +94,11 @@ const translateDot = keyframes`
         transform: translateY(0);
         opacity: 1;
     }
+    
+    30% {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
     70% {
         transform: translateY(0.9rem);

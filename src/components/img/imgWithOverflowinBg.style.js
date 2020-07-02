@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 
 const ImgContainer = styled.div`
   width: 100%;
@@ -17,14 +18,23 @@ const ImgContainer = styled.div`
     transition: all 0.25s ease-in-out;
     z-index: -1;
   }
+
+  .lazy-load-image-background {
+    width: calc(100% - 1.25rem);
+    height: calc(100% - 1.25rem);
+    position: absolute;
+    top: 0;
+    left: 1.25rem;
+
+    &:not(.lazy-load-image-loaded) {
+      filter: blur(5px);
+    }
+  }
 `;
 
-const Img = styled.img`
-  width: calc(100% - 1.25rem);
-  height: calc(100% - 1.25rem);
-  position: absolute;
-  top: 0;
-  left: 1.25rem;
+const Img = styled(LazyLoadImage)`
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 `;
 

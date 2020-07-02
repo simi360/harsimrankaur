@@ -31,6 +31,7 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
       setActiveIndex(index);
     }
   }
+
   return (
     <ProjectSliderStyles additionalSettings={additionalSettings} colors={theme}>
       {photos &&
@@ -41,6 +42,11 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
                 process.env.NODE_ENV === "development"
                   ? `src/assets/img/${projectId}/${photo.src}`
                   : `./img/${photo.src}`
+              }
+              imgLazy={
+                process.env.NODE_ENV === "development"
+                  ? `src/assets/img/${projectId}/${photo.lazy}`
+                  : `./img/${photo.lazy}`
               }
               imgAlt={photo.alt}
               isActive={index == activeIndex ? true : false}

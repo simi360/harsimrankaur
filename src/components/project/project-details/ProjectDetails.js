@@ -75,6 +75,11 @@ const ProjectDetails = ({ project }) => {
                   ? `src/assets/img/${project.id}/${project.photos.project[0].src}`
                   : `./img/${project.photos.project[0].src}`
               }
+              imgLazy={
+                process.env.NODE_ENV === "development"
+                  ? `src/assets/img/${project.id}/${project.photos.project[0].lazy}`
+                  : `./img/${project.photos.project[0].lazy}`
+              }
               imgAlt=""
             />
           )}
