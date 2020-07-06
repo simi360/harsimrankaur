@@ -1,10 +1,13 @@
 import styled from "styled-components";
-import ImgWithOverflowingBg from "../../../../img/ImgWithOverflowinBg";
+import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
 
-const ProjectSection = styled.section`
+const easeOut = "cubic-bezier(0.22, 0.61, 0.35, 1)";
+const easeIn = "cubic-bezier(0.55, 0.05, 0.67, 0.19)";
+const easeInOut = "cubic-bezier(0.64, 0.04, 0.35, 1)";
+
+const ProjectContainer = styled.div`
   width: 100%;
-  max-width: ${(p) => `${p.theme.container}px`};
-  position: relative;
+  height: 100%;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
 
@@ -24,6 +27,20 @@ const ProjectImg = styled(ImgWithOverflowingBg)`
   grid-column: 2 / span 4;
   grid-row: 3 / span 7;
   align-self: center;
+  transform: translateX(-100vw);
+  transform-origin: left;
+
+  .animate-enter-done &,
+  .animate-exit & {
+    transform: translateX(0);
+    transition: transform 0.5s ${easeOut};
+    transition-delay: 0s;
+  }
+  .animate-exit-active & {
+    transform: translateX(-100vw);
+    transition: transform 0.4s ${easeIn};
+    transition-delay: 0.3s;
+  }
 
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
     grid-row: 2 / span 8;
@@ -37,7 +54,6 @@ const ProjectImg = styled(ImgWithOverflowingBg)`
 `;
 
 const ProjectIndex = styled.p`
-  width: 0;
   grid-column: 4 / span 3;
   grid-row: 7;
   align-self: end;
@@ -45,6 +61,7 @@ const ProjectIndex = styled.p`
   font-size: 2.25rem;
   line-height: 0.8;
   letter-spacing: 3px;
+  transform: scaleX(0);
   transform-origin: left;
   overflow: hidden;
   z-index: -1;
@@ -66,6 +83,31 @@ const ProjectIndex = styled.p`
     transform: translateY(200%);
   }
 
+  .animate-enter-done &,
+  .animate-exit & {
+    transform: scaleX(1);
+    transition: transform 0.3s ${easeInOut};
+    transition-delay: 0.3s;
+
+    span {
+      transform: translateY(0);
+      transition: transform 0.25s ${easeOut};
+      transition-delay: 0.55s;
+    }
+  }
+
+  .animate-exit-active & {
+    transform: scaleX(0);
+    transition: transform 0.3s ${easeIn};
+    transition-delay: 0.15s;
+
+    span {
+      transform: translateY(200%);
+      transition: transform 0.2s linear;
+      transition-delay: 0s;
+    }
+  }
+
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
     grid-column: 7 / span 5;
   }
@@ -78,21 +120,34 @@ const ProjectIndex = styled.p`
 `;
 
 const ProjectTitle = styled.div`
+  width: 0;
   grid-column: 4 / span 3;
   grid-row: 5 / span 2;
-
-  display: flex;
-  align-items: center;
+  position: relative;
   overflow: hidden;
+
+  will-change: width;
+
   z-index: 1;
 
   h2 {
-    width: auto;
-
     font-size: ${(p) =>
       p.title.length >= 4
         ? "clamp(2.4rem, 8vw, 5.5rem)"
         : "clamp(4rem, 15.5vw, 11.5rem); "};
+  }
+
+  .animate-enter-done &,
+  .animate-exit & {
+    width: 100%;
+    transition: width 0.5s ${easeInOut};
+    transition-delay: 0.3s;
+  }
+
+  .animate-exit-active & {
+    width: 0;
+    transition: width 0.3s ${easeInOut};
+    transition-delay: 0.2s;
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
@@ -120,4 +175,4 @@ const ProjectTitle = styled.div`
   }
 `;
 
-export { ProjectSection, ProjectImg, ProjectIndex, ProjectTitle };
+export { ProjectContainer, ProjectImg, ProjectIndex, ProjectTitle };

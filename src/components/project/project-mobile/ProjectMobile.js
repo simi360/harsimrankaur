@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import StretchedLink from "../../../../links/Stretched-link";
-import Title from "../../../../text/Title";
+import StretchedLink from "../../links/Stretched-link";
+import Title from "../../text/Title";
 import {
   ProjectSection,
   ProjectImg,

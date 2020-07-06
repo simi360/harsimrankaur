@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import Project from "../project/project-desktop/ProjectDesktop";
-import Pagination from "../pagination/Pagination";
+import Project from "../../../project/project-desktop/ProjectDesktop";
+import Pagination from "../../pagination/Pagination";
 import Scroll from "../../../icons/scroll/Scroll";
 
 const SliderContainer = styled.div`
@@ -92,10 +92,21 @@ const ScrollIcon = styled(Scroll)`
   }
 `;
 
+const ProjectSection = styled.section`
+  width: 100%;
+  max-width: ${(p) => `${p.theme.container}px`};
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+`;
+
 export {
   SliderContainer,
   SliderProject,
   WorkSliderPagination,
   SliderButtons,
   ScrollIcon,
+  ProjectSection,
 };

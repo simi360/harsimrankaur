@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "react-responsive-carousel/lib/styles/carousel.css";
-import Project from "../project/project-mobile/ProjectMobile";
+import Project from "../../../project/project-mobile/ProjectMobile";
 import { ThemeProvider, withTheme } from "styled-components";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
 import BaseSlider from "../../base-slider/BaseSlider";

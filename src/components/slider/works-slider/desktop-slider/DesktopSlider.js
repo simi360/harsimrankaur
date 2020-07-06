@@ -11,6 +11,7 @@ import {
   WorkSliderPagination,
   SliderButtons,
   ScrollIcon,
+  ProjectSection,
 } from "./DesktopSlider.styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -54,11 +55,6 @@ class DesktopSlider extends React.Component {
   }
 
   componentWillUnmount() {
-    //used to fix the memory leak when clicking on link before the end of the animation
-    clearTimeout(this.timeOut);
-    this.timeOut = 0;
-    this.isUnMounted = true;
-
     //remove all the scrolltrigger events
     this.state.slides.forEach((slide, index) => {
       ScrollTrigger.getById(`slide${index}`).kill();
@@ -108,7 +104,7 @@ class DesktopSlider extends React.Component {
             this.setState({
               theme: newTheme,
             });
-          }, 1000);
+          }, 800);
         }
       );
     }
@@ -151,12 +147,13 @@ class DesktopSlider extends React.Component {
           <div className="slider-container">
             {slides &&
               slides.map((slide, index) => (
-                <SliderProject
-                  slide={slide}
-                  slideIndex={index}
-                  key={"slide" + index}
-                  isActive={activeIndex == index ? true : false}
-                />
+                <ProjectSection key={"slide" + index} className="project">
+                  <SliderProject
+                    slide={slide}
+                    slideIndex={index}
+                    isActive={activeIndex == index ? true : false}
+                  />
+                </ProjectSection>
               ))}
           </div>
           <SliderButtons>
