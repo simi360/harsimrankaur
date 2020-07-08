@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Arrow from "../../icons/Arrow";
+import Carret from "../../icons/Carret";
 import SliderButtonStyles from "./SliderButton.styles";
 
 const SliderButton = ({
@@ -24,7 +24,7 @@ const SliderButton = ({
         enableArrow ? "" : "control-disabled"
       }`}
     >
-      <Arrow colors={colors} />
+      <Carret colors={colors} />
     </SliderButtonStyles>
   );
 };

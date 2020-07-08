@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import PropTypes from "prop-types";
 import { ThemeContext } from "styled-components";
 import { useViewPortWidth } from "../../../utils/getViewport";
-import ExternalStretchedLink from "../../links/External-stretched-link";
+import StretchedLink from "../../links/stretched-link/Stretched-link";
 import MovingImgWithBg from "../../img/MovingImgWithBg";
 import { ProjectSliderStyles, Slide } from "./ProjectSlider.Styles";
 
@@ -52,7 +52,8 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
               isActive={index == activeIndex ? true : false}
               isMobile={photo.isMobile}
             />
-            <ExternalStretchedLink
+            <StretchedLink
+              externalLink={true}
               url={photo.url}
               ariaLabel={`Visit ${photo.alt}`}
               srOnly={true}

@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import CSSTransition from "react-transition-group/esm/CSSTransition";
 import Title from "../../text/Title";
-import StretchedLink from "../../links/Stretched-link";
+import StretchedLink from "../../links/stretched-link/Stretched-link";
 import {
   ProjectContainer,
   ProjectImg,

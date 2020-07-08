@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Title from "../../text/Title";
-import ArrowLink from "../../icons/ArrowLink";
 import ImgBg from "../../img/ImgWithBg";
+import ArrowLink from "../../links/arrow-link/ArrowLink";
 
 const Main = styled.main`
   width: 100%;
@@ -72,21 +72,8 @@ const ListItem = styled.li`
   font-size: 0.875rem;
 `;
 
-const Link = styled.a`
+const Link = styled(ArrowLink)`
   margin-top: 1.5rem;
-  display: inline-block;
-  color: ${(p) => p.theme.color.primary};
-`;
-
-const Arrow = styled(ArrowLink)`
-  width: 0.75rem;
-  margin-left: 0.75rem;
-  transform: translateX(0);
-  transition: transform 0.25s ease-in-out;
-
-  ${Link}:hover & {
-    transform: translateX(50%);
-  }
 `;
 
 const Img = styled(ImgBg)`
@@ -163,7 +150,6 @@ export {
   CatDescription,
   ListItem,
   Link,
-  Arrow,
   Img,
   LeftSection,
   RightSection,

@@ -10,7 +10,6 @@ import {
   CatDescription,
   ListItem,
   Link,
-  Arrow,
   Img,
   LeftSection,
   RightSection,
@@ -62,10 +61,15 @@ const ProjectDetails = ({ project }) => {
               </ul>
             </FlexChilds>
           </FlexContainer>
-          <Link href={project.url} target="_blank" rel="noreferrer">
-            {`Visit ${project.name}'s website`}{" "}
-            <Arrow color={project.colors.primary} />
-          </Link>
+
+          {project.url && (
+            <Link
+              url={project.url}
+              linkText={`Visit ${project.name}'s website`}
+              externalLink={true}
+              color={theme.color.primary}
+            />
+          )}
         </LeftSection>
         <RightSection>
           {width < themeContext.bp.tablets && (
