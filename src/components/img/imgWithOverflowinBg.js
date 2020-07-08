@@ -3,9 +3,9 @@ import PropTypes from "prop-types";
 import { ImgContainer, Img } from "./ImgWithOverflowinBg.style";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const ImgWithOverflowingBg = React.forwardRef((props, ref) => {
+const ImgWithOverflowingBg = (props) => {
   return (
-    <ImgContainer className={props.className} ref={ref}>
+    <ImgContainer className={props.className}>
       <Img
         src={props.imgSrc}
         alt={props.imgAlt}
@@ -13,9 +13,7 @@ const ImgWithOverflowingBg = React.forwardRef((props, ref) => {
       />
     </ImgContainer>
   );
-});
-//needed for eslint
-ImgWithOverflowingBg.displayName = "ImgWithOverflowingBg";
+};
 
 ImgContainer.prototype = {
   className: PropTypes.string.isRequired,

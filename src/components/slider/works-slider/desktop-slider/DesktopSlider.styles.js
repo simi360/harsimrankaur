@@ -92,21 +92,10 @@ const ScrollIcon = styled(Scroll)`
   }
 `;
 
-const ProjectSection = styled.section`
-  width: 100%;
-  max-width: ${(p) => `${p.theme.container}px`};
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-`;
-
 export {
   SliderContainer,
   SliderProject,
   WorkSliderPagination,
   SliderButtons,
   ScrollIcon,
-  ProjectSection,
 };

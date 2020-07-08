@@ -7,13 +7,25 @@ const easeInOut = "cubic-bezier(0.64, 0.04, 0.35, 1)";
 
 const ProjectContainer = styled.div`
   width: 100%;
-  height: 100%;
+  max-width: ${(p) => `${p.theme.container}px`};
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
 
   grid-template-rows: repeat(10, minmax(0, 1fr));
   grid-gap: 1.875rem;
   font-family: ${(p) => p.theme.font.poppins};
+
+  z-index: 0;
+  pointer-events: none;
+  &.animate-enter-done {
+    z-index: 100;
+    pointer-events: all;
+  }
 
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
     grid-template-columns: repeat(12, minmax(0, 1fr));

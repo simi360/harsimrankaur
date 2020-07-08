@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CSSTransition from "react-transition-group/esm/CSSTransition";
-import StretchedLink from "../../links/Stretched-link";
 import Title from "../../text/Title";
+import StretchedLink from "../../links/Stretched-link";
 import {
   ProjectContainer,
   ProjectImg,
@@ -21,7 +21,7 @@ const Project = (props) => {
       appear={true}
       in={props.isActive}
     >
-      <ProjectContainer id={props.slide.id}>
+      <ProjectContainer id={props.slide.id} className="project">
         <ProjectTitle title={props.slide.name}>
           <Title title={props.slide.name} />
         </ProjectTitle>

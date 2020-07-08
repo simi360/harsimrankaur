@@ -11,7 +11,6 @@ import {
   WorkSliderPagination,
   SliderButtons,
   ScrollIcon,
-  ProjectSection,
 } from "./DesktopSlider.styles";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -20,9 +19,6 @@ gsap.core.globals("ScrollTrigger", ScrollTrigger);
 class DesktopSlider extends React.Component {
   constructor(props) {
     super(props);
-
-    this.timeOut = 0;
-    this.isUnMounted = false;
 
     this.state = {
       slides: null,
@@ -147,13 +143,12 @@ class DesktopSlider extends React.Component {
           <div className="slider-container">
             {slides &&
               slides.map((slide, index) => (
-                <ProjectSection key={"slide" + index} className="project">
-                  <SliderProject
-                    slide={slide}
-                    slideIndex={index}
-                    isActive={activeIndex == index ? true : false}
-                  />
-                </ProjectSection>
+                <SliderProject
+                  key={"slide" + index}
+                  slide={slide}
+                  slideIndex={index}
+                  isActive={activeIndex == index ? true : false}
+                />
               ))}
           </div>
           <SliderButtons>
