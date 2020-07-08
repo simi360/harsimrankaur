@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import {
   translateVerticalDesktops,
+  translateLargeDesktops,
   translateVerticalUltraLargeDesktops,
   translateVerticalTablets,
   translateVerticalMobile,
@@ -68,6 +69,18 @@ const ImgContainer = styled.div`
       &.lazy-load-image-loaded {
         animation: ${(p) =>
             p.isMobile ? translateVerticalMobile : translateVerticalDesktops}
+          10s linear infinite;
+
+        animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};
+        animation-delay: 1s;
+      }
+    }
+
+    @media (min-width: ${(p) =>
+        `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+      &.lazy-load-image-loaded {
+        animation: ${(p) =>
+            p.isMobile ? translateVerticalMobile : translateLargeDesktops}
           10s linear infinite;
 
         animation-play-state: ${(p) => (p.isActive ? "running" : "paused")};

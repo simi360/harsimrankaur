@@ -136,6 +136,11 @@ const RightSection = styled.section`
   }
 
   @media (min-width: ${(p) =>
+      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+    width: 50%;
+  }
+
+  @media (min-width: ${(p) =>
       `${p.theme.container}px`}) and (orientation: landscape) {
     margin-top: 0;
     width: ${(p) => `calc(${p.theme.container}px / 12 * 5)`};
