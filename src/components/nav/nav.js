@@ -1,6 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import { NavTag, Logo } from "./Nav.styles";
+import { NavTag, Logo, NavItems } from "./Nav.styles";
 
 function Nav() {
   return (
@@ -8,7 +7,8 @@ function Nav() {
       <Logo to="" aria-label="home">
         Sarah <span>Hick</span>
       </Logo>
-      <Link to="/about">About</Link>
+      <NavItems to="">Home</NavItems>
+      <NavItems to="/about">About</NavItems>
     </NavTag>
   );
 }

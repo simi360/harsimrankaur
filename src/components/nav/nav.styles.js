@@ -11,7 +11,7 @@ const NavTag = styled.nav`
   top: 0;
   right: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   font-weight: 500;
   background: rgba(255, 255, 255, 0.8);
@@ -28,6 +28,7 @@ const NavTag = styled.nav`
 `;
 
 const Logo = styled(Link)`
+  margin-right: auto;
   font-family: ${(p) => p.theme.font.poppins};
   text-transform: uppercase;
   color: ${(p) => p.theme.color.secondary};
@@ -49,4 +50,12 @@ const Logo = styled(Link)`
   }
 `;
 
-export { NavTag, Logo };
+const NavItems = styled(Link)`
+  margin: 0 1rem;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+`;
+
+export { NavTag, Logo, NavItems };
