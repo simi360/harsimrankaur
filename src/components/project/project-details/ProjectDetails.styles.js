@@ -49,7 +49,7 @@ const ProjectTitle = styled(Title)`
       `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     font-size: ${(p) =>
       p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 5.5rem)"
+        ? "clamp(2.4rem, 8vw, 4.75rem)"
         : "clamp(4rem, 15.5vw, 11.5rem); "};
   }
 `;
@@ -112,12 +112,7 @@ const LeftSection = styled.section`
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
-    margin: 0 8.3333%;
-    flex-basis: 33.333%;
-  }
-  @media (min-width: ${(p) =>
-      `${p.theme.container}px`}) and (orientation: landscape) {
-    margin: 0 0 0 16.666%;
+    margin: 0 16.666%;
     flex-basis: 33.333%;
   }
 `;
