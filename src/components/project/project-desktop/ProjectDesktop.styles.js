@@ -132,13 +132,10 @@ const ProjectIndex = styled.p`
 `;
 
 const ProjectTitle = styled.div`
-  width: 0;
   grid-column: 4 / span 3;
   grid-row: 5 / span 2;
   position: relative;
   overflow: hidden;
-
-  will-change: width;
 
   z-index: 1;
 
@@ -147,19 +144,58 @@ const ProjectTitle = styled.div`
       p.title.length >= 4
         ? "clamp(2.4rem, 8vw, 5.5rem)"
         : "clamp(4rem, 15.5vw, 11.5rem); "};
+
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: "";
+      width: 150%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: block;
+      background: ${(p) => p.theme.color.primary};
+      transform: translateX(-100%);
+    }
+
+    .title-span {
+      opacity: 0;
+    }
   }
 
   .animate-enter-done &,
   .animate-exit & {
-    width: 100%;
-    transition: width 0.5s ${easeInOut};
-    transition-delay: 0.3s;
+    h2 {
+      &::after {
+        transform: translateX(100%);
+        transition: transform 1s ${easeInOut};
+        transition-delay: 0.2s;
+      }
+
+      .title-span {
+        opacity: 1;
+        transition: opacity 0.1s ${easeInOut};
+        transition-delay: 0.6s;
+      }
+    }
   }
 
   .animate-exit-active & {
-    width: 0;
-    transition: width 0.3s ${easeInOut};
-    transition-delay: 0.2s;
+    h2 {
+      &::after {
+        transform: translateX(-100%);
+        transition: transform 0.6s ${easeInOut};
+        transition-delay: 0s;
+      }
+
+      .title-span {
+        opacity: 0;
+        transition: opacity 0.1s ${easeInOut};
+        transition-delay: 0.15s;
+      }
+    }
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {
