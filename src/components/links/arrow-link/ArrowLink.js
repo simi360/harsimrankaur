@@ -12,20 +12,21 @@ const ArrowLink = (props) => {
         className={props.className}
       >
         {props.linkText}
-        <ArrowIcon color={props.color} />
+        <ArrowIcon color={props.color} isReversed={props.isReversed} />
       </ExternalLinkTag>
     );
   }
   return (
     <LinkTag to={props.url} className={props.className}>
       {props.linkText}
-      <ArrowIcon color={props.color} />
+      <ArrowIcon color={props.color} isReversed={props.isReversed} />
     </LinkTag>
   );
 };
 
 ArrowLink.proptypes = {
   externalLink: PropTypes.bool,
+  isReversed: PropTypes.bool,
   url: PropTypes.string.isRequired,
   linkText: PropTypes.string.isRequired,
   color: PropTypes.string.isRequired,

@@ -2,15 +2,15 @@ import styled from "styled-components";
 import Title from "../../text/Title";
 import ImgBg from "../../img/ImgWithBg";
 import ArrowLink from "../../links/arrow-link/ArrowLink";
+import ProjectNav from "../../nav/project-nav/ProjectNav";
 
 const Main = styled.main`
   width: 100%;
   max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
-  padding: 0 1rem 4rem;
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
-    padding: 0 0 5rem;
+    padding: 0 0 2rem;
   }
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
@@ -82,19 +82,19 @@ const Img = styled(ImgBg)`
 `;
 
 const LeftSection = styled.section`
-  @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
-    padding: 0 1rem;
-  }
+  padding: 0 1rem;
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     min-height: 100vh;
     padding: 0 1rem 3rem;
+    margin: 0 8.3333%;
     flex-basis: 33.333%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    order: 1;
   }
 
   @media (min-width: ${(p) =>
@@ -106,6 +106,7 @@ const LeftSection = styled.section`
 
 const RightSection = styled.section`
   margin-top: 2.65rem;
+  padding: 0 1rem;
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
@@ -143,6 +144,22 @@ const FlexChilds = styled.div`
   flex-basis: 50%;
 `;
 
+const ProjectNavigation = styled(ProjectNav)`
+  @media (min-width: ${(p) =>
+      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+    width: calc(100% / 12);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+  }
+  @media (min-width: ${(p) =>
+      `${p.theme.container}px`}) and (orientation: landscape) {
+    width: ${(p) => `calc(${p.theme.container}px / 12)`};
+    left: ${(p) => `calc(50vw - ${p.theme.container}px / 2)`};
+  }
+`;
+
 export {
   Main,
   ProjectTitle,
@@ -155,4 +172,5 @@ export {
   RightSection,
   FlexContainer,
   FlexChilds,
+  ProjectNavigation,
 };

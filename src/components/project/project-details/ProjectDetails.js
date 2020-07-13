@@ -15,17 +15,21 @@ import {
   RightSection,
   FlexContainer,
   FlexChilds,
+  ProjectNavigation,
 } from "./ProjectDetails.styles";
 
-const ProjectDetails = ({ project }) => {
+const ProjectDetails = ({ project, nextProject, prevProject }) => {
+  const themeContext = useContext(ThemeContext);
+
   const theme = {
+    ...themeContext,
     color: {
+      ...themeContext.color,
       primary: project.colors.primary,
       primaryLight: project.colors.primaryLight,
     },
   };
 
-  const themeContext = useContext(ThemeContext);
   const width = useViewPortWidth();
 
   return (
@@ -96,6 +100,10 @@ const ProjectDetails = ({ project }) => {
             />
           )}
         </RightSection>
+        <ProjectNavigation
+          prevProject={prevProject}
+          nextProject={nextProject}
+        />
       </Main>
     </ThemeProvider>
   );

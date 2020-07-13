@@ -3,7 +3,7 @@ import Arrow from "../../icons/Arrow";
 import { Link } from "react-router-dom";
 
 const linkStyles = css`
-  display: inline-block;
+  display: flex;
   color: ${(p) => p.theme.color.primary};
 `;
 
@@ -17,12 +17,16 @@ const ExternalLinkTag = styled.a`
 
 const ArrowIcon = styled(Arrow)`
   width: 0.75rem;
-  margin-left: 0.75rem;
-  transform: translateX(0);
+  margin: ${(p) => (p.isReversed ? "0 0.75rem 0 0" : "0 0 0 0.75rem")};
+  order: ${(p) => (p.isReversed ? -1 : 1)};
+
+  transform: ${(p) =>
+    p.isReversed ? "translateX(0) scaleX(-1)" : "translateX(0)"};
   transition: transform 0.25s ease-in-out;
 
   ${LinkTag}:hover & {
-    transform: translateX(50%);
+    transform: ${(p) =>
+      p.isReversed ? "translateX(-50%) scaleX(-1)" : "translateX(50%)"};
   }
 `;
 
