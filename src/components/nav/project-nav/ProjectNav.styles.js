@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { FadeLeft } from "../../../utils/animations";
 
 const ProjectsNavigation = styled.section`
   padding-top: 4.75rem;
@@ -20,6 +21,7 @@ const ProjectsNavigation = styled.section`
 
 const NavLink = styled(Link)`
   padding: 0 1rem 1rem;
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -38,10 +40,59 @@ const NavLink = styled(Link)`
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     padding: 1rem;
     display: block;
-    border-bottom: 2px solid ${(p) => p.theme.color.primary};
+
+    & > span {
+      display: block;
+    }
+
+    & > span,
+    &::after,
+    &:first-of-type::before {
+      /*Animations*/
+      ${FadeLeft}
+    }
+
+    &::after,
+    &:first-of-type::before {
+      content: "";
+      width: 100%;
+      height: 2px;
+      position: absolute;
+
+      display: block;
+      background: ${(p) => p.theme.color.primary};
+    }
+
+    &::after {
+      bottom: 0;
+      left: 0;
+    }
+
+    &:first-of-type::before {
+      top: 0;
+      left: 0;
+      transition-delay: 0s;
+    }
+
     &:first-of-type {
-      border-top: 2px solid ${(p) => p.theme.color.primary};
       border-right: none;
+
+      & > span {
+        transition-delay: 0.1s;
+      }
+      &::after {
+        transition-delay: 0.15s;
+      }
+    }
+
+    &:last-of-type {
+      & > span {
+        transition-delay: 0.2s;
+      }
+
+      &::after {
+        transition-delay: 0.25s;
+      }
     }
   }
 `;

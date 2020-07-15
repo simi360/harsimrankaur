@@ -7,12 +7,16 @@ import {
   LinkText,
 } from "./ProjectNav.styles";
 
-const ProjectNav = ({ prevProject, nextProject, className }) => {
+const ProjectNav = ({ prevProject, nextProject, className, clickHandler }) => {
   return (
     <ProjectsNavigation className={className}>
       {prevProject && (
         <NavLink
-          to={`/project/${prevProject.id}`}
+          to={{
+            pathname: `/project/${prevProject.id}`,
+            state: { prevHash: location.hash },
+          }}
+          onClick={(e) => clickHandler(e, `/project/${prevProject.id}`)}
           aria-label={`See ${prevProject.name}'s details`}
         >
           <span>
@@ -23,7 +27,11 @@ const ProjectNav = ({ prevProject, nextProject, className }) => {
       )}
       {nextProject && (
         <NavLink
-          to={`/project/${nextProject.id}`}
+          to={{
+            pathname: `/project/${nextProject.id}`,
+            state: { prevHash: location.hash },
+          }}
+          onClick={(e) => clickHandler(e, `/project/${nextProject.id}`)}
           aria-label={`See ${nextProject.name}'s details`}
         >
           <span>

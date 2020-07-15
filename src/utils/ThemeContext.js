@@ -16,4 +16,9 @@ export const Theme = {
     largeDesktops: 1200,
   },
   container: 1920,
+  animations: {
+    easeOut: "cubic-bezier(0.22, 0.61, 0.35, 1)",
+    easeIn: "cubic-bezier(0.55, 0.05, 0.67, 0.19)",
+    easeInOut: "cubic-bezier(0.64, 0.04, 0.35, 1)",
+  },
 };

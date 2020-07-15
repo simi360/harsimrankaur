@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const NavTag = styled.nav`
-  width: 100%;
+  width: 100vw;
   max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
   padding: 0.875rem;
@@ -22,7 +22,7 @@ const NavTag = styled.nav`
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
-    padding: 2rem 1rem;
+    padding: 1rem;
     font-size: 1.125rem;
   }
 `;

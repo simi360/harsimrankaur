@@ -17,7 +17,13 @@ const ArrowLink = (props) => {
     );
   }
   return (
-    <LinkTag to={props.url} className={props.className}>
+    <LinkTag
+      to={{
+        pathname: props.url,
+        state: { prevHash: location.hash },
+      }}
+      className={props.className}
+    >
       {props.linkText}
       <ArrowIcon color={props.color} isReversed={props.isReversed} />
     </LinkTag>

@@ -3,6 +3,7 @@ import Title from "../../text/Title";
 import ImgBg from "../../img/ImgWithBg";
 import ArrowLink from "../../links/arrow-link/ArrowLink";
 import ProjectNav from "../../nav/project-nav/ProjectNav";
+import { FadeUp } from "../../../utils/animations";
 
 const Main = styled.main`
   width: 100%;
@@ -24,7 +25,34 @@ const ProjectTitle = styled(Title)`
   padding: 0.5rem 0.25rem;
   line-height: 0.8;
 
+  font-size: 3.2rem;
+
+  &::after {
+    transform: translateX(-100%);
+    transition: ${(p) => `transform 0.6s ${p.theme.animations.easeInOut};`};
+  }
+
+  .title-span {
+    opacity: 0;
+    transition: ${(p) => `opacity 0.1s ${p.theme.animations.easeInOut};`};
+    transition-delay: 0.12s;
+  }
+
+  .project-enter-done & {
+    &::after {
+      transform: translateX(100%);
+      transition: ${(p) => `transform 1s ${p.theme.animations.easeInOut};`};
+    }
+
+    .title-span {
+      opacity: 1;
+      transition: ${(p) => `opacity 0.1s ${p.theme.animations.easeInOut};`};
+      transition-delay: 0.45s;
+    }
+  }
+
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
+    font-size: 8rem;
     margin-top: 10rem;
   }
 
@@ -38,10 +66,10 @@ const ProjectTitle = styled(Title)`
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
-    margin-top: 7rem;
+    margin-top: 0;
     font-size: ${(p) =>
       p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 5.5rem)"
+        ? "clamp(2.4rem, 8vw, 4.5rem)"
         : "clamp(4rem, 15.5vw, 8rem); "};
   }
 
@@ -74,11 +102,18 @@ const ListItem = styled.li`
 
 const Link = styled(ArrowLink)`
   margin-top: 1.5rem;
+  display: block;
+
+  /*animation*/
+  ${FadeUp}
 `;
 
 const Img = styled(ImgBg)`
   width: 100%;
   padding: 0;
+
+  /*animation*/
+  ${FadeUp}
 `;
 
 const LeftSection = styled.section`
@@ -87,18 +122,17 @@ const LeftSection = styled.section`
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     min-height: 100vh;
-    padding: 0 1rem 3rem;
+    padding: 5rem 1rem 3rem 2rem;
     margin: 0 8.3333%;
     flex-basis: 33.333%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    order: 1;
   }
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+    padding: 3rem 1rem 3rem;
     margin: 0 16.666%;
     flex-basis: 33.333%;
   }
@@ -107,20 +141,17 @@ const LeftSection = styled.section`
 const RightSection = styled.section`
   margin-top: 2.65rem;
   padding: 0 1rem;
+  overflow-x: hidden;
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     margin-top: 0;
     position: fixed;
-    width: calc(100% / 12 * 7);
+    width: 50%;
     top: 0;
     right: 0;
     bottom: 0;
-  }
-
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
-    width: 50%;
+    overflow: hidden;
   }
 
   @media (min-width: ${(p) =>
@@ -133,8 +164,11 @@ const RightSection = styled.section`
 `;
 
 const FlexContainer = styled.div`
+    /*animation*/
+    ${FadeUp}
+
   @media (min-width: ${(p) =>
-      `${p.theme.bp.tablets}px`}) and (orientation: portrait) {
+    `${p.theme.bp.tablets}px`}) and (orientation: portrait) {
     display: flex;
   }
 `;

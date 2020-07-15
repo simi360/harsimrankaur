@@ -13,7 +13,15 @@ const StretchedLink = (props) => {
       />
     );
   }
-  return <LinkTag to={props.url} aria-label={props.ariaLabel} />;
+  return (
+    <LinkTag
+      to={{
+        pathname: props.url,
+        state: { prevHash: location.hash },
+      }}
+      aria-label={props.ariaLabel}
+    />
+  );
 };
 
 StretchedLink.prototype = {

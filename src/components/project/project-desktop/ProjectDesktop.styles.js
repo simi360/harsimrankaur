@@ -1,10 +1,6 @@
 import styled from "styled-components";
 import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
 
-const easeOut = "cubic-bezier(0.22, 0.61, 0.35, 1)";
-const easeIn = "cubic-bezier(0.55, 0.05, 0.67, 0.19)";
-const easeInOut = "cubic-bezier(0.64, 0.04, 0.35, 1)";
-
 const ProjectContainer = styled.div`
   width: 100%;
   max-width: ${(p) => `${p.theme.container}px`};
@@ -43,14 +39,16 @@ const ProjectImg = styled(ImgWithOverflowingBg)`
   transform-origin: left;
 
   .animate-enter-done &,
-  .animate-exit & {
+  .animate-exit &,
+  .change-route-exit & {
     transform: translateX(0);
-    transition: transform 0.5s ${easeOut};
+    transition: ${(p) => `transform 0.5s ${p.theme.animations.easeOut};`};
     transition-delay: 0s;
   }
-  .animate-exit-active & {
+  .animate-exit-active &,
+  .change-route-exit-active & {
     transform: translateX(-100vw);
-    transition: transform 0.4s ${easeIn};
+    transition: ${(p) => `transform 0.4s ${p.theme.animations.easeIn};`};
     transition-delay: 0.3s;
   }
 
@@ -96,21 +94,23 @@ const ProjectIndex = styled.p`
   }
 
   .animate-enter-done &,
-  .animate-exit & {
+  .animate-exit &,
+  .change-route-exit & {
     transform: scaleX(1);
-    transition: transform 0.3s ${easeInOut};
+    transition: ${(p) => `transform 0.3s ${p.theme.animations.easeInOut};`};
     transition-delay: 0.3s;
 
     span {
       transform: translateY(0);
-      transition: transform 0.25s ${easeOut};
+      transition: ${(p) => `transform 0.25s ${p.theme.animations.easeOut};`};
       transition-delay: 0.55s;
     }
   }
 
-  .animate-exit-active & {
+  .animate-exit-active &,
+  .change-route-exit-active & {
     transform: scaleX(0);
-    transition: transform 0.3s ${easeIn};
+    transition: ${(p) => `transform 0.3s ${p.theme.animations.easeIn};`};
     transition-delay: 0.15s;
 
     span {
@@ -145,21 +145,6 @@ const ProjectTitle = styled.div`
         ? "clamp(2.4rem, 8vw, 5.5rem)"
         : "clamp(4rem, 15.5vw, 11.5rem); "};
 
-    position: relative;
-    overflow: hidden;
-
-    &::after {
-      content: "";
-      width: 150%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      background: ${(p) => p.theme.color.primary};
-      transform: translateX(-100%);
-    }
-
     .title-span {
       opacity: 0;
     }
@@ -170,29 +155,31 @@ const ProjectTitle = styled.div`
     h2 {
       &::after {
         transform: translateX(100%);
-        transition: transform 1s ${easeInOut};
+        transition: ${(p) => `transform 1s ${p.theme.animations.easeInOut};`};
         transition-delay: 0.2s;
       }
 
       .title-span {
         opacity: 1;
-        transition: opacity 0.1s ${easeInOut};
+        transition: ${(p) => `opacity 0.1s ${p.theme.animations.easeInOut};`};
         transition-delay: 0.6s;
       }
     }
   }
 
-  .animate-exit-active & {
+  .animate-enter &,
+  .animate-exit-active &,
+  .change-route-exit-active & {
     h2 {
       &::after {
         transform: translateX(-100%);
-        transition: transform 0.6s ${easeInOut};
+        transition: ${(p) => `transform 0.6s ${p.theme.animations.easeInOut};`};
         transition-delay: 0s;
       }
 
       .title-span {
         opacity: 0;
-        transition: opacity 0.1s ${easeInOut};
+        transition: ${(p) => `opacity 0.1s ${p.theme.animations.easeInOut};`};
         transition-delay: 0.15s;
       }
     }

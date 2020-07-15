@@ -1,9 +1,13 @@
 import styled from "styled-components";
 import BaseSlider from "../base-slider/BaseSlider";
+import { FadeUp } from "../../../utils/animations";
 
 const ProjectSliderStyles = styled(BaseSlider)`
   margin: auto;
   position: relative;
+
+  /*animation*/
+  ${FadeUp}
 
   &::before {
     content: "";
@@ -13,7 +17,15 @@ const ProjectSliderStyles = styled(BaseSlider)`
     top: 50%;
     left: 50%;
     background: ${(p) => p.theme.color.primaryLight};
-    transform: translate(0, -50%);
+    transform: translate(100%, -50%);
+    transition: ${(p) => `transform 0.5s ${p.theme.animations.easeInOut};`};
+    transition-delay: 0.25s;
+
+    .project-enter-done & {
+      transform: translate(0, -50%);
+      transition: ${(p) => `transform 0.5s ${p.theme.animations.easeInOut};`};
+      transition-delay: 0.25s;
+    }
   }
 
   .slider-wrapper {
@@ -21,6 +33,7 @@ const ProjectSliderStyles = styled(BaseSlider)`
   }
 
   .carousel-slider {
+    overflow: visible;
     .control-arrow {
       height: 1.5rem;
       position: absolute;
@@ -51,9 +64,10 @@ const ProjectSliderStyles = styled(BaseSlider)`
     }
     .carousel-slider {
       height: 100vh;
-      padding: 0 2rem;
+      padding: 0 0 0 2rem;
       display: flex;
       align-items: center;
+      overflow: hidden;
 
       .control-arrow {
         height: 1.5rem;
@@ -93,6 +107,7 @@ const Slide = styled.div`
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     height: 55vh;
+    padding: 2rem 0 3rem 2rem;
   }
 `;
 

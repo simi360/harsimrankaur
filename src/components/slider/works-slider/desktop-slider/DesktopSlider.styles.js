@@ -18,8 +18,18 @@ const SliderContainer = styled.div`
     left: 33.6vw;
     display: block;
     background: ${(p) => p.theme.color.primaryLight};
-    transition: background-color 0.25s ease-in-out;
+    transform: translateX(100vw);
+    transition: ${(p) => `transform 0.4s ${p.theme.animations.easeIn};`};
+    transition-delay: 0.2s;
     z-index: -1;
+  }
+
+  .change-route-enter-done & {
+    &::before {
+      transform: translateX(0);
+      transition: ${(p) => `transform 0.9s ${p.theme.animations.easeOut};`};
+      transition-delay: 0s;
+    }
   }
 
   @media (min-width: ${(p) => `${p.theme.bp.desktops}px`}) {

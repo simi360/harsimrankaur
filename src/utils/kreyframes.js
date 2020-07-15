@@ -7,34 +7,12 @@ const translateVerticalDesktops = keyframes`
     60% {
         /* 
             needed to have the bottom of image stop at bottom of it's parent
-            -100% of image size + 7/12 device width - all padings of slide & slider * height of parent padding-top
+           -100% of image size + 50% device width - all padings of slide & slider * height of parent padding-top
          */
-        transform: translateY(calc(-100% + ((100vw / 12 * 7 - 8rem) * 0.56)));
+        transform: translateY(calc(-100% + ((50vw - 6rem) * 0.56)));
     }
     80% {
-        transform: translateY(calc(-100% + ((100vw / 12 * 7 - 8rem) * 0.56)));
-    }
-    90% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(0);
-    }
-`;
-
-const translateLargeDesktops = keyframes`
-    0% {
-        transform: translateY(0);
-    }
-    60% {
-        /* 
-            needed to have the bottom of image stop at bottom of it's parent
-            -100% of image size + 50% device width - all padings of slide & slider * height of parent padding-top
-         */
-        transform: translateY(calc(-100% + ((50vw - 8rem) * 0.56)));
-    }
-    80% {
-        transform: translateY(calc(-100% + ((50vw - 8rem) * 0.56)));
+        transform: translateY(calc(-100% + ((50vw - 6rem) * 0.56)));
     }
     90% {
         transform: translateY(0);
@@ -75,10 +53,10 @@ const translateVerticalTablets = keyframes`
             -100% of image size + (device with * par centerPercentage of slider - slides paddings) * parent pading-top height
          */
     60% {
-        transform: translateY(calc(-100% + ((100vw * 0.65 - 4rem) * 0.56)));
+        transform: translateY(calc(-100% + ((100vw * 0.65 - 5rem) * 0.56)));
     }
     80% {
-        transform: translateY(calc(-100% + ((100vw * 0.65 - 4rem) * 0.56)));
+        transform: translateY(calc(-100% + ((100vw * 0.65 - 5rem) * 0.56)));
     }
     90% {
         transform: translateY(0);
@@ -134,7 +112,6 @@ const translateDot = keyframes`
 
 export {
   translateVerticalDesktops,
-  translateLargeDesktops,
   translateVerticalUltraLargeDesktops,
   translateVerticalTablets,
   translateVerticalMobile,

@@ -3,17 +3,14 @@ import PropTypes from "prop-types";
 import ProjectDetails from "../components/project/project-details/ProjectDetails";
 import ProjectDatas from "../assets/projectsData.json";
 
-const ProjectDetailsRoute = ({
-  match: {
-    params: { id },
-  },
-}) => {
+const ProjectDetailsRoute = (props) => {
   const [projectInfos, setProjectInfos] = useState(null);
   const [isLoading, setLoadingStatus] = useState(true);
   //refs are needed to keep sync of the projects when changing route
   //because of the closure, useState wil show the previous state
   const prevProjectRef = useRef(null);
   const nextProjectRef = useRef(null);
+  const id = props.match.params.id;
 
   useEffect(() => {
     async function getProjectDetails() {
@@ -56,6 +53,7 @@ const ProjectDetailsRoute = ({
       project={projectInfos}
       nextProject={nextProjectRef.current}
       prevProject={prevProjectRef.current}
+      history={props.history}
     />
   );
 };
