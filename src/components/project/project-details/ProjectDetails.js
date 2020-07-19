@@ -56,7 +56,7 @@ const ProjectDetails = (props) => {
       <CSSTransition
         classNames="project"
         timeout={{
-          enter: 0,
+          enter: 750,
           exit: 750,
         }}
         appear
