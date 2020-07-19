@@ -4,6 +4,7 @@ import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
 const ProjectContainer = styled.div`
   width: 100%;
   max-width: ${(p) => `${p.theme.container}px`};
+  min-height: 100vh; /*needed for IOS to set a height when using grid rows*/
   position: fixed;
   top: 0;
   left: 50vw;
@@ -140,6 +141,8 @@ const ProjectTitle = styled.div`
   z-index: 1;
 
   h2 {
+    font-size: ${(p) =>
+      p.title.length >= 4 ? "4.5rem" : "12.5vw"}; /* For better support */
     font-size: ${(p) =>
       p.title.length >= 4
         ? "clamp(2.4rem, 8vw, 5.5rem)"
