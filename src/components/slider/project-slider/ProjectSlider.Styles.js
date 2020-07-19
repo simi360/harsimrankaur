@@ -35,10 +35,10 @@ const ProjectSliderStyles = styled(BaseSlider)`
   .carousel-slider {
     overflow: visible;
     .control-arrow {
-      height: 1.5rem;
       position: absolute;
-      bottom: 1.25rem;
+      bottom: 0;
       left: calc(50vw - 7.5rem);
+      z-index: 100;
 
       &.control-next {
         left: calc(50vw - 4.5rem);
