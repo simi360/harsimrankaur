@@ -9,11 +9,8 @@ import { Theme } from "./utils/ThemeContext";
 import CSSTransition from "react-transition-group/esm/CSSTransition";
 import TransitionGroup from "react-transition-group/esm/TransitionGroup";
 
-require.context("./assets/img", true);
-
 const About = lazy(() => import("./routes/About"));
-// const ProjectDetailsRoute = lazy(() => import("./routes/ProjectDetailsRoute"));
-import ProjectDetailsRoute from "./routes/ProjectDetailsRoute";
+const ProjectDetailsRoute = lazy(() => import("./routes/ProjectDetailsRoute"));
 
 const App = () => {
   return (

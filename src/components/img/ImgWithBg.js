@@ -5,11 +5,23 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const ImgBg = (props) => {
   return (
-    <ImgContainer className={props.className}>
+    <ImgContainer
+      className={props.className}
+      //key needed to avoid old image keeping on showing after changing the image src
+      key={props.imgSrc}
+    >
       <Img
-        src={props.imgSrc}
+        src={
+          process.env.NODE_ENV === "development"
+            ? `public/img/${props.imgSrc}`
+            : `./img/${props.imgSrc}`
+        }
         alt={props.imgAlt}
-        placeholderSrc={props.imgLazy}
+        placeholderSrc={
+          process.env.NODE_ENV === "development"
+            ? `public/img/${props.imgLazy}`
+            : `./img/${props.imgLazy}`
+        }
       />
     </ImgContainer>
   );

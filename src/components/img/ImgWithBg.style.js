@@ -13,6 +13,7 @@ const Img = styled(LazyLoadImage)`
 
 const ImgContainer = styled.div`
   width: calc(100% - 1.25rem);
+  min-height: 250px;
   position: relative;
 
   &::before {

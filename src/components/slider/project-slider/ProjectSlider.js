@@ -38,20 +38,13 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
         photos.map((photo, index) => (
           <Slide key={`photo${index}`} index={index}>
             <MovingImgWithBg
-              imgSrc={
-                process.env.NODE_ENV === "development"
-                  ? `src/assets/img/${projectId}/${photo.src}`
-                  : `./img/${photo.src}`
-              }
-              imgLazy={
-                process.env.NODE_ENV === "development"
-                  ? `src/assets/img/${projectId}/${photo.lazy}`
-                  : `./img/${photo.lazy}`
-              }
+              imgSrc={`${projectId}/${photo.src}`}
+              imgLazy={`${projectId}/${photo.lazy}`}
               imgAlt={photo.alt}
               isActive={index == activeIndex ? true : false}
               isMobile={photo.isMobile}
             />
+
             <StretchedLink
               externalLink={true}
               url={photo.url}

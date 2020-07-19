@@ -22,7 +22,7 @@ import {
 const ProjectDetails = (props) => {
   const themeContext = useContext(ThemeContext);
   const [isMounted, setIsMounted] = useState(true);
-  const { project, nextProject, prevProject } = props;
+  const { project, nextProject, prevProject, history } = props;
 
   const theme = {
     ...themeContext,
@@ -35,18 +35,18 @@ const ProjectDetails = (props) => {
 
   //needed to have the animations when the project id is changed
   //if not delayed the exit animation goes directly on the new project details page
-  function delayNavigation(e, target) {
+  async function delayNavigation(e, target) {
     e.preventDefault();
-    setIsMounted(false);
+    await setIsMounted(false);
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
 
     window.setTimeout(() => {
-      props.history.push(target);
+      history.push(target);
       setIsMounted(true);
-    }, 700);
+    }, 750);
   }
 
   const width = useViewPortWidth();
@@ -108,16 +108,8 @@ const ProjectDetails = (props) => {
           <RightSection>
             {width < themeContext.bp.tablets && (
               <Img
-                imgSrc={
-                  process.env.NODE_ENV === "development"
-                    ? `src/assets/img/${project.id}/${project.photos.project[0].src}`
-                    : `./img/${project.photos.project[0].src}`
-                }
-                imgLazy={
-                  process.env.NODE_ENV === "development"
-                    ? `src/assets/img/${project.id}/${project.photos.project[0].lazy}`
-                    : `./img/${project.photos.project[0].lazy}`
-                }
+                imgSrc={`${project.id}/${project.photos.project[0].src}`}
+                imgLazy={`${project.id}/${project.photos.project[0].lazy}`}
                 imgAlt=""
               />
             )}

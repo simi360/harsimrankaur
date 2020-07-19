@@ -19,16 +19,8 @@ const Project = (props) => {
         <Title title={props.slide.name} />
       </ProjectTitle>
       <ProjectImg
-        imgSrc={
-          process.env.NODE_ENV === "development"
-            ? `src/assets/img/${props.slide.id}/${props.slide.photos.thumb.default}`
-            : `./img/${props.slide.photos.thumb.default}`
-        }
-        imgLazy={
-          process.env.NODE_ENV === "development"
-            ? `src/assets/img/${props.slide.id}/${props.slide.photos.thumb.lazy}`
-            : `./img/${props.slide.photos.thumb.lazy}`
-        }
+        imgSrc={`${props.slide.id}/${props.slide.photos.thumb.default}`}
+        imgLazy={`${props.slide.id}/${props.slide.photos.thumb.lazy}`}
         imgAlt=""
       />
       <ProjectIndex>

@@ -140,8 +140,8 @@ const LeftSection = styled.section`
 
 const RightSection = styled.section`
   margin-top: 2.65rem;
-  padding: 0 1rem;
-  overflow-x: hidden;
+  padding: 0 1rem 1.5rem;
+  overflow: hidden;
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {

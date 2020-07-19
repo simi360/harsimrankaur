@@ -12,12 +12,33 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 
 const MovingImgWithBg = (props) => {
   return (
-    <BgContainer className={props.className} isMobile={props.isMobile}>
+    <BgContainer
+      className={props.className}
+      isMobile={props.isMobile}
+      //key needed to avoid old image keeping on showing after changing the image src
+      key={props.imgSrc}
+    >
       <ImgContainer isMobile={props.isMobile} isActive={props.isActive}>
-        <LazyLoadImage src={props.imgSrc} alt={props.imgAlt} effect="blur" />
-        {/* Needed to have an height with the vertical slider */}
+        <LazyLoadImage
+          src={
+            process.env.NODE_ENV === "development"
+              ? `public/img/${props.imgSrc}`
+              : `./img/${props.imgSrc}`
+          }
+          alt={props.imgAlt}
+          effect="blur"
+        />
+
         <PlaceHolder>
-          <img src={props.imgLazy} alt="" />
+          {/* Needed to have an height with the vertical slider */}
+          <img
+            src={
+              process.env.NODE_ENV === "development"
+                ? `public/img/${props.imgLazy}`
+                : `./img/${props.imgLazy}`
+            }
+            alt=""
+          />
         </PlaceHolder>
       </ImgContainer>
     </BgContainer>
