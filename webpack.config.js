@@ -4,8 +4,6 @@ const webpackMerge = require("webpack-merge");
 const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
 
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-
 //environment and presets arguments with their default values are given
 module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
   return webpackMerge(
@@ -44,9 +42,6 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       },
 
       plugins: [
-        new HtmlWebpackPlugin({
-          template: "./index.html",
-        }),
         //adds the created bundles between script tags in the output file
         new webpack.ProgressPlugin(),
       ],

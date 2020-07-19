@@ -1,10 +1,14 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+
 module.exports = () => ({
   devtool: "source-map",
   output: {
     filename: "[name].js",
     chunkFilename: "[name].bundle.js",
+    path: path.resolve(__dirname, "../public/dist/"),
+    publicPath: "./dist/",
   },
   module: {
     rules: [
@@ -36,5 +40,11 @@ module.exports = () => ({
       },
     ],
   },
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: "./index.html",
+      filename: "../index.html",
+    }),
+    new MiniCssExtractPlugin(),
+  ],
 });
