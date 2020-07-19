@@ -22,9 +22,7 @@ const Main = styled.main`
 
 const ProjectTitle = styled(Title)`
   margin: 5rem 0 0.5rem;
-  padding: 0.5rem 0.25rem;
   line-height: 0.8;
-
   font-size: 3.2rem;
 
   &::after {
@@ -33,6 +31,7 @@ const ProjectTitle = styled(Title)`
   }
 
   .title-span {
+    padding: 0.5rem 0.25rem;
     opacity: 0;
     transition: ${(p) => `opacity 0.1s ${p.theme.animations.easeInOut};`};
     transition-delay: 0.12s;
@@ -54,31 +53,34 @@ const ProjectTitle = styled(Title)`
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     font-size: 8rem;
     margin-top: 10rem;
+
+    .title-span {
+      padding: 1.25rem 0.5rem 0.5rem;
+    }
   }
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: portrait) {
-    font-size: ${(p) =>
-      p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 5.5rem)"
-        : "clamp(4rem, 15.5vw, 11.5rem); "};
+    font-size: ${(p) => (p.title.length >= 4 ? "8vw" : "11.5")};
+
+    .title-span {
+      padding: 1rem 0.5rem 0.5rem;
+    }
   }
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     margin-top: 0;
-    font-size: ${(p) =>
-      p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 4.5rem)"
-        : "clamp(4rem, 15.5vw, 8rem); "};
+    font-size: ${(p) => (p.title.length >= 4 ? "4.5rem" : "8rem")};
+
+    .title-span {
+      padding: 1rem 0.5rem 0.5rem;
+    }
   }
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
-    font-size: ${(p) =>
-      p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 4.75rem)"
-        : "clamp(4rem, 15.5vw, 11.5rem); "};
+    font-size: ${(p) => (p.title.length >= 4 ? "4.75rem" : "11.5rem")};
   }
 `;
 

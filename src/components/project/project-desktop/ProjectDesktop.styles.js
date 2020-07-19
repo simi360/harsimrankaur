@@ -141,12 +141,7 @@ const ProjectTitle = styled.div`
   z-index: 1;
 
   h2 {
-    font-size: ${(p) =>
-      p.title.length >= 4 ? "4.5rem" : "12.5vw"}; /* For better support */
-    font-size: ${(p) =>
-      p.title.length >= 4
-        ? "clamp(2.4rem, 8vw, 5.5rem)"
-        : "clamp(4rem, 15.5vw, 11.5rem); "};
+    font-size: ${(p) => (p.title.length >= 4 ? "8vw" : "15.5vw")};
 
     .title-span {
       opacity: 0;
@@ -193,10 +188,7 @@ const ProjectTitle = styled.div`
     grid-row: 4 / span 3;
 
     h2 {
-      font-size: ${(p) =>
-        p.title.length >= 4
-          ? "clamp(2.4rem, 4.75vw, 4.5rem)"
-          : "clamp(4rem, 9.5vw, 11.5rem); "};
+      font-size: ${(p) => (p.title.length >= 4 ? "4.75vw" : "9.5vw")};
     }
   }
 
@@ -205,10 +197,7 @@ const ProjectTitle = styled.div`
     grid-column: 6 / span 5;
 
     h2 {
-      font-size: ${(p) =>
-        p.title.length >= 4
-          ? "clamp(2.4rem, 9.5vw, 4.5rem)"
-          : "clamp(4rem, 12.5vw, 11.5rem); "};
+      font-size: ${(p) => (p.title.length >= 4 ? "4.5rem" : "12.5vw")};
     }
   }
 `;
