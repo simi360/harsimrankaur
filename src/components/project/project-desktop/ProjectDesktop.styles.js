@@ -6,18 +6,18 @@ const ProjectContainer = styled.div`
   max-width: ${(p) => `${p.theme.container}px`};
   position: fixed;
   top: 0;
-  left: 0;
+  left: 50vw;
   bottom: 0;
   right: 0;
   display: grid;
   grid-template-columns: repeat(6, minmax(0, 1fr));
-
   grid-template-rows: repeat(10, minmax(0, 1fr));
   grid-gap: 1.875rem;
   font-family: ${(p) => p.theme.font.poppins};
-
+  transform: translateX(-50%);
   z-index: 0;
   pointer-events: none;
+
   &.animate-enter-done {
     z-index: 100;
     pointer-events: all;
