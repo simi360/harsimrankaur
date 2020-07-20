@@ -14,7 +14,7 @@ const FadeUp = css`
     opacity: 0;
     transition: ${(p) => `all 0.75s ${p.theme.animations.easeInOut};`};
   } */
-
+  .load-enter-done &,
   .change-route-enter-done &,
   .project-enter-done & {
     transform: translateY(0);

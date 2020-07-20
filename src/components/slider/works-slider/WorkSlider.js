@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Loader from "../../loader";
+import Loader from "../../loaders/loader";
 import WorkSliderMobile from "./mobile-slider/MobileSlider";
 import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";
@@ -17,7 +17,7 @@ const WorkSlider = () => {
   async function getProjects() {
     setTimeout(() => {
       setLoadingStatus(false);
-    }, 0);
+    }, 3000);
 
     await setProjects(ProjectDatas || []);
   }
@@ -26,7 +26,7 @@ const WorkSlider = () => {
     getProjects();
   }, []);
 
-  if (isLoading || projects.length == 0) {
+  if (isLoading && projects.length == 0) {
     return <Loader />;
   }
 

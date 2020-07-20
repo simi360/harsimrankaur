@@ -53,12 +53,18 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ol, ul {
-	list-style: none;
-}
+        list-style: none;
+    }
 
-button {
-    border: none;
-    background: none;
-    color: ${(p) => p.theme.color.primary};
-}
+    button {
+        border: none;
+        background: none;
+        color: ${(p) => p.theme.color.primary};
+    }
+
+    .read-only {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+    }
 `;
