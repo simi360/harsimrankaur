@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SliderButton from "../../slider-button/SliderButton";
+import ErrorBoundary from "../../../error/ErrorBoundary";
 
 import {
   SliderContainer,
@@ -133,43 +134,46 @@ class DesktopSlider extends React.Component {
   render() {
     const { theme, activeIndex } = this.state;
     const { slides } = this.props;
+
     return (
-      <ThemeProvider theme={theme}>
-        <SliderContainer>
-          <WorkSliderPagination
-            activeIndex={activeIndex}
-            sliderLenght={slides.length}
-          />
-          <div className="slider-container">
-            {slides &&
-              slides.map((slide, index) => (
-                <SliderProject
-                  key={"slide" + index}
-                  slide={slide}
-                  slideIndex={index}
-                  isActive={activeIndex == index ? true : false}
-                />
-              ))}
-          </div>
-          <SliderButtons>
-            <SliderButton
-              onClickHandler={() => this.onClickHandler(true)}
-              hasFollowingSlide={() => this.hasFollowingSlide(true)}
-              label="Prevous work"
-              isPrev={true}
-              colors={this.state.theme}
+      <ErrorBoundary type="slider">
+        <ThemeProvider theme={theme}>
+          <SliderContainer>
+            <WorkSliderPagination
+              activeIndex={activeIndex}
+              sliderLenght={slides.length}
             />
-            <SliderButton
-              onClickHandler={() => this.onClickHandler(false)}
-              hasFollowingSlide={() => this.hasFollowingSlide(false)}
-              label="Next work"
-              isPrev={false}
-              colors={this.state.theme}
-            />
-          </SliderButtons>
-          <ScrollIcon />
-        </SliderContainer>
-      </ThemeProvider>
+            <div className="slider-container">
+              {slides &&
+                slides.map((slide, index) => (
+                  <SliderProject
+                    key={"slide" + index}
+                    slide={slide}
+                    slideIndex={index}
+                    isActive={activeIndex == index ? true : false}
+                  />
+                ))}
+            </div>
+            <SliderButtons>
+              <SliderButton
+                onClickHandler={() => this.onClickHandler(true)}
+                hasFollowingSlide={() => this.hasFollowingSlide(true)}
+                label="Prevous work"
+                isPrev={true}
+                colors={this.state.theme}
+              />
+              <SliderButton
+                onClickHandler={() => this.onClickHandler(false)}
+                hasFollowingSlide={() => this.hasFollowingSlide(false)}
+                label="Next work"
+                isPrev={false}
+                colors={this.state.theme}
+              />
+            </SliderButtons>
+            <ScrollIcon />
+          </SliderContainer>
+        </ThemeProvider>
+      </ErrorBoundary>
     );
   }
 }

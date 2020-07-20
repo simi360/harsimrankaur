@@ -21,8 +21,14 @@ const Carret = (props) => {
   );
 };
 
-Carret.prototype = {
-  colors: PropTypes.object.isRequired,
+Carret.propTypes = {
+  colors: PropTypes.shape({
+    colors: PropTypes.shape({
+      color: PropTypes.shape({
+        primary: PropTypes.string.isRequired,
+      }),
+    }),
+  }),
 };
 
 export default Carret;

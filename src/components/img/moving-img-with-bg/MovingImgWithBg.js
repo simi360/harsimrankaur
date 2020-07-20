@@ -45,9 +45,12 @@ const MovingImgWithBg = (props) => {
   );
 };
 
-MovingImgWithBg.prototype = {
+MovingImgWithBg.propTypes = {
   imgSrc: PropTypes.string.isRequired,
+  imgLazy: PropTypes.string.isRequired,
   imgAlt: PropTypes.string,
+  isMobile: PropTypes.bool.isRequired,
+  isActive: PropTypes.bool.isRequired,
 };
 
 export default MovingImgWithBg;

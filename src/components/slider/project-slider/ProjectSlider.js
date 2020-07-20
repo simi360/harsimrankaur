@@ -3,14 +3,15 @@ import PropTypes from "prop-types";
 import { ThemeContext } from "styled-components";
 import { useViewPortWidth } from "../../../utils/getViewport";
 import StretchedLink from "../../links/stretched-link/Stretched-link";
-import MovingImgWithBg from "../../img/MovingImgWithBg";
+import MovingImgWithBg from "../../img/moving-img-with-bg/MovingImgWithBg";
+import ErrorBoundary from "../../error/ErrorBoundary";
 import { ProjectSliderStyles, Slide } from "./ProjectSlider.Styles";
 
 const ProjectSlider = ({ photos, theme, projectId }) => {
   const width = useViewPortWidth();
 
   const themeContext = useContext(ThemeContext);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
 
   const additionalSettings = {
     infiniteLoop: true,
@@ -33,33 +34,41 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
   }
 
   return (
-    <ProjectSliderStyles additionalSettings={additionalSettings} colors={theme}>
-      {photos &&
-        photos.map((photo, index) => (
-          <Slide key={`photo${index}`} index={index}>
-            <MovingImgWithBg
-              imgSrc={`${projectId}/${photo.src}`}
-              imgLazy={`${projectId}/${photo.lazy}`}
-              imgAlt={photo.alt}
-              isActive={index == activeIndex ? true : false}
-              isMobile={photo.isMobile}
-            />
+    <ErrorBoundary type="slider">
+      <ProjectSliderStyles
+        additionalSettings={additionalSettings}
+        colors={theme}
+      >
+        {photos &&
+          photos.map((photo, index) => (
+            <Slide key={`photo${index}`} index={index}>
+              <MovingImgWithBg
+                imgSrc={`${projectId}/${photo.src}`}
+                imgLazy={`${projectId}/${photo.lazy}`}
+                imgAlt={photo.alt}
+                isActive={index == activeIndex ? true : false}
+                isMobile={photo.isMobile}
+              />
 
-            <StretchedLink
-              externalLink={true}
-              url={photo.url}
-              ariaLabel={`Visit ${photo.alt}`}
-              srOnly={true}
-            />
-          </Slide>
-        ))}
-    </ProjectSliderStyles>
+              {photo.url && (
+                <StretchedLink
+                  externalLink={true}
+                  url={photo.url}
+                  ariaLabel={`Visit ${photo.alt}`}
+                  srOnly={true}
+                />
+              )}
+            </Slide>
+          ))}
+      </ProjectSliderStyles>
+    </ErrorBoundary>
   );
 };
 
-ProjectSlider.prototype = {
-  photos: PropTypes.object.isRequired,
+ProjectSlider.propTypes = {
+  photos: PropTypes.array.isRequired,
   theme: PropTypes.object.isRequired,
+  projectId: PropTypes.string.isRequired,
 };
 
 export default ProjectSlider;

@@ -25,8 +25,8 @@ const ArrowLink = (props) => {
   );
 };
 
-ArrowLink.prototype = {
-  colors: PropTypes.object.isRequired,
+ArrowLink.propTypes = {
+  color: PropTypes.string.isRequired,
 };
 
 export default ArrowLink;

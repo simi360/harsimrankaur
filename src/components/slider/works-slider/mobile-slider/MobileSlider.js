@@ -5,14 +5,15 @@ import Project from "../../../project/project-mobile/ProjectMobile";
 import { ThemeProvider, withTheme } from "styled-components";
 import { SliderStyle, WorkSliderPagination } from "./MobileSlider.styles";
 import BaseSlider from "../../base-slider/BaseSlider";
+import ErrorBoundary from "../../../error/ErrorBoundary";
 
 class WorkSliderMobile extends React.Component {
   state = {
     activeIndex: 0,
     theme: {
       color: {
-        primary: this.props.slides[0].colors.primary,
-        primaryLight: this.props.slides[0].colors.primaryLight,
+        primary: this.props.slides[0].colors.primary || "black",
+        primaryLight: this.props.slides[0].colors.primaryLight || "grey",
       },
     },
   };
@@ -42,30 +43,32 @@ class WorkSliderMobile extends React.Component {
     };
 
     return (
-      <ThemeProvider theme={this.state.theme}>
-        <SliderStyle>
-          <div className="slider-container">
-            <WorkSliderPagination
-              activeIndex={activeIndex}
-              sliderLenght={slides.length}
-            />
+      <ErrorBoundary type="slider">
+        <ThemeProvider theme={this.state.theme}>
+          <SliderStyle>
+            <div className="slider-container">
+              <WorkSliderPagination
+                activeIndex={activeIndex}
+                sliderLenght={slides.length}
+              />
 
-            <BaseSlider
-              additionalSettings={additionalSettings}
-              colors={this.state.theme}
-            >
-              {slides &&
-                slides.map((slide, index) => (
-                  <Project
-                    slide={slide}
-                    slideIndex={index}
-                    key={"slide" + index}
-                  />
-                ))}
-            </BaseSlider>
-          </div>
-        </SliderStyle>
-      </ThemeProvider>
+              <BaseSlider
+                additionalSettings={additionalSettings}
+                colors={this.state.theme}
+              >
+                {slides &&
+                  slides.map((slide, index) => (
+                    <Project
+                      slide={slide}
+                      slideIndex={index}
+                      key={"slide" + index}
+                    />
+                  ))}
+              </BaseSlider>
+            </div>
+          </SliderStyle>
+        </ThemeProvider>
+      </ErrorBoundary>
     );
   }
 }

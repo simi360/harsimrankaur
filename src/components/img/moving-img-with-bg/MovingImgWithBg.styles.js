@@ -4,7 +4,7 @@ import {
   translateVerticalUltraLargeDesktops,
   translateVerticalTablets,
   translateVerticalMobile,
-} from "../../utils/kreyframes";
+} from "../../../utils/kreyframes";
 
 const BgContainer = styled.div`
   /*if the value 250px of width is changed, it also has to change in keyframes.js to sync the animation*/

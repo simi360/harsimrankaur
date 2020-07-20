@@ -10,7 +10,7 @@ const Title = (props) => {
   );
 };
 
-Title.prototype = {
+Title.propTypes = {
   title: PropTypes.string.isRequired,
   className: PropTypes.string,
 };

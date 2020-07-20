@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { ImgContainer, Img } from "./ImgWithOverflowinBg.style";
+import { Img, ImgContainer } from "./ImgWithBg.style";
 import "react-lazy-load-image-component/src/effects/blur.css";
 
-const ImgWithOverflowingBg = (props) => {
+const ImgBg = (props) => {
   return (
     <ImgContainer
       className={props.className}
@@ -27,13 +27,10 @@ const ImgWithOverflowingBg = (props) => {
   );
 };
 
-ImgContainer.prototype = {
-  className: PropTypes.string.isRequired,
-};
-
-Img.prototype = {
+ImgBg.propTypes = {
   imgSrc: PropTypes.string.isRequired,
+  imgLazy: PropTypes.string.isRequired,
   imgAlt: PropTypes.string,
 };
 
-export default ImgWithOverflowingBg;
+export default ImgBg;

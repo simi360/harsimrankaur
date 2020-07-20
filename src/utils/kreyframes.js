@@ -110,10 +110,35 @@ const translateDot = keyframes`
     }
 `;
 
+const rotateTurtle = keyframes`
+ 0% {
+        transform: rotate(185deg);
+    }
+    
+    10% {
+        transform: rotate(195deg);
+    }
+    
+    25% {
+        transform: rotate(175deg);
+    }
+    40% {
+        transform: rotate(190deg);
+    }
+    50% {
+        transform: rotate(185deg);
+    }
+
+    100% {
+        transform: rotate(185deg);
+    }
+`;
+
 export {
   translateVerticalDesktops,
   translateVerticalUltraLargeDesktops,
   translateVerticalTablets,
   translateVerticalMobile,
   translateDot,
+  rotateTurtle,
 };

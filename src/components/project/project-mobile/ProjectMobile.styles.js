@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import ImgWithOverflowingBg from "../../img/ImgWithOverflowinBg";
+import ImgWithOverflowingBg from "../../img/img-with-overflowing-bg/ImgWithOverflowinBg";
 
 const ProjectSection = styled.section`
   width: 100%;

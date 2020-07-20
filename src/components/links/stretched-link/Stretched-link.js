@@ -24,7 +24,7 @@ const StretchedLink = (props) => {
   );
 };
 
-StretchedLink.prototype = {
+StretchedLink.propTypes = {
   externalLink: PropTypes.bool,
   url: PropTypes.string.isRequired,
   ariaLabel: PropTypes.string.isRequired,

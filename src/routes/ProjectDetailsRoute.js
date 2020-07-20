@@ -2,6 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 import ProjectDetails from "../components/project/project-details/ProjectDetails";
 import ProjectDatas from "../assets/projectsData.json";
+import ErrorBoundary from "../components/error/ErrorBoundary";
 
 const ProjectDetailsRoute = (props) => {
   const [projectInfos, setProjectInfos] = useState(null);
@@ -49,21 +50,24 @@ const ProjectDetailsRoute = (props) => {
   }
 
   return (
-    <ProjectDetails
-      project={projectInfos}
-      nextProject={nextProjectRef.current}
-      prevProject={prevProjectRef.current}
-      history={props.history}
-    />
+    <ErrorBoundary type="route">
+      <ProjectDetails
+        project={projectInfos}
+        nextProject={nextProjectRef.current}
+        prevProject={prevProjectRef.current}
+        history={props.history}
+      />
+    </ErrorBoundary>
   );
 };
 
-ProjectDetailsRoute.prototype = {
+ProjectDetailsRoute.propTypes = {
   match: PropTypes.shape({
     params: PropTypes.shape({
       id: PropTypes.string.isRequired,
     }),
   }),
+  history: PropTypes.object.isRequired,
 };
 
 export default ProjectDetailsRoute;

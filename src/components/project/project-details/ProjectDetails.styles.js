@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Title from "../../text/Title";
-import ImgBg from "../../img/ImgWithBg";
+import ImgBg from "../../img/img-with-bg/ImgWithBg";
 import ArrowLink from "../../links/arrow-link/ArrowLink";
 import ProjectNav from "../../nav/project-nav/ProjectNav";
 import { FadeUp } from "../../../utils/animations";
@@ -9,6 +9,15 @@ const Main = styled.main`
   width: 100%;
   max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
+
+  .error-slider {
+    height: 100%;
+    max-width: none;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
 
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     padding: 0 0 2rem;

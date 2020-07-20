@@ -5,6 +5,7 @@ import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";
 import { useViewPortWidth } from "../../../utils/getViewport";
 import ProjectDatas from "../../../assets/projectsData.json";
+import ErrourBoundary from "../../error/ErrorBoundary";
 
 const WorkSlider = () => {
   const [isLoading, setLoadingStatus] = useState(true);
@@ -32,9 +33,13 @@ const WorkSlider = () => {
   //the components are shown depending the screen size
   return width < themeContext.bp.tablets ||
     (width < themeContext.bp.desktops && width >= window.innerHeight) ? (
-    <WorkSliderMobile slides={projects} />
+    <ErrourBoundary type="layout">
+      <WorkSliderMobile slides={projects} />
+    </ErrourBoundary>
   ) : (
-    <DesktopSlider slides={projects} />
+    <ErrourBoundary type="layout">
+      <DesktopSlider slides={projects} />
+    </ErrourBoundary>
   );
 };
 
