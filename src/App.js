@@ -36,7 +36,7 @@ const App = () => {
           <GlobalStyle />
           <CSSTransition
             classNames="load"
-            timeout={{ enter: 750, exit: 750 }}
+            timeout={{ enter: 0, exit: 750 }}
             in={showLoader}
             appear
             enter
