@@ -51,7 +51,18 @@ const About = ({
         </P>
 
         <Link>
-          For more informations here is a <a href="/">full resume</a>
+          For more informations here is a{" "}
+          <a
+            target="_blank"
+            rel="noreferrer"
+            href={
+              process.env.NODE_ENV === "development"
+                ? `public/img/sarah-hick_resume.pdf`
+                : `./img/sarah-hick_resume.pdf`
+            }
+          >
+            full resume
+          </a>
         </Link>
       </IntroContainer>
 
