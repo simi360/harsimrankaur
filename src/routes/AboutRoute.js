@@ -9,7 +9,6 @@ const AboutRoute = () => {
   const [softSkills, setSoftSkills] = useState(null);
   const [experiences, setExperiences] = useState(null);
   const [formations, setFormations] = useState(null);
-  const [isLoading, setLoadingStatus] = useState(true);
 
   useEffect(() => {
     async function getProjectDetails() {
@@ -26,16 +25,10 @@ const AboutRoute = () => {
         setExperiences(exp),
         setFormations(formationsData),
       ]);
-
-      setLoadingStatus(false);
     }
 
     getProjectDetails();
   });
-
-  if (isLoading) {
-    return <h1>Loading</h1>;
-  }
 
   return (
     <ErrorBoundary type="route">

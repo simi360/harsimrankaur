@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Loader from "../../loaders/loader";
+import Loader from "../../loaders/main-loader/MainLoader";
 import WorkSliderMobile from "./mobile-slider/MobileSlider";
 import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";

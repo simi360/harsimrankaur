@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import ProjectDetails from "../pages/project-details/ProjectDetails";
 import ProjectDatas from "../assets/projectsData.json";
 import ErrorBoundary from "../components/error/ErrorBoundary";
+import Loader from "../components/loaders/main-loader/MainLoader";
 
 const ProjectDetailsRoute = (props) => {
   const [projectInfos, setProjectInfos] = useState(null);
@@ -46,7 +47,7 @@ const ProjectDetailsRoute = (props) => {
   }, [id]);
 
   if (isLoading) {
-    return <h1>Loading</h1>;
+    return <Loader />;
   }
 
   return (

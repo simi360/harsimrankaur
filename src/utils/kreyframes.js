@@ -134,6 +134,33 @@ const rotateTurtle = keyframes`
     }
 `;
 
+const primaryRGB = "234,102,22";
+
+const cubeAnimation = keyframes`
+    0% {
+        border: 20px solid rgba(${primaryRGB}, 0.9);
+        border-right:20px solid rgba(${primaryRGB}, 0.5);
+        
+    }
+    25% {
+        border: 20px solid rgba(${primaryRGB}, 0.9);
+        border-bottom:20px solid rgba(${primaryRGB}, 0.5);
+    }
+    50% {
+        border: 20px solid rgba(${primaryRGB}, 0.9);
+        border-left:20px solid rgba(${primaryRGB}, 0.5);
+    }
+    75% {
+        border: 20px solid rgba(${primaryRGB}, 0.9);
+        border-top:20px solid rgba(${primaryRGB}, 0.5);
+    }
+    100% {
+        border: 20px solid rgba(${primaryRGB}, 0.9);
+        border-right:20px solid rgba(${primaryRGB}, 0.5);
+        
+    }
+`;
+
 export {
   translateVerticalDesktops,
   translateVerticalUltraLargeDesktops,
@@ -141,4 +168,5 @@ export {
   translateVerticalMobile,
   translateDot,
   rotateTurtle,
+  cubeAnimation,
 };

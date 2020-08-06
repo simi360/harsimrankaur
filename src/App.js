@@ -5,9 +5,9 @@ import CSSTransition from "react-transition-group/esm/CSSTransition";
 import TransitionGroup from "react-transition-group/esm/TransitionGroup";
 
 import Nav from "./components/nav/Nav";
-import ErrorDefault from "./components/error/error-default/ErrorDefault";
 import ViewportWidthProvider from "./utils/getViewport";
 import HomeLoader from "./components/loaders/home-loader/HomeLoader";
+import Loader from "./components/loaders/main-loader/MainLoader";
 
 import { Theme } from "./utils/ThemeContext";
 import { GlobalStyle } from "./utils/globalStyles";
@@ -17,7 +17,7 @@ const AboutRoute = lazy(() => import("./routes/AboutRoute"));
 const ProjectDetailsRoute = lazy(() => import("./routes/ProjectDetailsRoute"));
 
 const App = () => {
-  const [isLoading, setLoadingStatus] = useState(false);
+  const [isLoading, setLoadingStatus] = useState(true);
   const [showLoader, isShowingLoader] = useState(true);
 
   useEffect(() => {
@@ -70,7 +70,7 @@ const App = () => {
                     <div>
                       <Switch location={location}>
                         <Route exact path="/" component={Home} />
-                        <Suspense fallback={<ErrorDefault />}>
+                        <Suspense fallback={<Loader />}>
                           <Route exact path="/about" component={AboutRoute} />
                         </Suspense>
                       </Switch>
@@ -81,7 +81,7 @@ const App = () => {
             />
 
             <Switch>
-              <Suspense fallback={<ErrorDefault />}>
+              <Suspense fallback={<Loader />}>
                 <Route
                   exact
                   path="/project/:id"
