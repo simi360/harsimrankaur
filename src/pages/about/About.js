@@ -37,9 +37,9 @@ const About = ({
         </Intro>
 
         <P>
-          After 3 years as Graphic Graphic Designer, I have decided to make a
-          change of career and become a <strong>Front-End developer</strong>.
-          Later, I was one of the 2000 of 200.000 selected for a{" "}
+          After 3 years as a Graphic Designer, I have decided to make a change
+          of career and become a <strong>Front-End developer</strong>. Later, I
+          was one of the 2000 of 200.000 selected for a
           <strong>Google Scholarship</strong> to follow Udacity Front-End
           Nanodregree. At the same time, I was working part time as a Web
           Integrator and all my free time was spent on Udacity.
