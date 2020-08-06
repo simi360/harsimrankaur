@@ -4,6 +4,7 @@ export const Theme = {
     primaryLight: "#FFBC93",
     secondary: "#260914",
     dark: "#2F2E2E",
+    grey: "#464545",
   },
   font: {
     raleway: "'Raleway', 'Roboto', Helvetica, Arial, sans-serif",

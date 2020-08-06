@@ -13,11 +13,11 @@ import { Theme } from "./utils/ThemeContext";
 import { GlobalStyle } from "./utils/globalStyles";
 
 import Home from "./routes/Home";
-const About = lazy(() => import("./routes/About"));
+const AboutRoute = lazy(() => import("./routes/AboutRoute"));
 const ProjectDetailsRoute = lazy(() => import("./routes/ProjectDetailsRoute"));
 
 const App = () => {
-  const [isLoading, setLoadingStatus] = useState(true);
+  const [isLoading, setLoadingStatus] = useState(false);
   const [showLoader, isShowingLoader] = useState(true);
 
   useEffect(() => {
@@ -71,7 +71,7 @@ const App = () => {
                       <Switch location={location}>
                         <Route exact path="/" component={Home} />
                         <Suspense fallback={<ErrorDefault />}>
-                          <Route exact path="/about" component={About} />
+                          <Route exact path="/about" component={AboutRoute} />
                         </Suspense>
                       </Switch>
                     </div>

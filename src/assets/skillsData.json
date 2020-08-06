@@ -1,0 +1,100 @@
+{
+  "technicalSkills": [
+    {
+      "name": "HTML",
+      "level": 9
+    },
+    {
+      "name": "CSS",
+      "level": 9
+    },
+    {
+      "name": "SASS",
+      "level": 9
+    },
+    {
+      "name": "Vanilla Js",
+      "level": 7
+    },
+    {
+      "name": "React",
+      "level": 6
+    },
+    {
+      "name": "JQuery",
+      "level": 7
+    },
+    {
+      "name": "Git",
+      "level": 6
+    },
+    {
+      "name": "Webpack",
+      "level": 7
+    },
+    {
+      "name": "Drupal",
+      "level": 4
+    },
+    {
+      "name": "PHP",
+      "level": 3
+    }
+  ],
+  "otherTechnicalSkills": [
+    "Bootstrap",
+    "Gulp",
+    "VS Code",
+    "PHP Storm",
+    "Figma",
+    "Jira",
+    "Photoshop",
+    "Illustrator",
+    "InDesign"
+  ],
+  "softSkills": [
+    "Always eager to learn",
+    "Adapt to lots of different situations",
+    "Creative",
+    "Can easily switch from one project to another"
+  ],
+  "experience": [
+    {
+      "year": "2018-2020",
+      "job": "Front-End Developer",
+      "agency": "Nvision"
+    },
+    {
+      "year": "2016-2018",
+      "job": "Web Integrator",
+      "agency": "Les éditions de l'Avenir"
+    },
+    {
+      "year": "2014-2016",
+      "job": "Graphic Designer",
+      "agency": "IAM Agency"
+    },
+    {
+      "year": "2013-2014",
+      "job": "Graphic Designer Intern",
+      "agency": "Belle Production"
+    }
+  ],
+  "formations": [
+    {
+      "year": "2017-2018",
+      "name": "Front-End Developer",
+      "school": "Udacity"
+    },
+    {
+      "year": "2013-2015",
+      "name": "Multimedia Products Conceptor and ",
+      "school": "IFAPME"
+    },
+    {
+      "year": "2008-2011",
+      "name": "Graphic Designer",
+      "school": "Ecole Supérieure des Arts Saint-Luc Liège"
+    }
+  ]
+}

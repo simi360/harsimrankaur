@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
-import ProjectDetails from "../components/project/project-details/ProjectDetails";
+import ProjectDetails from "../pages/project-details/ProjectDetails";
 import ProjectDatas from "../assets/projectsData.json";
 import ErrorBoundary from "../components/error/ErrorBoundary";
 
