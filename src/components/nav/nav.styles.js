@@ -14,6 +14,7 @@ const NavTag = styled.nav`
   justify-content: flex-end;
   align-items: center;
   font-weight: 500;
+  overflow: hidden;
   background: rgba(255, 255, 255, 0.8);
   z-index: 9999;
 
