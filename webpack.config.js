@@ -5,7 +5,10 @@ const modeConfig = (env) => require(`./build-utils/webpack.${env}`)(env);
 const presetConfig = require("./build-utils/loadPresets");
 
 //environment and presets arguments with their default values are given
-module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
+module.exports = (
+  { mode, presets, psw } = { mode: "production", presets: [] }
+) => {
+  console.log(psw);
   return webpackMerge(
     {
       mode,
@@ -44,6 +47,9 @@ module.exports = ({ mode, presets } = { mode: "production", presets: [] }) => {
       plugins: [
         //adds the created bundles between script tags in the output file
         new webpack.ProgressPlugin(),
+        new webpack.DefinePlugin({
+          __PSW__: JSON.stringify(psw || ""),
+        }),
       ],
 
       optimization: {

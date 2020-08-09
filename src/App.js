@@ -13,21 +13,28 @@ import { Theme } from "./utils/ThemeContext";
 import { GlobalStyle } from "./utils/globalStyles";
 
 import Home from "./routes/Home";
+const Connect = lazy(() => import("./components/connect/Connect"));
 const AboutRoute = lazy(() => import("./routes/AboutRoute"));
 const ProjectDetailsRoute = lazy(() => import("./routes/ProjectDetailsRoute"));
 
 const App = () => {
   const [isLoading, setLoadingStatus] = useState(true);
+  //needed for the exit animation of the loader
   const [showLoader, isShowingLoader] = useState(true);
+  const [isConnected, setConnected] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
-      setLoadingStatus(false);
-    }, 5000);
-    setTimeout(() => {
       isShowingLoader(false);
     }, 4250);
+    setTimeout(() => {
+      setLoadingStatus(false);
+    }, 5000);
   });
+
+  function connectToSite() {
+    setConnected(true);
+  }
 
   if (isLoading) {
     return (
@@ -46,6 +53,16 @@ const App = () => {
           </CSSTransition>
         </ThemeProvider>
       </Router>
+    );
+  }
+
+  if (!isConnected) {
+    return (
+      <ThemeProvider theme={Theme}>
+        <Suspense fallback={<Loader />}>
+          <Connect connectToSite={connectToSite} />
+        </Suspense>
+      </ThemeProvider>
     );
   }
 
