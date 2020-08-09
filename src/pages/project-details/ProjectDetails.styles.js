@@ -140,7 +140,7 @@ const LeftSection = styled.section`
 
   @media (min-width: ${(p) =>
       `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
-    padding: 3rem 1rem 3rem;
+    padding: 5rem 1rem 3rem;
     margin: 0 16.666%;
     flex-basis: 33.333%;
   }
