@@ -25,7 +25,7 @@ const HomeLoader = () => {
           </LastNameDiv>
 
           <JobDiv>
-            <JobParagraph>Front-End Developper</JobParagraph>
+            <JobParagraph>Front-End Developer</JobParagraph>
           </JobDiv>
         </GridDiv>
       </FadeUpDiv>

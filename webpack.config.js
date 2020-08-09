@@ -8,7 +8,6 @@ const presetConfig = require("./build-utils/loadPresets");
 module.exports = (
   { mode, presets, psw } = { mode: "production", presets: [] }
 ) => {
-  console.log(psw);
   return webpackMerge(
     {
       mode,
