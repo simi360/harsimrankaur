@@ -5,13 +5,15 @@ import { useViewPortWidth } from "../../utils/getViewport";
 import ProjectSlider from "../../components/slider/project-slider/ProjectSlider";
 import CSSTransition from "react-transition-group/esm/CSSTransition";
 import ErrorBoundary from "../../components/error/ErrorBoundary";
+import ProjectMessage from "../../components/project/project-message/ProjectMessage";
 import {
   Main,
   ProjectTitle,
   CatTitle,
   CatDescription,
   ListItem,
-  Link,
+  AgencyLink,
+  CLientLink,
   Img,
   LeftSection,
   RightSection,
@@ -72,11 +74,25 @@ const ProjectDetails = (props) => {
 
               <FlexContainer>
                 <FlexChilds>
+                  <CatTitle>Agency :</CatTitle>
+                  <CatDescription>
+                    <AgencyLink
+                      href={project.agency.url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Nvision
+                    </AgencyLink>
+                  </CatDescription>
+
                   <CatTitle>Year :</CatTitle>
                   <CatDescription>{project.year}</CatDescription>
 
                   <CatTitle>Client :</CatTitle>
                   <CatDescription>{project.client}</CatDescription>
+
+                  <CatTitle>Role :</CatTitle>
+                  <CatDescription>{project.role}</CatDescription>
 
                   <CatTitle>Technologies :</CatTitle>
                   <CatDescription>
@@ -88,9 +104,10 @@ const ProjectDetails = (props) => {
                   </CatDescription>
                 </FlexChilds>
                 <FlexChilds>
+                  <CatTitle>Summary :</CatTitle>
+                  <CatDescription>{project.summary}</CatDescription>
                   <CatTitle>Challenges :</CatTitle>
                   <ul>
-                    {" "}
                     {project.challenges.map((challenge, index) => (
                       <ListItem key={`challenge-${index}`}>
                         {challenge}
@@ -101,7 +118,7 @@ const ProjectDetails = (props) => {
               </FlexContainer>
 
               {project.url && (
-                <Link
+                <CLientLink
                   url={project.url}
                   linkText={`Visit ${project.name}'s website`}
                   externalLink={true}
@@ -110,20 +127,27 @@ const ProjectDetails = (props) => {
               )}
             </LeftSection>
             <RightSection>
-              {width < themeContext.bp.tablets && (
-                <Img
-                  imgSrc={`${project.id}/${project.photos.project[0].src}`}
-                  imgLazy={`${project.id}/${project.photos.project[0].lazy}`}
-                  imgAlt=""
-                />
-              )}
+              {width < themeContext.bp.tablets &&
+                project.photos.project.length > 0 && (
+                  <Img
+                    imgSrc={`${project.id}/${project.photos.project[0].src}`}
+                    imgLazy={`${project.id}/${project.photos.project[0].lazy}`}
+                    imgAlt=""
+                  />
+                )}
 
-              {width >= themeContext.bp.tablets && (
-                <ProjectSlider
-                  photos={project.photos.project}
-                  theme={theme}
-                  projectId={project.id}
-                />
+              {width >= themeContext.bp.tablets &&
+                project.photos.project.length > 0 && (
+                  <ProjectSlider
+                    photos={project.photos.project}
+                    theme={theme}
+                    projectId={project.id}
+                  />
+                )}
+              {project.message && (
+                <ProjectMessage>
+                  <p>CONFIDENTIAL</p>
+                </ProjectMessage>
               )}
             </RightSection>
             <ProjectNavigation

@@ -10,15 +10,6 @@ const Main = styled.main`
   max-width: ${(p) => `${p.theme.container}px`};
   margin: auto;
 
-  .error-slider {
-    height: 100%;
-    max-width: none;
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-  }
-
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     padding: 0 0 2rem;
   }
@@ -111,7 +102,13 @@ const ListItem = styled.li`
   font-size: 0.875rem;
 `;
 
-const Link = styled(ArrowLink)`
+const AgencyLink = styled.a`
+  color: ${(p) => p.theme.color.primary};
+  font-size: 1.2rem;
+  line-height: 1;
+`;
+
+const CLientLink = styled(ArrowLink)`
   margin-top: 1.5rem;
   display: block;
 
@@ -211,7 +208,8 @@ export {
   CatTitle,
   CatDescription,
   ListItem,
-  Link,
+  CLientLink,
+  AgencyLink,
   Img,
   LeftSection,
   RightSection,
