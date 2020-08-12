@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { cubeAnimation } from "../../../utils/kreyframes";
+import { FadeUp } from "../../../utils/animations";
 
 const LoaderContainer = styled.section`
   width: 100vw;
@@ -18,6 +19,9 @@ const Cube = styled.div`
   height: 10rem;
   margin: 0 auto;
   animation: ${cubeAnimation} 1s infinite ${(p) => p.theme.animations.easeInOut};
+
+  /* Animations */
+  ${FadeUp}
 `;
 
 const P = styled.p`
@@ -27,6 +31,9 @@ const P = styled.p`
   font-family: ${(p) => p.theme.font.poppins};
   color: ${(p) => p.theme.color.primary};
   text-align: center;
+
+  /* Animations */
+  ${FadeUp}
 `;
 
 export { LoaderContainer, Cube, P };
