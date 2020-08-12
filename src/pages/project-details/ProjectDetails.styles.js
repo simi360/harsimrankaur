@@ -133,9 +133,6 @@ const LeftSection = styled.section`
     padding: 5rem 1rem 3rem 2rem;
     margin: 0 8.3333%;
     flex-basis: 33.333%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 
   @media (min-width: ${(p) =>
@@ -151,8 +148,11 @@ const RightSection = styled.section`
   padding: 0 1rem 1.5rem;
   overflow: hidden;
 
+      /*animation*/
+      ${FadeUp}
+
   @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+    `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     margin-top: 0;
     position: fixed;
     width: 50%;
@@ -163,7 +163,7 @@ const RightSection = styled.section`
   }
 
   @media (min-width: ${(p) =>
-      `${p.theme.container}px`}) and (orientation: landscape) {
+    `${p.theme.container}px`}) and (orientation: landscape) {
     margin-top: 0;
     width: ${(p) => `calc(${p.theme.container}px / 12 * 5)`};
     left: 50%;
