@@ -58,8 +58,7 @@ const ProjectImg = styled(ImgWithOverflowingBg)`
     grid-column: 3 / span 5;
   }
 
-  @media (orientation: portrait) and (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) {
+  @media (orientation: portrait) and (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) {
     grid-column: 2 / span 7;
   }
 `;
@@ -192,8 +191,7 @@ const ProjectTitle = styled.div`
     }
   }
 
-  @media (orientation: portrait) and (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) {
+  @media (orientation: portrait) and (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) {
     grid-column: 6 / span 5;
 
     h2 {

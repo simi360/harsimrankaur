@@ -15,8 +15,7 @@ const Main = styled.main`
     font-weight: 500;
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     padding: 4rem 1rem;
     display: flex;
 
@@ -39,8 +38,7 @@ const Main = styled.main`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.container}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.container}px`}) and (orientation: landscape) {
     section {
       padding: 4rem 0;
       &:first-of-type {
@@ -95,13 +93,11 @@ const Img = styled(ImgBg)`
   margin-top: 2rem;
   display: none;
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     display: block;
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     margin-bottom: 4rem;
   }
 `;
@@ -232,8 +228,7 @@ const FlexSKillsContainer = styled.section`
       }
     }
   }
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     display: block;
     align-self: flex-end;
 
@@ -260,8 +255,7 @@ const FlexExpContainer = styled.section`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     > div {
       flex-basis: 33.333%;
 
@@ -272,8 +266,7 @@ const FlexExpContainer = styled.section`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     margin-bottom: 0rem;
     display: block;
     align-self: flex-end;

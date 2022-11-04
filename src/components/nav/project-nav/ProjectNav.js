@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { useLocation } from 'react-router-dom';
 import {
   ProjectsNavigation,
   NavLink,
@@ -8,6 +9,7 @@ import {
 } from "./ProjectNav.styles";
 
 const ProjectNav = ({ prevProject, nextProject, className, clickHandler }) => {
+  const location = useLocation();
   return (
     <ProjectsNavigation className={className}>
       {prevProject && (

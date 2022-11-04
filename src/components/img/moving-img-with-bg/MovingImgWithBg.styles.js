@@ -63,8 +63,7 @@ const ImgContainer = styled.div`
       }
     }
 
-    @media (min-width: ${(p) =>
-        `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+    @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
       &.lazy-load-image-loaded {
         animation: ${(p) =>
             p.isMobile ? translateVerticalMobile : translateVerticalDesktops}
@@ -75,8 +74,7 @@ const ImgContainer = styled.div`
       }
     }
 
-    @media (min-width: ${(p) =>
-        `${p.theme.container}px`}) and (orientation: landscape) {
+    @media (min-width: ${(p) =>`${p.theme.container}px`}) and (orientation: landscape) {
       &.lazy-load-image-loaded {
         animation: ${(p) =>
             p.isMobile

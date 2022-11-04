@@ -59,10 +59,10 @@ module.exports = (
         },
       },
     },
-    modeConfig(mode)
-    // presetConfig({
-    //    mode,
-    //    presets
-    // })
+    modeConfig(mode),
+    presetConfig({
+       mode,
+       presets
+    })
   );
 };

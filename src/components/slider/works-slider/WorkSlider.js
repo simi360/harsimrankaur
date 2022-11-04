@@ -5,7 +5,7 @@ import DesktopSlider from "./desktop-slider/DesktopSlider";
 import { ThemeContext } from "styled-components";
 import { useViewPortWidth } from "../../../utils/getViewport";
 import ProjectDatas from "../../../assets/projectsData.json";
-import ErrourBoundary from "../../error/ErrorBoundary";
+import ErrorBoundary from "../../error/ErrorBoundary";
 
 const WorkSlider = () => {
   const [isLoading, setLoadingStatus] = useState(true);
@@ -26,20 +26,20 @@ const WorkSlider = () => {
     getProjects();
   }, []);
 
-  if (isLoading && projects.length == 0) {
+  if (isLoading && projects.length === 0) {
     return <Loader />;
   }
 
   //the components are shown depending the screen size
   return width < themeContext.bp.tablets ||
     (width < themeContext.bp.desktops && width >= window.innerHeight) ? (
-    <ErrourBoundary type="layout">
+    <ErrorBoundary type="layout">
       <WorkSliderMobile slides={projects} />
-    </ErrourBoundary>
+    </ErrorBoundary>
   ) : (
-    <ErrourBoundary type="layout">
+    <ErrorBoundary type="layout">
       <DesktopSlider slides={projects} />
-    </ErrourBoundary>
+    </ErrorBoundary>
   );
 };
 

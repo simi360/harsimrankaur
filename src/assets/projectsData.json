@@ -1,243 +1,250 @@
 [
-  {
-    "id": "cfl",
-    "name": "CFL",
-    "year": "2018-2019",
-    "client": "Société Nationale des Chemins de Fer Luxembourgeois",
-    "url": "https://www.cfl.lu",
-    "agency": {
-      "name": "Nvision",
-      "url": "https://www.nvision.lu/case-study/cfl"
-    },
-    "role": "Front-End Developer",
-    "summary": "The Luxemburgish National Railway Company asked Nvision to make a complete rebranding of their three websites. My job was to make a static version of the website which would be integrated by back-end developers later. In addition to the 128 different pages with different behaviours, the website had to be accessible, crossbrowser compatible and support legacy browsers",
-    "technologies": [
-      "HTML",
-      "SASS",
-      "JS",
-      "Webpack",
-      "PHP",
-      "Bootstrap",
-      "jQuery"
-    ],
-    "challenges": [
-      "Managing to make reusable and maintanable components for 128 different pages",
-      "Unsing theming for the 3 different web sites with shared styles and functions but different colors",
-      "Supporting of legacy browsers",
-      "As a public society in the EU, the website must have a good level of accessibility",
-      "Developping crossbrowser printing styles for allowing the travelers to print their timetables",
-      "Main Front-End Developer on this project"
-    ],
-    "photos": {
-      "thumb": {
-        "default": "cfl-thumb.png",
-        "retina": "cfl-thumb2x.png",
-        "lazy": "cfl-thumb-lazy.png"
+    {
+      "id": "clothingecommerce",
+      "name": "Clothing E-Commerce",
+      "year": "2021-2022",
+      "client": "",
+      "url": "https://635b0494afefed149adfa998--frabjous-banoffee-04d76f.netlify.app/",
+      "agency": {
+        "name": "Apptonate",
+        "url": "https://www.apptonate.com"
       },
-      "project": [
-        {
-          "src": "cfl-home.jpg",
-          "lazy": "cfl-home-lazy.jpg",
-          "alt": "CFL Travelers homepage",
-          "url": "https://www.cfl.lu",
-          "isMobile": false
+      "role": "Full-Stack Developer",
+      "summary": "Confidential company asked Apptonate to make a complete re-branding of their clothing e-commerce website. My job was to make a static version of the website and integrate with the back-end developers. In addition to creating about 30 different pages with different behaviors, the website had to be accessible, cross-browser compatible and support legacy browsers",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "JS",
+        "Webpack",
+        "React",
+        "Bootstrap",
+        "jQuery"
+      ],
+      "challenges": [
+        "Managing to make reusable and maintainable components for 30 different pages",
+        "Using theme for the website with shared styles and functions but different colors depending upon the category",
+        "Supporting of legacy browsers",
+        "Intermediate Front-End Developer on this project"
+      ],
+      "photos": {
+        "thumb": {
+          "default": "e-commerce-thumb.png",
+          "retina": "e-commerce-thumb2x.png",
+          "lazy": "e-commerce-thumb-lazy.png"
         },
-        {
-          "src": "cfl-timetables.png",
-          "lazy": "cfl-timetables-lazy.png",
-          "alt": "CFL Travelers timetable results",
-          "url": "https://www.cfl.lu/fr-fr/search/searchresult?SearchDepartureExtId=9217081&SearchDeparture=Luxembourg%2C+Gare+Centrale&SearchArrivalExtId=8200102&SearchArrival=Pfaffenthal-Kirchberg&departureBullets=departure&SearchDate=2020-06-27&SearchTime=17%3A00&SearchViaExtId=&SearchVia=&SearchProducts=0%2C1&SearchProducts=3%2C4&SearchProducts=2%2C5&SearchProducts=8&SearchProducts=9&SearchMaxConnections=4&SearchManageOriginWalk=true&SearchManageDestWalk=true&advanced-search-preferences=direct",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-network.png",
-          "lazy": "cfl-network-lazy.png",
-          "alt": "CFL Travelers's network overview",
-          "url": "https://www.cfl.lu/fr-fr/network",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-transport.png",
-          "lazy": "cfl-transport-lazy.png",
-          "alt": "CFL Fret combined transport page",
-          "url": "https://www.cfl-mm.lu/fr-fr/solutions/ferroviaire/transport-combine",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-groupe.jpg",
-          "lazy": "cfl-groupe-lazy.jpg",
-          "alt": "CFL Group's homepage",
-          "url": "https://groupe.cfl.lu/fr-fr",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-historique.jpg",
-          "lazy": "cfl-historique-lazy.jpg",
-          "alt": "CFL' history",
-          "url": "https://groupe.cfl.lu/fr-fr/history",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-projects.png",
-          "lazy": "cfl-projects-lazy.png",
-          "alt": "CFL Group's projects",
-          "url": "https://groupe.cfl.lu/fr-fr/project",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-numbers.png",
-          "lazy": "cfl-numbers-lazy.png",
-          "alt": "CFL Group's key numbers",
-          "url": "https://groupe.cfl.lu/fr-fr/keynumbers",
-          "isMobile": false
-        },
-        {
-          "src": "cfl-contact.png",
-          "lazy": "cfl-contact-lazy.png",
-          "alt": "CFL Group's contact page",
-          "url": "https://groupe.cfl.lu/fr-fr/contact",
-          "isMobile": false
-        }
-      ]
-    },
-    "colors": {
-      "primary": "#CC0033",
-      "primaryLight": "#FCADA9"
-    }
-  },
-  {
-    "id": "aea",
-    "name": "A&A",
-    "year": "2019",
-    "client": "a&a gérence",
-    "url": "https://www.aea.lu",
-    "agency": {
-      "name": "Nvision",
-      "url": "https://www.nvision.lu/case-study/aea"
-    },
-    "role": "Front-End Developer",
-    "summary": "A&A is a real estate agency, at first they asked Nvision to make a rebranding of the website, but happy with the work we provided, asked to make their intranet and 2 other websites. I worked on the development of the rebranded website, where you could find the descriptions of their services, a filterable list of all the rents/sales and customer account pages",
-    "technologies": [
-      "HTML",
-      "SASS",
-      "JS",
-      "Webpack",
-      "PHP",
-      "Drupal",
-      "Twig",
-      "Bootstrap",
-      "jQuery"
-    ],
-    "challenges": ["Learning Drupal and Twig ecosystem"],
-    "photos": {
-      "thumb": {
-        "default": "aea-thumb.png",
-        "retina": "aea-thumb2x.png",
-        "lazy": "aea-thumb-lazy.png"
+        "project": [
+          {
+            "src": "e-commerce-first-page.png",
+            "lazy": "e-commerce-first-page-lazy.png",
+            "alt": "E-commerce Home Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "e-commerce-shop-page.png",
+            "lazy": "e-commerce-shop-page-lazy.png",
+            "alt": "E-commerce Shop Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "e-commerce-sign-in-page.png",
+            "lazy": "e-commerce-sign-in-page-lazy.png",
+            "alt": "E-commerce Sign In page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "e-commerce-checkout-page.png",
+            "lazy": "e-commerce-checkout-page-lazy.png",
+            "alt": "E-commerce Checkout Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "e-commerce-hats-page-with-cart-component.png",
+            "lazy": "e-commerce-hats-page-with-cart-component-lazy.png",
+            "alt": "E-commerce Hats Page with Cart component opened up",
+            "url": "",
+            "isMobile": false
+          }
+        ]
       },
-      "project": [
-        {
-          "src": "aea-home.png",
-          "lazy": "aea-home-lazy.png",
-          "alt": "A&A's homepage",
-          "url": "https://www.aea.lu",
-          "isMobile": false
-        },
-        {
-          "src": "aea-immo.png",
-          "lazy": "aea-immo-lazy.png",
-          "alt": "A&a's real estate page",
-          "url": "https://www.aea.lu/fr/immobilier",
-          "isMobile": false
-        },
-        {
-          "src": "aea-goods.png",
-          "lazy": "aea-goods-lazy.png",
-          "alt": "A&a's available goods",
-          "url": "https://www.aea.lu/fr/immobilier/recherche",
-          "isMobile": false
-        },
-        {
-          "src": "aea-property.png",
-          "lazy": "aea-property-lazy.png",
-          "alt": "A&a's property's details",
-          "url": "https://www.aea.lu/fr/immobilier/recherche/location/maison-bettembourg",
-          "isMobile": false
-        }
-      ]
+      "colors": {
+        "primary": "#CC0033",
+        "primaryLight": "#FCADA9"
+      }
     },
-    "colors": {
-      "primary": "#006083",
-      "primaryLight": "#86C2D2"
-    }
-  },
-  {
-    "id": "law",
-    "name": "Law Firm",
-    "year": "2019",
-    "client": "An international Law Firm",
-    "url": "",
-    "agency": {
-      "name": "Nvision",
-      "url": "https://www.nvision.lu"
-    },
-    "role": "Front-End Developer",
-    "summary": "For this project, Nvision was asked to make an internal website and app with future and previous events, employees list and collaborators details with floor plan position,contacts and teammates",
-    "message": "Due to it's confidientiality, the project can't be viewed",
-    "technologies": [
-      "HTML",
-      "SASS",
-      "JS",
-      "React Native",
-      "Drupal",
-      "Twig",
-      "Bootstrap",
-      "jQuery"
-    ],
-    "challenges": ["Learning the difference between React & React Native"],
-    "photos": {
-      "thumb": {
-        "default": "law-thumb.png",
-        "retina": "law-thumb2x.png",
-        "lazy": "law-thumb-lazy.png"
+    {
+      "id": "facerecognition",
+      "name": "Face-Recognition App",
+      "year": "2021",
+      "client": "Confidential",
+      "url": "https://face-recognition-app13.herokuapp.com/",
+      "agency": {
+        "name": "Apptonate",
+        "url": "https://www.apptonate.com"
       },
-      "project": []
-    },
-    "colors": {
-      "primary": "#B23427",
-      "primaryLight": "#EA9289"
-    }
-  },
-  {
-    "id": "bank",
-    "name": "A bank",
-    "year": "2019",
-    "client": "A cooperative Bank",
-    "url": "",
-    "agency": {
-      "name": "Nvision",
-      "url": "https://www.nvision.lu"
-    },
-    "role": "Front-End Developer",
-    "summary": "A bank established in Luxemburg asked Nvision to develop their new detailed loan simulator. Nvision trusted me and sent me on site to represent them for the Front-End part of the simulator. Based on Excel sheet provided by the client, I developed the simulator's calculations, the forms and the interactiveness of the results when a input is changed",
-    "message": "Due to it's confidientiality, the project can't be viewed",
-    "photos": {
-      "thumb": {
-        "default": "bank-thumb.png",
-        "retina": "bank-thumb2x.png",
-        "lazy": "bank-thumb-lazy.png"
+      "role": "Full-Stack Developer",
+      "summary": "Confidential company asked to create a website that would be able to recognize faces in the images. Impressed by the work done, the company asked to create a sign-in and register page. I created our own server through Node.js and Express.js to keep the database",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "JS",
+        "Webpack",
+        "React",
+        "Node.js",
+        "Express.js",
+        "Bootstrap",
+        "PostgresSQL"
+      ],
+      "challenges": ["Creating a back-end server"],
+      "photos": {
+        "thumb": {
+          "default": "face-recognition-thumb.png",
+          "retina": "face-recognition-thumb2x.png",
+          "lazy": "face-recognition-thumb-lazy.png"
+        },
+        "project": [
+          {
+            "src": "fr-signin-home-page.png",
+            "lazy": "fr-signin-home-page-lazy.png",
+            "alt": "Face Recognition: Sign In Home Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "fr-register-page.png",
+            "lazy": "fr-register-page-lazy.png",
+            "alt": "Face Recognition: Register Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "fr-user-login-page.png",
+            "lazy": "fr-user-login-page-lazy.png",
+            "alt": "Face recognition: User login page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "fr-face-recognition.png",
+            "lazy": "fr-face-recognition-lazy.png",
+            "alt": "Face recognition: main face recognition page",
+            "url": "",
+            "isMobile": false
+          }
+        ]
       },
-      "project": []
+      "colors": {
+        "primary": "#006083",
+        "primaryLight": "#86C2D2"
+      }
     },
-    "technologies": ["HTML", "LESS", "JS", "Drupal", "Bootstrap 3", "JQuery"],
-    "challenges": [
-      "Working at the client location with extremely limited tools because of safety reasons",
-      "Using an old version of Bootstrap",
-      "Learning LESS on the fly"
+    {
+      "id": "clinic",
+      "name": "Clinic",
+      "year": "2019",
+      "client": "Santokh Diet Clinic",
+      "url": "",
+      "agency": {
+        "name": "Apptonate",
+        "url": "https://www.apptonate.com"
+      },
+      "role": "Front-End Developer",
+      "summary": "For this project, I was asked to create a professional website for a diet clinic that showed the potential clients the set of services they provided. Each client of the clinic was able to login the website and view their personalized diet plan",
+      "technologies": [
+        "HTML",
+        "SASS",
+        "JS",
+        "React",
+        "PostgresSQL",
+        "Bootstrap"
+      ],
+      "challenges": ["Learning to create authentication in a way that was secure"],
+      "photos": {
+        "thumb": {
+          "default": "clinic-thumb.png",
+          "retina": "clinic-thumb2x.png",
+          "lazy": "clinic-thumb-lazy.png"
+        },
+        "project": [
+          {
+            "src": "clinic-blog-page.png",
+            "lazy": "clinic-blog-page-lazy.png",
+            "alt": "Clinic: Sample blog page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "clinic-home-page.png",
+            "lazy": "clinic-home-page-lazy.png",
+            "alt": "Clinic: Home Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "clinic-about-me-page.png",
+            "lazy": "clinic-about-me-page-lazy.png",
+            "alt": "Clinic: About Me Page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "clinic-services-page.png",
+            "lazy": "clinic-services-page-lazy.png",
+            "alt": "Face recognition: User login page",
+            "url": "",
+            "isMobile": false
+          },
+          {
+            "src": "clinic-contact-page.png",
+            "lazy": "clinic-contact-page-lazy.png",
+            "alt": "Clinic: Contact Page",
+            "url": "",
+            "isMobile": false
+          }
+        ]
+      },
+      "colors": {
+        "primary": "#B23427",
+        "primaryLight": "#EA9289"
+      }
+    },
+    {
+      "id": "bank",
+      "name": "Bank",
+      "year": "2019",
+      "client": "A cooperative Bank",
+      "url": "",
+      "agency": {
+        "name": "Apptonate",
+        "url": "https://www.apptonate.com"
+      },
+      "role": "Front-End Developer",
+      "summary": "A bank established in Toronto asked to develop their new detailed loan simulator. I was trusted to represent them for the Front-End part of the simulator. Based on Excel sheet provided by the client, I developed the simulator's calculations, the forms and the interactiveness of the results when a input is changed",
+      "message": "Due to it's confidentiality, the project can't be viewed",
+      "photos": {
+        "thumb": {
+          "default": "bank-thumb.png",
+          "retina": "bank-thumb2x.png",
+          "lazy": "bank-thumb-lazy.png"
+        },
+        "project": []
+      },
+      "technologies": [
+        "HTML", 
+        "JS", 
+        "Bootstrap 3", 
+        "JQuery"
     ],
-    "colors": {
-      "primary": "#b4c72e",
-      "primaryLight": "#DAE58F"
+      "challenges": [
+        "Working at the client location with extremely limited tools because of safety reasons",
+        "Using an old version of Bootstrap"
+      ],
+      "colors": {
+        "primary": "#b4c72e",
+        "primaryLight": "#DAE58F"
+      }
     }
-  }
-]
+  ]

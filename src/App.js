@@ -4,7 +4,7 @@ import { ThemeProvider } from "styled-components";
 import CSSTransition from "react-transition-group/esm/CSSTransition";
 import TransitionGroup from "react-transition-group/esm/TransitionGroup";
 
-import Nav from "./components/nav/Nav";
+import Nav from "./components/nav/nav";
 import ViewportWidthProvider from "./utils/getViewport";
 import HomeLoader from "./components/loaders/home-loader/HomeLoader";
 import Loader from "./components/loaders/main-loader/MainLoader";

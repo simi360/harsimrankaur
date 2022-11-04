@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { LinkTag, ExternalLinkTag, ArrowIcon } from "./ArrowLink.Styles";
+import { useLocation } from "react-router-dom";
 
 const ArrowLink = (props) => {
+  const location = useLocation();
   if (props.externalLink) {
     return (
       <ExternalLinkTag
@@ -30,7 +32,7 @@ const ArrowLink = (props) => {
   );
 };
 
-ArrowLink.proptypes = {
+ArrowLink.propTypes = {
   externalLink: PropTypes.bool,
   isReversed: PropTypes.bool,
   url: PropTypes.string.isRequired,

@@ -46,8 +46,7 @@ const ProjectSliderStyles = styled(BaseSlider)`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     &::before {
       content: "";
       width: 100%;
@@ -85,8 +84,7 @@ const ProjectSliderStyles = styled(BaseSlider)`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     &::before {
       content: "";
       width: 80%;
@@ -104,8 +102,7 @@ const Slide = styled.div`
   justify-content: center;
   align-items: center;
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     height: 55vh;
     padding: 2rem 0 3rem 2rem;
   }

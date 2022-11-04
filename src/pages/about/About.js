@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import {
   Main,
   AboutTitle,
@@ -32,33 +33,32 @@ const About = ({
         <AboutTitle title="About" />
 
         <Intro>
-          I am a Belgian, mostly self-taught, Front-End Developer, who, on top
-          of beers and fries, loves to making live beautiful designs.
+          Front-End Developer, who, on top
+          of pizza and burrito bowls, loves to make live beautiful web apps and sites.
         </Intro>
 
         <P>
-          After 3 years as a Graphic Designer, I have decided to make a change
-          of career and become a <strong>Front-End developer</strong>. Later, I
-          was one of the 2000 of 200.000 selected for a
-          <strong>Google Scholarship</strong> to follow Udacity Front-End
-          Nanodregree. At the same time, I was working part time as a Web
-          Integrator and all my free time was spent on Udacity.
+          After majoring in Computer Science, I was mostly focused on java 
+          development and teaching native app development, but decided to 
+          change careers and became a <strong>Front-End developer</strong>.
+
+          I have since gained <strong>4 years of experience</strong> as Front-end developer
+          and hold certifications from ZtM Academy, Geeks for Geeks and
+          Udemy.
+          
         </P>
         <P>
-          After having graduated, I moved to another agency and became a
-          Front-End Developer and worked on different projects, be it a loan
-          simulator or and national railway company.
+          I have gained experience by working on numerous different projects,
+          be it a loan simulator or an e-commerce clothing brand.
         </P>
 
         <Link>
-          For more informations here is a{" "}
+          For more information here is a{" "}
           <a
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
             href={
-              process.env.NODE_ENV === "development"
-                ? `public/img/sarah-hick_resume.pdf`
-                : `./img/sarah-hick_resume.pdf`
+              process.env.PUBLIC_URL+'/img/harsimran-kaur-resume.pdf'
             }
           >
             full resume
@@ -102,11 +102,13 @@ const About = ({
       </FlexSKillsContainer>
 
       <FlexExpContainer>
-        <Img
-          imgSrc="self.png"
+      
+        <Img 
+          imgSrc='self.png'
           imgLazy="lazy/self-lazy.png"
-          imgAlt="Sarah Hick's photo"
+          imgAlt="Harsimran Kaur's photo"
         />
+      
         <div>
           <H3>Work experience</H3>
 
@@ -123,7 +125,7 @@ const About = ({
           </FlexContainer>
         </div>
         <div>
-          <H3>Formations</H3>
+          <H3>Education</H3>
 
           <FlexContainer>
             {formations &&

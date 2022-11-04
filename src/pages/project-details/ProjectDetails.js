@@ -81,7 +81,7 @@ const ProjectDetails = (props) => {
                       target="_blank"
                       rel="noreferrer"
                     >
-                      Nvision
+                      Apptonate
                     </AgencyLink>
                   </CatDescription>
 
@@ -97,7 +97,7 @@ const ProjectDetails = (props) => {
                   <CatTitle>Technologies :</CatTitle>
                   <CatDescription>
                     {project.technologies.map((tech, index) => {
-                      return index == project.technologies.length - 1
+                      return index === project.technologies.length - 1
                         ? tech
                         : `${tech}, `;
                     })}

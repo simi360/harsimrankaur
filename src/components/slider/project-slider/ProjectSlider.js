@@ -46,7 +46,7 @@ const ProjectSlider = ({ photos, theme, projectId }) => {
                 imgSrc={`${projectId}/${photo.src}`}
                 imgLazy={`${projectId}/${photo.lazy}`}
                 imgAlt={photo.alt}
-                isActive={index == activeIndex ? true : false}
+                isActive={index === activeIndex ? true : false}
                 isMobile={photo.isMobile}
               />
 

@@ -13,8 +13,7 @@ const Main = styled.main`
   @media (min-width: ${(p) => `${p.theme.bp.tablets}px`}) {
     padding: 0 0 2rem;
   }
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     padding: 0;
     display: flex;
   }
@@ -59,8 +58,7 @@ const ProjectTitle = styled(Title)`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: portrait) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: portrait) {
     font-size: ${(p) => (p.title.length >= 4 ? "8vw" : "11.5")};
 
     .title-span {
@@ -68,8 +66,7 @@ const ProjectTitle = styled(Title)`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     margin-top: 0;
     font-size: ${(p) => (p.title.length >= 4 ? "4.5rem" : "8rem")};
 
@@ -78,8 +75,7 @@ const ProjectTitle = styled(Title)`
     }
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     font-size: ${(p) => (p.title.length >= 4 ? "4.75rem" : "11.5rem")};
   }
 `;
@@ -127,16 +123,14 @@ const Img = styled(ImgBg)`
 const LeftSection = styled.section`
   padding: 0 1rem;
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     min-height: 100vh;
     padding: 5rem 1rem 3rem 2rem;
     margin: 0 8.3333%;
     flex-basis: 33.333%;
   }
 
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.largeDesktops}px`}) and (orientation: landscape) {
     padding: 5rem 1rem 3rem;
     margin: 0 16.666%;
     flex-basis: 33.333%;
@@ -151,8 +145,7 @@ const RightSection = styled.section`
       /*animation*/
       ${FadeUp}
 
-  @media (min-width: ${(p) =>
-    `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     margin-top: 0;
     position: fixed;
     width: 50%;
@@ -162,8 +155,7 @@ const RightSection = styled.section`
     overflow: hidden;
   }
 
-  @media (min-width: ${(p) =>
-    `${p.theme.container}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.container}px`}) and (orientation: landscape) {
     margin-top: 0;
     width: ${(p) => `calc(${p.theme.container}px / 12 * 5)`};
     left: 50%;
@@ -175,8 +167,7 @@ const FlexContainer = styled.div`
     /*animation*/
     ${FadeUp}
 
-  @media (min-width: ${(p) =>
-    `${p.theme.bp.tablets}px`}) and (orientation: portrait) {
+  @media (min-width: ${(p) =>`${p.theme.bp.tablets}px`}) and (orientation: portrait) {
     display: flex;
   }
 `;
@@ -187,16 +178,14 @@ const FlexChilds = styled.div`
 `;
 
 const ProjectNavigation = styled(ProjectNav)`
-  @media (min-width: ${(p) =>
-      `${p.theme.bp.desktops}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.bp.desktops}px`}) and (orientation: landscape) {
     width: calc(100% / 12);
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
   }
-  @media (min-width: ${(p) =>
-      `${p.theme.container}px`}) and (orientation: landscape) {
+  @media (min-width: ${(p) =>`${p.theme.container}px`}) and (orientation: landscape) {
     width: ${(p) => `calc(${p.theme.container}px / 12)`};
     left: ${(p) => `calc(50vw - ${p.theme.container}px / 2)`};
   }

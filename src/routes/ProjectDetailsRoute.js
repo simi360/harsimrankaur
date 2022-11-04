@@ -16,23 +16,23 @@ const ProjectDetailsRoute = (props) => {
 
   useEffect(() => {
     async function getProjectDetails() {
-      const project = ProjectDatas.find((obj) => obj.id == id);
-      const projectIndex = ProjectDatas.findIndex((obj) => obj.id == id);
+      const project = ProjectDatas.find((obj) => obj.id === id);
+      const projectIndex = ProjectDatas.findIndex((obj) => obj.id === id);
 
       if (projectIndex && projectIndex > 0) {
         prevProjectRef.current = ProjectDatas[projectIndex - 1];
-      } else if (projectIndex == 0) {
+      } else if (projectIndex === 0) {
         prevProjectRef.current = ProjectDatas[ProjectDatas.length - 1];
       } else {
         prevProjectRef.current = null;
       }
 
       if (
-        (projectIndex || projectIndex == 0) &&
+        (projectIndex || projectIndex === 0) &&
         projectIndex < ProjectDatas.length - 1
       ) {
         nextProjectRef.current = ProjectDatas[projectIndex + 1];
-      } else if (projectIndex && projectIndex == ProjectDatas.length - 1) {
+      } else if (projectIndex && projectIndex === ProjectDatas.length - 1) {
         nextProjectRef.current = ProjectDatas[0];
       } else {
         nextProjectRef.current = null;

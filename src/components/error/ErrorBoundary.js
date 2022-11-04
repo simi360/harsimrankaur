@@ -1,8 +1,9 @@
 import React, { Suspense, lazy } from "react";
 import PropTypes from "prop-types";
+import ErrorDefault from "./error-default/ErrorDefault";
 
 const ErrorSlider = lazy(() => import("./error-slider/ErrorSlider"));
-import ErrorDefault from "./error-default/ErrorDefault";
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,7 +26,7 @@ class ErrorBoundary extends React.Component {
       switch (type) {
         case "slider":
           return (
-            <Suspense fallback={<div>Chargement...</div>}>
+            <Suspense fallback={<div>Loading...</div>}>
               <ErrorSlider />
             </Suspense>
           );

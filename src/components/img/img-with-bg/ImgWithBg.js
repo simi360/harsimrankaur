@@ -11,16 +11,16 @@ const ImgBg = (props) => {
       key={props.imgSrc}
     >
       <Img
-        src={
-          process.env.NODE_ENV === "development"
-            ? `public/img/${props.imgSrc}`
-            : `./img/${props.imgSrc}`
+        src={ process.env.PUBLIC_URL+`/img/${props.imgSrc}`
+          // process.env.NODE_ENV === "development"
+          //   ? `public/img/${props.imgSrc}`
+          //   : `./img/${props.imgSrc}`
         }
         alt={props.imgAlt}
-        placeholderSrc={
-          process.env.NODE_ENV === "development"
-            ? `public/img/${props.imgLazy}`
-            : `./img/${props.imgLazy}`
+        placeholderSrc={process.env.PUBLIC_URL+`/img/${props.imgLazy}`
+          // process.env.NODE_ENV === "development"
+          //   ? `public/img/${props.imgLazy}`
+          //   : `./img/${props.imgLazy}`
         }
       />
     </ImgContainer>
@@ -31,6 +31,6 @@ ImgBg.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   imgLazy: PropTypes.string.isRequired,
   imgAlt: PropTypes.string,
-};
+ };
 
 export default ImgBg;

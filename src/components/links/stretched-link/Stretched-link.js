@@ -1,8 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { ExternalLinkTag, LinkTag } from "./Stretched-link.styles";
+import { useLocation } from "react-router-dom";
 
 const StretchedLink = (props) => {
+  const location= useLocation();
   if (props.externalLink) {
     return (
       <ExternalLinkTag

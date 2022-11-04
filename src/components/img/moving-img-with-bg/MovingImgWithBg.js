@@ -20,10 +20,10 @@ const MovingImgWithBg = (props) => {
     >
       <ImgContainer isMobile={props.isMobile} isActive={props.isActive}>
         <LazyLoadImage
-          src={
-            process.env.NODE_ENV === "development"
-              ? `public/img/${props.imgSrc}`
-              : `./img/${props.imgSrc}`
+          src={ process.env.PUBLIC_URL+`/img/${props.imgSrc}`
+            // process.env.NODE_ENV === "development"
+            //   ? `../../../../public/img/${props.imgSrc}`
+            //   : `./img/${props.imgSrc}`
           }
           alt={props.imgAlt}
           effect="blur"
@@ -32,11 +32,11 @@ const MovingImgWithBg = (props) => {
         <PlaceHolder>
           {/* Needed to have an height with the vertical slider */}
           <img
-            src={
-              process.env.NODE_ENV === "development"
-                ? `public/img/${props.imgLazy}`
-                : `./img/${props.imgLazy}`
-            }
+          src={ process.env.PUBLIC_URL+`/img/${props.imgLazy}`
+              // process.env.NODE_ENV === "development"
+              //   ? `public/img/${props.imgLazy}`
+              //   : `./img/${props.imgLazy}`
+             }
             alt=""
           />
         </PlaceHolder>

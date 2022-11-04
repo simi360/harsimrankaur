@@ -62,8 +62,8 @@ class DesktopSlider extends React.Component {
     this.state.slides.forEach((slide, i) => {
       ScrollTrigger.create({
         // use dynamic scroll positions based on the window height (offset by half to make it feel natural)
-        start: () => (i - 0.5) * innerHeight,
-        end: () => (i + 0.5) * innerHeight,
+        start: () => (i - 0.5) * window.innerHeight,
+        end: () => (i + 0.5) * window.innerHeight,
         // when a new section activates (from either direction), set the section accordingly.
         onUpdate: (self) => self.isActive && this.updateSlider(slide, i),
         id: `slide${i}`,
@@ -150,7 +150,7 @@ class DesktopSlider extends React.Component {
                     key={"slide" + index}
                     slide={slide}
                     slideIndex={index}
-                    isActive={activeIndex == index ? true : false}
+                    isActive={activeIndex === index ? true : false}
                   />
                 ))}
             </div>
