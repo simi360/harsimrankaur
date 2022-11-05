@@ -39,10 +39,10 @@ const About = ({
 
         <P>
           After majoring in Computer Science, I was mostly focused on java 
-          development and teaching native app development, but decided to 
+          development and teaching native app development, but ultimately decided to 
           change careers and became a <strong>Front-End developer</strong>.
 
-          I have since gained <strong>4 years of experience</strong> as Front-end developer
+          Since then I have gained <strong>4 years of experience</strong> as Front-end developer
           and hold certifications from ZtM Academy, Geeks for Geeks and
           Udemy.
           
