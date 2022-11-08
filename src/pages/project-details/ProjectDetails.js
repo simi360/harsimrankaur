@@ -105,7 +105,13 @@ const ProjectDetails = (props) => {
                 </FlexChilds>
                 <FlexChilds>
                   <CatTitle>Summary :</CatTitle>
-                  <CatDescription>{project.summary}</CatDescription>
+                  <ul>
+                    {project.summary.map((summarypoint, index) => (
+                      <ListItem key={`summarypoint-${index}`}>
+                        {summarypoint}
+                      </ListItem>
+                    ))}
+                  </ul>
                   <CatTitle>Challenges :</CatTitle>
                   <ul>
                     {project.challenges.map((challenge, index) => (

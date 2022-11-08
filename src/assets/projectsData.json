@@ -3,14 +3,17 @@
       "id": "clothingecommerce",
       "name": "Clothing E-Commerce",
       "year": "2021-2022",
-      "client": "",
+      "client": "Confidential",
       "url": "https://635b0494afefed149adfa998--frabjous-banoffee-04d76f.netlify.app/",
       "agency": {
         "name": "Apptonate",
         "url": "https://www.apptonate.com"
       },
       "role": "Full-Stack Developer",
-      "summary": "Confidential company asked Apptonate to make a complete re-branding of their clothing e-commerce website. My job was to make a static version of the website and integrate with the back-end developers. In addition to creating about 30 different pages with different behaviors, the website had to be accessible, cross-browser compatible and support legacy browsers",
+      "summary": [
+        "The company asked Apptonate to do a complete re-branding of their clothing e-commerce website. My job was to create a static version of the website and integrate with the back-end database. In addition to creating about 30 different pages with different behaviors, the website had to be accessible, cross-browser compatible and support legacy browsers",
+        "(Demo website and pictures attached)"
+      ],
       "technologies": [
         "HTML",
         "SASS",
@@ -18,13 +21,14 @@
         "Webpack",
         "React",
         "Bootstrap",
-        "jQuery"
+        "jQuery",
+        "PostgresSQL"
       ],
       "challenges": [
         "Managing to make reusable and maintainable components for 30 different pages",
         "Using theme for the website with shared styles and functions but different colors depending upon the category",
         "Supporting of legacy browsers",
-        "Intermediate Front-End Developer on this project"
+        "Creating redux store for state management"
       ],
       "photos": {
         "thumb": {
@@ -86,7 +90,10 @@
         "url": "https://www.apptonate.com"
       },
       "role": "Full-Stack Developer",
-      "summary": "Confidential company asked to create a website that would be able to recognize faces in the images. Impressed by the work done, the company asked to create a sign-in and register page. I created our own server through Node.js and Express.js to keep the database",
+      "summary": [
+        "Client asked to create a website that would be able to recognize faces in the images through API. Impressed by the work done at the completion of given tasks, the company asked to create a sign-in and register page for the users to come back and display their personalized backdrops and updated index of the number of searches done. I created our own server through Node.js and Express.js to keep the user database",
+        "(Demo website and pictures attached)"
+      ],
       "technologies": [
         "HTML",
         "SASS",
@@ -152,7 +159,10 @@
         "url": "https://www.apptonate.com"
       },
       "role": "Front-End Developer",
-      "summary": "For this project, I was asked to create a professional website for a diet clinic that showed the potential clients the set of services they provided. Each client of the clinic was able to login the website and view their personalized diet plan",
+      "summary": [
+        "For this project, client asked to create a professional website for a diet clinic that showed the potential clients the set of services they provided. Further each client of the clinic was able to login the website and view their personalized diet plan",
+        "(Demo website and pictures attached)"
+      ],
       "technologies": [
         "HTML",
         "SASS",
@@ -222,7 +232,10 @@
         "url": "https://www.apptonate.com"
       },
       "role": "Front-End Developer",
-      "summary": "A bank established in Toronto asked to develop their new detailed loan simulator. I was trusted to represent them for the Front-End part of the simulator. Based on Excel sheet provided by the client, I developed the simulator's calculations, the forms and the interactiveness of the results when a input is changed",
+      "summary": [
+        "A bank established in Toronto asked to develop their new detailed loan simulator. I was trusted to represent them for the Front-End part of the simulator. Based on Excel sheet provided by the client, I developed the simulator's calculations, the forms and the interactiveness of the results when a input is changed",
+        "(Confidential)"
+      ],
       "message": "Due to it's confidentiality, the project can't be viewed",
       "photos": {
         "thumb": {
