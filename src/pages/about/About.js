@@ -33,16 +33,16 @@ const About = ({
         <AboutTitle title="About" />
 
         <Intro>
-          Front-End Developer, who, on top
+          Full-Stack Developer, who, on top
           of pizza and burrito bowls, loves to make live beautiful web apps and sites.
         </Intro>
 
         <P>
           After majoring in Computer Science, I was mostly focused on java 
           development and teaching native app development, but ultimately decided to 
-          change careers and became a <strong>Front-End developer</strong>.
+          change careers and became a <strong>Full-Stack developer</strong>.
 
-          Since then I have gained <strong>4 years of experience</strong> as Front-end developer
+          Since then I have gained <strong>4 years of experience</strong> as Full-Stack developer
           and hold certifications from ZtM Academy, Geeks for Geeks and
           Udemy.
           
@@ -57,9 +57,9 @@ const About = ({
           <a
             target="_blank"
             rel="noopener noreferrer"
-            href={
-              process.env.PUBLIC_URL+'/img/harsimran-kaur-resume.pdf'
-            }
+            href=
+              "https://resume.io/r/m9RI2Hjxh"
+              // process.env.PUBLIC_URL+'/img/harsimran-kaur-resume.pdf'
           >
             full resume
           </a>
