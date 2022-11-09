@@ -33,16 +33,17 @@ const About = ({
         <AboutTitle title="About" />
 
         <Intro>
-          Full-Stack Developer, who, on top
+          Mostly self-taught Full-Stack Developer, who, on top
           of pizza and burrito bowls, loves to make live beautiful web apps and sites.
         </Intro>
 
         <P>
-          After majoring in Computer Science, I was mostly focused on java 
-          development and teaching native app development, but ultimately decided to 
-          change careers and became a <strong>Full-Stack developer</strong>.
+          After majoring in Computer Science in the USA, I went back to India and worked as a java developer but was always intrigued
+          and captivated by the creativeness front-end developers displayed. Therefore, I started learning various nuances of front-end
+          developing. Already having experience with back-end I ultimately decided to 
+          change careers and became a <b>Full-Stack developer</b>.
 
-          Since then I have gained <strong>4 years of experience</strong> as Full-Stack developer
+          Since then I have gained <b>4 years of experience</b> as Full-Stack developer
           and hold certifications from ZtM Academy, Geeks for Geeks and
           Udemy.
           
