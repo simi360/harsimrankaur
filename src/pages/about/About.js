@@ -38,10 +38,10 @@ const About = ({
         </Intro>
 
         <P>
-          After majoring in Computer Science in the USA, I went back to India and worked as a java developer but was always intrigued
+          After majoring in Computer Science in the USA, I went back to India and worked as a developer but was always intrigued
           and captivated by the creativeness front-end developers displayed. Therefore, I started learning various nuances of front-end
-          developing. Already having experience with back-end I ultimately decided to 
-          change careers and became a <b>Full-Stack developer</b>.
+          developing and interned in 2017 as one. Already having experience with back-end I ultimately decided to 
+          upgrade careers and became a <b>Full-Stack developer</b>.
 
           Since then I have gained <b>4 years of experience</b> as Full-Stack developer
           and hold certifications from ZtM Academy, Geeks for Geeks and
@@ -59,7 +59,7 @@ const About = ({
             target="_blank"
             rel="noopener noreferrer"
             href=
-              "https://resume.io/r/m9RI2Hjxh"
+              "https://drive.google.com/file/d/1QocpLXrZmpFLRgFcN_2J8-6d0jL7Qi65/view?usp=sharing"
               // process.env.PUBLIC_URL+'/img/harsimran-kaur-resume.pdf'
           >
             full resume
